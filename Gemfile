@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'therubyracer'
 
+gem 'httparty'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
@@ -56,6 +58,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
+
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :test do
