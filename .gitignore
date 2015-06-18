@@ -29,3 +29,5 @@ coverage
 .idea
 .secret
 .idea
+# Ignore application configuration
+/config/application.yml

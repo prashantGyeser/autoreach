@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'home#index'
+  devise_for :users
+
+  # Omniauth
+  # Sample reference: https://github.com/RailsApps/rails-omniauth/
+  get '/auth/:provider/callback', to: 'sessions#create', as: 'callback'
+  get '/auth/failure', to: 'sessions#error', as: 'failure'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

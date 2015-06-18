@@ -44,6 +44,15 @@ gem 'highscore'
 gem 'stemmer'
 gem 'rake_text'
 
+# Authentication
+gem 'devise'
+
+gem 'omniauth-twitter'
+
+gem "figaro"
+
+gem "annotate"
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
@@ -65,19 +74,18 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
-
-  gem 'webmock'
-  gem 'vcr'
+  gem 'faker'
 end
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'faker'
   gem 'launchy'
   gem 'poltergeist'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :production do
