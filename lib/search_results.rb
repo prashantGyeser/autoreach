@@ -11,17 +11,17 @@ class SearchResults
   end
 
   def iterate_results(results_hash)
-    post_hashs = []
+    post_hashes = []
     results_hash["posts"].each do |post|
-      post_hashs << parse_post(post)
+      post_hashes << parse_post(post)
     end
-    return post_hashs
+    return post_hashes
   end
-
-  # Todo: Ensure that httpparty automatically follows redirects
+  
   def parse_post(post)
     post_hash = {}
     post_hash[:url] = post["url"]
+    post_hash[:final_url] = get_final_url(post["url"])
     post_hash[:published] = post["published"]
     post_hash[:title] = post["title"]
     post_hash[:text] = post["text"]
@@ -30,6 +30,16 @@ class SearchResults
     return post_hash
   end
 
+  def get_final_url(url)
+    response = HTTParty.get(url)
+    extract_url_from_omgili(response.body)
+  end
 
+  def extract_url_from_omgili(html)
+
+    page = MetaInspector.new("http://omgili.com",
+                             :document => html)
+    return page.links.raw.first
+  end
 
 end

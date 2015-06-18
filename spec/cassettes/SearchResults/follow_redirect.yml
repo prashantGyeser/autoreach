@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://omgili.com/r/DyQaNGXlfMp4GkjqYwqUHVNTL0mtNeHucqWhgKphc_9OyE2MmC3wJMdZP4rkNJfCgpGMrPeEI3r040OjIEXg7aCaRFrXrMrG8d6n6q9D5aolQrQ4hDBfrNGP1awZJKJn9hubqgcRXQU-
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 17 Jun 2015 06:29:06 GMT
+      Server:
+      - Play! Framework;1.2.7;prod
+      Content-Type:
+      - text/html; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - PLAY_ERRORS=;Expires=Wed, 17-Jun-2015 04:29:06 GMT;Path=/
+      - PLAY_FLASH=;Expires=Wed, 17-Jun-2015 04:29:06 GMT;Path=/
+      - PLAY_SESSION=;Expires=Wed, 17-Jun-2015 04:29:06 GMT;Path=/
+      Via:
+      - 1.1 omgili.com
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '526'
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <html>
+        <head>
+            <meta http-equiv="content-type" content="text/html;charset=utf-8">
+            <meta http-equiv="refresh" content="1; url=http://thenextweb.com/entrepreneur/2015/06/13/43-lessons-growing-from-0-to-1-million-in-revenue-twice/" />
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-1371695-1', 'auto');
+                ga('send', 'pageview');
+            </script>
+        </head>
+        <body onLoad="window.location.href='http://thenextweb.com/entrepreneur/2015/06/13/43-lessons-growing-from-0-to-1-million-in-revenue-twice/'"></body>
+        Redirecting you to <a href="http://thenextweb.com/entrepreneur/2015/06/13/43-lessons-growing-from-0-to-1-million-in-revenue-twice/">http://thenextweb.com/entrepreneur/2015/06/13/43-lessons-growing-from-0-to-1-million-in-revenue-twice/</a>
+        </html>
+    http_version: 
+  recorded_at: Wed, 17 Jun 2015 04:29:06 GMT
+recorded_with: VCR 2.9.3

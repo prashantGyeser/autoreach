@@ -37,6 +37,13 @@ gem 'therubyracer'
 
 gem 'httparty'
 
+gem 'metainspector'
+
+# Keyword extractor
+gem 'highscore'
+gem 'stemmer'
+gem 'rake_text'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
