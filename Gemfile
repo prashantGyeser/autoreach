@@ -51,12 +51,13 @@ gem 'omniauth-twitter'
 
 gem "figaro"
 
-gem "annotate"
+gem 'twitter'
 
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
   gem 'spring-commands-rspec'
+  gem "annotate"
 end
 
 
