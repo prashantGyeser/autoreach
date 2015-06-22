@@ -40,10 +40,15 @@ class Token < ActiveRecord::Base
   end
 
   def set_keywords
+
     recent_tweets = TwitterUser.new(self).recent_tweets(self.username)
+
     parsed_tweets = Tweets.new.parse(recent_tweets)
+
     UserTweet.save_tweets(parsed_tweets, self.id)
+
     UserKeyword.generate_keywords(self.id)
+    
   end
 
 end

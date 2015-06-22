@@ -33,5 +33,4 @@ RSpec.describe Token, type: :model do
     end
   end
 
-
 end

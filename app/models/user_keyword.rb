@@ -38,8 +38,9 @@ class UserKeyword < ActiveRecord::Base
     end
   end
 
+  # Todo: Fix this so that it no matter the extraction method this works
   def self.save_keyword(keyword, token_id)
-    UserKeyword.create(keyword: keyword[0], weight: keyword[1].to_i, token_id: token_id)
+    UserKeyword.create(keyword: keyword.text, weight: keyword.weight.to_i, token_id: token_id)
   end
 
 end
