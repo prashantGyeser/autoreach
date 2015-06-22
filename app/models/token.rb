@@ -17,9 +17,12 @@
 
 class Token < ActiveRecord::Base
   belongs_to :user
+  has_many :user_tweets
+  has_many :user_keywords
+
+  after_create :set_keywords
 
   def self.from_omniauth(auth)
-    # Todo: Add the user_id params to the
     where(provider: auth.provider, uid: auth.uid, user_id: auth.user_id).first || create_from_omniauth(auth)
   end
 
@@ -34,6 +37,13 @@ class Token < ActiveRecord::Base
       token.profile_picture = auth['info']['image']
       token.user_id = auth['user_id']
     end
+  end
+
+  def set_keywords
+    recent_tweets = TwitterUser.new(self).recent_tweets(self.username)
+    parsed_tweets = Tweets.new.parse(recent_tweets)
+    UserTweet.save_tweets(parsed_tweets, self.id)
+    UserKeyword.generate_keywords(self.id)
   end
 
 end

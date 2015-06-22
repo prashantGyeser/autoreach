@@ -15,8 +15,8 @@ class Tweets
 
   def single_tweet(tweet)
     # Tweet
-    tweet = {}
-    tweet[:text] = tweet.text
+    parsed_tweet = {}
+    parsed_tweet[:text] = tweet.full_text
   end
 
 end

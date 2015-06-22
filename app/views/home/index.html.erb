@@ -18,3 +18,19 @@
 <br/>
 
 <%= Token.last.inspect %>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<% UserKeyword.all.each do |keyword| %>
+    <%= keyword.keyword %> | <%= keyword.weight %>
+    <br/>
+<% end %>
