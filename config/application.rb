@@ -37,5 +37,7 @@ module Autoreach
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
+    config.assets.paths << File.join(Rails.root, "/vendor/pages")
+
   end
 end
