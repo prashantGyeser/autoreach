@@ -1,0 +1,2 @@
+module Dashboard::SetupHelper
+end

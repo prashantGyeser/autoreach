@@ -24,6 +24,7 @@
 //= require pages-plugins/imagesloaded/imagesloaded.pkgd.min
 //= require pages-plugins/jquery-actual/jquery.actual.min
 //= require pages-plugins/jquery-scrollbar/jquery.scrollbar.min
+//= require pages-plugins/boostrap-form-wizard/js/jquery.bootstrap.wizard.min
 
 // BEGIN CORE TEMPLATE JS FOR PAGES
 //= require pages-core/js/pages

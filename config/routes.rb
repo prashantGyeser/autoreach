@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :dashboard do
+  get 'setup/keywords'
+  end
+
+  namespace :dashboard do
   get 'home/index'
   end
 
