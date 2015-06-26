@@ -24,5 +24,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :tokens
+  has_many :user_keywords
 
 end

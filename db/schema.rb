@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621103759) do
+ActiveRecord::Schema.define(version: 20150625052240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "url"
+    t.text     "content"
+    t.datetime "crawled_on"
+    t.integer  "keyword_id"
+    t.string   "site"
+    t.integer  "performance_score"
+    t.float    "spam_score"
+    t.text     "title"
+    t.string   "main_image"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "tokens", force: :cascade do |t|
     t.string   "provider"
@@ -32,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150621103759) do
   create_table "user_keywords", force: :cascade do |t|
     t.string   "keyword"
     t.integer  "weight"
-    t.integer  "token_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

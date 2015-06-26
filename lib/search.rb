@@ -3,9 +3,9 @@ require 'net/http'
 # This class currently only searches using the webhose.io api
 class Search
 
-  # Todo: This currently only handles a single keywords. Need to add code to handle or cases
+  # Summary: The search function takes either a single keyword or an array of keywords
   def find_all(query)
-    get_results(generate_url(query))
+    get_results(generate_url(generate_query(query)))
   end
 
   private
@@ -14,8 +14,18 @@ class Search
     # The above sample url gets content from new fees and blogs only.
     # The above sample url gets content that has been shared i.e. the performance score
     # The url has a multi keyword search
-    url = "https://webhose.io/search?token=49b06853-009e-4737-9bf8-43b2365109d2&format=json&site_type=blogs&q=" + query
+    #url = "https://webhose.io/search?token=49b06853-009e-4737-9bf8-43b2365109d2&format=json&site_type=blogs&q=" + query
+    url = "https://webhose.io/search?token=49b06853-009e-4737-9bf8-43b2365109d2&format=json&q=#{query} performance_score:>3&language=english&site_type=blogs"
     encode_url(url)
+  end
+
+  def generate_query(keywords)
+    if keywords.is_a? Array
+      query_keywords = keywords.join(" OR ")
+      return '(' + query_keywords + ')'
+    else
+      return keywords
+    end
   end
 
   def encode_url(url_string)

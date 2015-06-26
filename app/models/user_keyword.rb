@@ -5,13 +5,14 @@
 #  id         :integer          not null, primary key
 #  keyword    :string
 #  weight     :integer
-#  token_id   :integer
+#  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 class UserKeyword < ActiveRecord::Base
-  belongs_to :token
+  belongs_to :user
+  has_many :articles
 
   def self.generate_keywords(token_id)
     tweets_text = combine_tweets(user_tweets(token_id))

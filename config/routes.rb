@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+  get 'article_search/index'
+  end
+
   namespace :dashboard do
   get 'setup/keywords'
   end
