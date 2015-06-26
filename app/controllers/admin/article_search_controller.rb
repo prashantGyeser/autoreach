@@ -2,8 +2,11 @@ class Admin::ArticleSearchController < Dashboard::ApplicationController
   def index
   end
 
+  def searches
+
+  end
+
   def results
-    @params = params
     keywords_array = params[:keywords].split(',')
     #results = Search.new.find_all(keywords_array)
     #@search_results = SearchResults.new.parse(results)
