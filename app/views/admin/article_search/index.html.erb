@@ -11,18 +11,20 @@
         <p class="m-b-20">
           Enter upto 3 keywords with each keyword seperated by a comma ',' without any space before or after the comma
         </p>
-        <form class="" role="form">
+
+        <%= form_tag("/admin/article_search/results", method: "get") do %>
+
           <div class="form-group form-group-default required ">
-            <label>Keywords</label>
-            <input class="form-control" required="" type="text" autofocus>
+            <%= label_tag(:keywords, "Keywords") %>
+            <%= text_field_tag(:keywords, nil, class: "form-control", autofocus: true ) %>
+            <!--<input class="form-control" required="" type="text" autofocus>-->
           </div>
-        </form>
+          <%= submit_tag("Search", class: 'btn btn-primary btn-cons') %>
+        <% end %>
+
       </div>
     </div>
 
-    <!-- SEARCH RESULTS START-->
-
-    <!-- SEARCH RESULTS END-->
 
 
   </div>
@@ -30,84 +32,3 @@
 </div>
 
 
-<div class="container-fluid container-fixed-lg bg-white">
-
-  <div class="panel panel-transparent">
-    <div class="panel-heading">
-      <div class="panel-title">
-        Search Results
-      </div>
-      <div class="clearfix"></div>
-    </div>
-    <div class="panel-body">
-      <div class="table-responsive">
-
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <th width="60%">Article Details</th>
-            <th style="padding: 8px 20px;">Status</th>
-            <th style="padding: 8px 20px;">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td class="v-align-middle">
-              <a href="#" class="bold">Article Title</a>
-              <p style="margin-top: 5px;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, odio gravida volutpat vestibulum, massa dui venenatis ipsum, quis cursus est odio a arcu. Fusce finibus libero sit amet nunc rutrum, ac aliquam felis malesuada. Sed maximus vel dui eu placerat.
-              </p>
-            </td>
-            <td class="v-align-middle">
-              <span class="label label-warning">Not Posted</span>
-            </td>
-            <td class="v-align-middle">
-              <div class="btn-group">
-                <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
-                <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="v-align-middle">
-              <a href="#" class="bold">Article Title</a>
-              <p style="margin-top: 5px;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, odio gravida volutpat vestibulum, massa dui venenatis ipsum, quis cursus est odio a arcu. Fusce finibus libero sit amet nunc rutrum, ac aliquam felis malesuada. Sed maximus vel dui eu placerat.
-              </p>
-            </td>
-            <td class="v-align-middle">
-              <span class="label label-warning">Not Posted</span>
-            </td>
-            <td class="v-align-middle">
-              <div class="btn-group">
-                <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
-                <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="v-align-middle">
-              <a href="#" class="bold">Article Title</a>
-              <p style="margin-top: 5px;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, odio gravida volutpat vestibulum, massa dui venenatis ipsum, quis cursus est odio a arcu. Fusce finibus libero sit amet nunc rutrum, ac aliquam felis malesuada. Sed maximus vel dui eu placerat.
-              </p>
-            </td>
-            <td class="v-align-middle">
-              <span class="label label-warning">Not Posted</span>
-            </td>
-            <td class="v-align-middle">
-              <div class="btn-group">
-                <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
-                <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
-              </div>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-</div>

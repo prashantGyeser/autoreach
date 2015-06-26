@@ -1,0 +1,48 @@
+<div class="container-fluid container-fixed-lg bg-white">
+
+  <div class="panel panel-transparent">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Search Results
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th width="60%">Article Details</th>
+            <th style="padding: 8px 20px;">Status</th>
+            <th style="padding: 8px 20px;">Performance Score</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @search_results.each do |search_result| %>
+            <tr>
+              <td class="v-align-middle">
+                <a href="<%= search_result[:final_url] %>" class="bold"><%= search_result[:title] %></a>
+                <p style="margin-top: 5px;">
+                  <%= truncate(search_result[:text], :length => 255, :separator => ' ') %>
+                </p>
+              </td>
+              <td class="v-align-middle">
+                <span class="label label-warning">Not Posted</span>
+              </td>
+              <td class="v-align-middle">
+                <%= search_result[:performance_score] %>
+              </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

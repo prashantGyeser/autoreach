@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
   get 'article_search/index'
+  get 'article_search/results'
   end
 
   namespace :dashboard do
