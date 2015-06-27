@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :dashboard do
+
+  end
+
   namespace :admin do
   get 'article_search/index'
   get 'article_search/results/:admin_search_id', to: 'article_search#results'
@@ -8,9 +12,8 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
   get 'setup/keywords'
-  end
-
-  namespace :dashboard do
+  get 'setup/processing'
+  get 'keywords/index'
   get 'home/index'
   end
 
