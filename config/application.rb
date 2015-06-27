@@ -39,5 +39,7 @@ module Autoreach
 
     config.assets.paths << File.join(Rails.root, "/vendor/pages")
 
+    config.active_job.queue_adapter = :delayed_job
+
   end
 end

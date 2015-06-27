@@ -12,7 +12,7 @@
           Enter upto 3 keywords with each keyword seperated by a comma ',' without any space before or after the comma
         </p>
 
-        <%= form_tag("/admin/article_search/results", method: "get") do %>
+        <%= form_tag("/admin/article_search/create", method: "post") do %>
 
           <div class="form-group form-group-default required ">
             <%= label_tag(:keywords, "Keywords") %>

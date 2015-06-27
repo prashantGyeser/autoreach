@@ -23,9 +23,9 @@
           <% @search_results.each do |search_result| %>
             <tr>
               <td class="v-align-middle">
-                <a href="<%= search_result[:final_url] %>" class="bold"><%= search_result[:title] %></a>
+                <a href="<%= search_result[:url] %>" class="bold"><%= search_result[:title] %></a>
                 <p style="margin-top: 5px;">
-                  <%= truncate(search_result[:text], :length => 255, :separator => ' ') %>
+                  <%= truncate(search_result[:content], :length => 255, :separator => ' ') %>
                 </p>
               </td>
               <td class="v-align-middle">

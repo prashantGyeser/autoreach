@@ -20,7 +20,7 @@ class Search
   end
 
   def generate_query(keywords)
-    if keywords.is_a? Array
+    if keywords.count > 1
       query_keywords = keywords.join(" OR ")
       return '(' + query_keywords + ')'
     else

@@ -11,10 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150625052240) do
+ActiveRecord::Schema.define(version: 20150626141517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_articles", force: :cascade do |t|
+    t.string   "url"
+    t.text     "content"
+    t.datetime "crawled_on"
+    t.integer  "admin_search_id"
+    t.string   "site"
+    t.float    "performance_score"
+    t.float    "spam_score"
+    t.text     "title"
+    t.string   "main_image"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "admin_searches", force: :cascade do |t|
+    t.string   "keywords"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string   "url"
@@ -29,6 +49,22 @@ ActiveRecord::Schema.define(version: 20150625052240) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
+
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "tokens", force: :cascade do |t|
     t.string   "provider"

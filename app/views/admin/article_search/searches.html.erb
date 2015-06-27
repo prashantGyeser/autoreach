@@ -1,0 +1,37 @@
+<div class="container-fluid container-fixed-lg bg-white">
+
+  <div class="panel panel-transparent">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Admin Searches
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th width="80%">Keywords</th>
+            <th width="20%" style="padding: 8px 20px;">Results</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @admin_searches.each do |search| %>
+              <tr>
+                <td><a href="/admin/article_search/results/<%= search.id %>"><%= search.keywords %></a></td>
+                <td><%= search.get_articles_count %></td>
+              </tr>
+            <% end %>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

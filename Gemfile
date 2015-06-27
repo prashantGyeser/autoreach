@@ -53,6 +53,8 @@ gem "figaro"
 
 gem 'twitter'
 
+gem 'delayed_job_active_record'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
@@ -76,8 +78,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'faker'
-
-  gem 'capybara'
 end
 
 group :test do
