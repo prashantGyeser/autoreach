@@ -14,7 +14,7 @@ class ArticleSearchJob < ActiveJob::Base
   end
 
   def store_result(result, admin_search_id)
-    AdminArticle.create(url: result[:final_url], content: result[:text], title: result[:title], performance_score: result[:performance_score], spam_score: result[:spam_score], admin_search_id: admin_search_id, content: result[:text])
+    AdminArticle.create(url: result[:final_url], content: result[:text], title: result[:title], performance_score: result[:performance_score], spam_score: result[:spam_score], admin_search_id: admin_search_id)
   end
 
 end

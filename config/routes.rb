@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   end
 
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
+
   namespace :admin do
   get 'article_search/index'
   get 'article_search/results/:admin_search_id', to: 'article_search#results'
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
   namespace :dashboard do
   get 'setup/keywords'
   get 'setup/processing'
+  post 'setup/create_keywords'
   get 'keywords/index'
   get 'home/index'
   end

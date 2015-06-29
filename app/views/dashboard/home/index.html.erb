@@ -19,59 +19,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="v-align-middle">
-                <a href="#" class="bold">Article Title</a>
-                <p style="margin-top: 5px;">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, odio gravida volutpat vestibulum, massa dui venenatis ipsum, quis cursus est odio a arcu. Fusce finibus libero sit amet nunc rutrum, ac aliquam felis malesuada. Sed maximus vel dui eu placerat.
-                </p>
-              </td>
-              <td class="v-align-middle">
-                <span class="label label-warning">Not Posted</span>
-              </td>
-              <td class="v-align-middle">
-                <div class="btn-group">
-                  <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
-                  <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
-                </div>
-              </td>
-            </tr>
 
-            <tr>
-              <td class="v-align-middle">
-                <a href="#" class="bold">Article Title</a>
-                <p style="margin-top: 5px;">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, odio gravida volutpat vestibulum, massa dui venenatis ipsum, quis cursus est odio a arcu. Fusce finibus libero sit amet nunc rutrum, ac aliquam felis malesuada. Sed maximus vel dui eu placerat.
-                </p>
-              </td>
-              <td class="v-align-middle">
-                <span class="label label-warning">Not Posted</span>
-              </td>
-              <td class="v-align-middle">
-                <div class="btn-group">
-                  <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
-                  <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="v-align-middle">
-                <a href="#" class="bold">Article Title</a>
-                <p style="margin-top: 5px;">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, odio gravida volutpat vestibulum, massa dui venenatis ipsum, quis cursus est odio a arcu. Fusce finibus libero sit amet nunc rutrum, ac aliquam felis malesuada. Sed maximus vel dui eu placerat.
-                </p>
-              </td>
-              <td class="v-align-middle">
-                <span class="label label-warning">Not Posted</span>
-              </td>
-              <td class="v-align-middle">
-                <div class="btn-group">
-                  <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
-                  <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
-                </div>
-              </td>
-            </tr>
+            <% @articles.each do |article| %>
+              <tr>
+                <td class="v-align-middle">
+                  <a href="#" class="bold"><%= article.title %></a>
+                  <p style="margin-top: 5px;">
+                    <%= truncate(article.content, :length => 255, :separator => ' ') %>
+                  </p>
+                </td>
+                <td class="v-align-middle">
+                  <span class="label label-warning">Not Posted</span>
+                </td>
+                <td class="v-align-middle">
+                  <div class="btn-group">
+                    <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
+                    <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i></button>
+                  </div>
+                </td>
+              </tr>
+            <% end %>
+          
           </tbody>
         </table>
       </div>

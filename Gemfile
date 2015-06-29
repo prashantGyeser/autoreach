@@ -54,6 +54,9 @@ gem "figaro"
 gem 'twitter'
 
 gem 'delayed_job_active_record'
+gem "delayed_job_web"
+
+
 
 group :development do
   gem 'guard-rspec'

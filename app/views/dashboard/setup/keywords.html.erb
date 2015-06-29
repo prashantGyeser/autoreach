@@ -1,127 +1,65 @@
-<div class="container-fluid container-fixed-lg">
-  <div id="myFormWizard" class="m-t-50">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator">
-      <li class="active">
-        <a data-toggle="tab" href="#tab1"><i class="fa fa-shopping-cart tab-icon"></i> <span>Keywords</span></a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#tab2"><i class="fa fa-truck tab-icon"></i> <span>Connect your account</span></a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#tab3"><i class="fa fa-credit-card tab-icon"></i> <span>Payment details</span></a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#tab4"><i class="fa fa-check tab-icon"></i> <span>Summary</span></a>
-      </li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div class="tab-pane active slide" id="tab1">
-        <div class="row row-same-height">
-          <div class="col-md-5 b-r b-dashed b-grey sm-b-b">
-            <div class="padding-30 m-t-50">
-              <i class="fa fa-shopping-cart fa-2x hint-text"></i>
-              <h2>Setup your keywords!</h2>
-              <p>
-                Keywords are used to find articles that relate to your business and interest your customers.
-              </p>
-              <p>
-                We then match these articles with what you have talked about on your networks to find the artciles that are of itnerest to your customers.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="padding-30">
+<div class="container-fluid container-fixed-lg bg-white">
 
-              <form action="" role="form">
+  <div class="panel panel-transparent">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Setup a few keywords
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+      <div class="row row-same-height">
+        <div class="col-md-7 b-r b-dashed b-grey sm-b-b">
+          <div class="padding-30 m-t-50">
+
+            <%= form_tag("/dashboard/setup/create_keywords", method: "post") do %>
                 <div class="form-group form-group-default required">
-                  <label>keyword 1</label>
-                  <input class="form-control" required="" type="email" autofocus>
+                  <%= label_tag("keywords[]", "Keyword 1") %>
+                  <%= text_field_tag "keywords[]",nil, class: "form-control", required: true, autofocus: true %>
                 </div>
+
                 <div class="form-group form-group-default">
-                  <label>keyword 2</label>
-                  <input class="form-control" required="" type="email">
+                  <%= label_tag("keywords[]", "Keyword 2") %>
+                  <%= text_field_tag "keywords[]", nil, class: "form-control"%>
                 </div>
+
                 <div class="form-group form-group-default">
-                  <label>keyword 3</label>
-                  <input class="form-control" required="" type="email">
+                  <%= label_tag("keywords[]", "Keyword 3") %>
+                  <%= text_field_tag "keywords[]", nil, class: "form-control"%>
                 </div>
-              </form>
+
+                <%= submit_tag("Find Articles", class: "btn btn-primary") %>
+            <% end %>
 
 
-            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="padding-30 m-t-50">
+            <h2>Almost there! One more step to put your content on auto pilot!</h2>
+            <p>
+              Enter a atleast one keyword as related to your customers interest.
+            </p>
           </div>
         </div>
       </div>
-      <div class="tab-pane slide" id="tab2">
-        <div class="row row-same-height">
-          <div class="col-md-5 b-r b-dashed b-grey sm-b-b">
-            <div class="padding-30 m-t-50">
-              <i class="fa fa-shopping-cart fa-2x hint-text"></i>
-              <h2>Connect to Twitter and Facebook</h2>
-              <p>
-                Keywords are used to find articles that relate to your business and interest your customers.
-              </p>
-              <p>
-                We then match these articles with what you have talked about on your networks to find the artciles that are of itnerest to your customers.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="padding-30">
-
-              <form action="" role="form">
-                <div class="form-group form-group-default required">
-                  <label>keyword 1</label>
-                  <input class="form-control" required="" type="email" autofocus>
-                </div>
-                <div class="form-group form-group-default">
-                  <label>keyword 2</label>
-                  <input class="form-control" required="" type="email">
-                </div>
-                <div class="form-group form-group-default">
-                  <label>keyword 3</label>
-                  <input class="form-control" required="" type="email">
-                </div>
-              </form>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane slide" id="tab3">
-        ...
-      </div>
-      <div class="tab-pane slide" id="tab4">
-        ...
-      </div>
-
-      <ul class="pager wizard">
-        <li class="next">
-          <button class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" type="button">
-            <span>Next</span>
-          </button>
-        </li>
-        <li class="next finish" style="display:none;">
-          <button class="btn btn-primary btn-cons btn-animated from-left fa fa-cog pull-right" type="button">
-            <span>Finish</span>
-          </button>
-        </li>
-        <li class="previous first" style="display:none;">
-          <button class="btn btn-white btn-cons btn-animated from-left fa fa-cog pull-right" type="button">
-            <span>First</span>
-          </button>
-        </li>
-        <li class="previous">
-          <button class="btn btn-white btn-cons pull-right" type="button">
-            <span>Previous</span>
-          </button>
-        </li>
-      </ul>
-
     </div>
   </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

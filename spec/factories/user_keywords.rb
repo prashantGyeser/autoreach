@@ -2,12 +2,13 @@
 #
 # Table name: user_keywords
 #
-#  id         :integer          not null, primary key
-#  keyword    :string
-#  weight     :integer
-#  user_id    :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :integer          not null, primary key
+#  keyword      :string
+#  weight       :integer
+#  user_id      :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  keyword_type :string
 #
 
 FactoryGirl.define do
