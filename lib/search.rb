@@ -24,7 +24,7 @@ class Search
       query_keywords = keywords.join(" OR ")
       return '(' + query_keywords + ')'
     else
-      return '\"' + keywords + '\"'
+      return '"' + keywords.first.to_s + '"'
     end
   end
 
