@@ -56,7 +56,8 @@ gem 'twitter'
 gem 'delayed_job_active_record'
 gem "delayed_job_web"
 
-
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 group :development do
   gem 'guard-rspec'

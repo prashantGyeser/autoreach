@@ -17,5 +17,11 @@
 #
 
 class AdminArticle < ActiveRecord::Base
+  include Elasticsearch::Model
   belongs_to :admin_search
+
+  validates :url, uniqueness: true
+
 end
+
+AdminArticle.import

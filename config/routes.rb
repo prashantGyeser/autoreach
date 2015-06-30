@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :dashboard do
+  get 'search/index'
+  end
+
+  namespace :dashboard do
 
   end
 
@@ -10,6 +14,7 @@ Rails.application.routes.draw do
   get 'article_search/results/:admin_search_id', to: 'article_search#results'
   get 'article_search/searches'
   post 'article_search/create'
+  get 'article_search/custom_search'
   end
 
   namespace :dashboard do

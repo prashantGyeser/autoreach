@@ -18,5 +18,6 @@
 #
 
 class Article < ActiveRecord::Base
+  include Elasticsearch::Model
   belongs_to :user_keywords
 end

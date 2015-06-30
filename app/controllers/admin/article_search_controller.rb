@@ -6,6 +6,14 @@ class Admin::ArticleSearchController < Dashboard::ApplicationController
     @admin_searches = AdminSearch.order('created_at DESC').all
   end
 
+  def custom_search
+    if params[:q].nil?
+      @articles = []
+    else
+      @articles = AdminArticle.search params[:q]
+    end
+  end
+
   def create
     AdminSearch.create(keywords: params[:keywords])
     redirect_to "/admin/article_search/searches"
