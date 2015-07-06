@@ -59,6 +59,10 @@ gem "delayed_job_web"
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
+gem 'searchbing'
+
+gem 'shared_count_api'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'

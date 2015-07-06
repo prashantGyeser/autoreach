@@ -5,6 +5,10 @@ class SearchResults
     iterate_results(convert_to_hash(results))
   end
 
+  def parse_bing(results)
+    iterate_bing_results(results)
+  end
+
   private
   def convert_to_hash(search_results)
     JSON.parse(search_results)
@@ -36,10 +40,25 @@ class SearchResults
   end
 
   def extract_url_from_omgili(html)
-
     page = MetaInspector.new("http://omgili.com",
                              :document => html)
     return page.links.raw.first
+  end
+
+  def iterate_bing_results(results)
+    links_array = []
+    results.each do |result|
+      links_array << parse_bing_results(result)
+    end
+    return links_array
+  end
+
+  def parse_bing_results(result)
+    results_hash = {}
+    results_hash[:final_url] = result[:Url]
+    results_hash[:title] = result[:Title]
+    results_hash[:description] = result[:Description]
+    return results_hash
   end
 
 end

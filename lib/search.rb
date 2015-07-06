@@ -6,6 +6,7 @@ class Search
   # Summary: The search function takes either a single keyword or an array of keywords
   def find_all(query)
     get_results(generate_url(generate_query(query)))
+    #bing_search(query)
   end
 
   private
@@ -36,5 +37,15 @@ class Search
     response = HTTParty.get(encoded_url)
     return response.body
   end
+
+  def bing_search(query)
+    bing_web = Bing.new('4yJT0kGliAUDUcOJltccNGVIrgvfkB8zrPNBDdKDS+Y', 50, 'Web')
+    bing_results = bing_web.search(query)
+
+    puts bing_results.inspect
+
+    return bing_results
+  end
+
 
 end

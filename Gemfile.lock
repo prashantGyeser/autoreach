@@ -308,11 +308,13 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    searchbing (0.2.4)
     selenium-webdriver (2.46.2)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    shared_count_api (0.2.0)
     shellany (0.0.1)
     simple_oauth (0.3.1)
     simplecov (0.10.0)
@@ -418,7 +420,9 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  searchbing
   selenium-webdriver
+  shared_count_api
   simplecov
   spring
   spring-commands-rspec
