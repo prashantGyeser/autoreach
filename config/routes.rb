@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+  get 'bing_search/index'
+  post 'bing_search/create'
+  get 'bing_search/searches'
+  get 'bing_search/results/:admin_search_id', to: 'bing_search#results'
+  end
+
   namespace :dashboard do
   get 'search/index'
   end

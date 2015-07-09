@@ -14,6 +14,8 @@
 #  main_image        :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  description       :text
+#  facebook_shares   :integer
 #
 
 require 'rails_helper'

@@ -63,6 +63,8 @@ gem 'searchbing'
 
 gem 'shared_count_api'
 
+gem 'mechanize'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'

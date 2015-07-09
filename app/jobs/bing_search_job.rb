@@ -9,7 +9,6 @@ class BingSearchJob < ActiveJob::Base
   def get_articles(keyword)
     search_results = SearchBing.new.find_all(keyword[:keyword])
     parsed_results = SearchResults.new.parse_bing(search_results[:results])
-    byebug
     store_articles(parsed_results, keyword)
   end
 

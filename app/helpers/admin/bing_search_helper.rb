@@ -1,0 +1,2 @@
+module Admin::BingSearchHelper
+end

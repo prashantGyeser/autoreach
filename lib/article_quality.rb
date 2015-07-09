@@ -4,9 +4,13 @@ class ArticleQuality
     get_score(args)
   end
 
+  def facebook_shares(args)
+    get_facebook_share_count(client(args[:url]))
+  end
+
   private
   def get_social_share(url)
-    client = SharedCountApi::Client.new(url)
+    client = client(url)
     client.twitter + client.facebook_share_count + client.google_plus_one
   end
 
@@ -28,6 +32,14 @@ class ArticleQuality
     else
       return 0
     end
+  end
+
+  def client(url)
+    SharedCountApi::Client.new(url)
+  end
+
+  def get_facebook_share_count(client)
+    client.facebook_share_count
   end
 
 end
