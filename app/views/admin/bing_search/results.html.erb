@@ -15,7 +15,7 @@
           <tr>
             <th width="60%">Article Details</th>
             <th style="padding: 8px 20px;">Status</th>
-            <th style="padding: 8px 20px;">Performance Score</th>
+            <th style="padding: 8px 20px;">Facebook Shares</th>
           </tr>
           </thead>
           <tbody>
@@ -25,14 +25,17 @@
                 <td class="v-align-middle">
                   <a href="<%= search_result[:url] %>" class="bold"><%= search_result[:title] %></a>
                   <p style="margin-top: 5px;">
-                    <%= truncate(search_result[:content], :length => 255, :separator => ' ') %>
+                    <%# truncate(search_result[:content], :length => 255, :separator => ' ') %>
+                    <% doc = Nokogiri::HTML(search_result[:content]) %>
+                    <% doc.css('style,script').remove  %>
+                    <%= doc.xpath("//text()").text %>
                   </p>
                 </td>
                 <td class="v-align-middle">
                   <span class="label label-warning">Not Posted</span>
                 </td>
                 <td class="v-align-middle">
-                  <%= search_result[:performance_score] %>
+                  <%= search_result[:facebook_shares] %>
                 </td>
               </tr>
           <% end %>

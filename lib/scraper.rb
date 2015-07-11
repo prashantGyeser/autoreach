@@ -6,7 +6,11 @@ class Scraper
 
   private
   def get_page_content(url)
-    Mechanize.new.get(url).body
+    begin
+      Mechanize.new.get(url).body
+    rescue => e
+      Rails.logger.error { "Encountered an error when trying scrape a site using mechanize: #{url}, #{e.message} #{e.backtrace.join("\n")}" }
+    end
   end
 
 

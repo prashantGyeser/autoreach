@@ -3,3 +3,9 @@
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+
+
+
+Todo
+
+1. Add a search engine and show the ranking for the content

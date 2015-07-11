@@ -13,14 +13,16 @@
         <table class="table table-striped">
           <thead>
           <tr>
-            <th width="80%">Keywords</th>
+            <th width="10%">Id</th>
+            <th width="70%">Keywords</th>
             <th width="20%" style="padding: 8px 20px;">Results</th>
           </tr>
           </thead>
           <tbody>
           <% @admin_searches.each do |search| %>
               <tr>
-                <td><a href="/admin/article_search/results/<%= search.id %>"><%= search.keywords %></a></td>
+                <td><%= search.id %></td>
+                <td><a href="/admin/bing_search/results/<%= search.id %>"><%= search.keywords %></a></td>
                 <td><%= search.get_articles_count %></td>
               </tr>
           <% end %>

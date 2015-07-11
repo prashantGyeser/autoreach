@@ -3,7 +3,7 @@ class Webpage
 
   def initialize(args)
     @url = args[:url]
-    @content = ''
+    @content = Scraper.new.scrape_page(@url) || ''
   end
 
   def contains_article?
@@ -22,7 +22,6 @@ class Webpage
 
   def term_in_content?
     begin
-      content = get_content
       if content.include? "Comments"
         return true
       elsif content.include? "Comment"
@@ -34,8 +33,5 @@ class Webpage
     return false
   end
 
-  def get_content
-    Scraper.new.scrape_page(url)
-  end
 
 end
