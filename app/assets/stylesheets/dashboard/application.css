@@ -25,6 +25,7 @@
  * BEGIN PAGES ASSET PIPELINE OVERRIDE
  *= require ./pages-asset-pipeline
  * BEGIN SITE STYLES
+ *= require dashboard/keywords
  *
  * I prefer to list stylesheets in a specific order, so I comment out require_tree .
  **** require_tree .

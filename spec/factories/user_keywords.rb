@@ -9,6 +9,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  keyword_type :string
+#  archived     :boolean          default(FALSE)
 #
 
 FactoryGirl.define do

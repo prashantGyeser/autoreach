@@ -25,10 +25,7 @@
                 <td class="v-align-middle">
                   <a href="<%= search_result[:url] %>" class="bold"><%= search_result[:title] %></a>
                   <p style="margin-top: 5px;">
-                    <%# truncate(search_result[:content], :length => 255, :separator => ' ') %>
-                    <% doc = Nokogiri::HTML(search_result[:content]) %>
-                    <% doc.css('style,script').remove  %>
-                    <%= doc.xpath("//text()").text %>
+                    <%= truncate(search_result[:content], :length => 255, :separator => ' ') %>
                   </p>
                 </td>
                 <td class="v-align-middle">

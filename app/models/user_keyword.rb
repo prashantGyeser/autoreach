@@ -9,6 +9,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  keyword_type :string
+#  archived     :boolean          default(FALSE)
 #
 
 class UserKeyword < ActiveRecord::Base
@@ -19,6 +20,17 @@ class UserKeyword < ActiveRecord::Base
     tweets_text = combine_tweets(user_tweets(token_id))
     extracted_keywords = extract_keywords(tweets_text)
     store_keywords(extracted_keywords, token_id)
+  end
+
+  def self.archive_all(user)
+    UserKeyword.where(user_id: user.id).each do |keyword|
+      archive_single(keyword)
+    end
+  end
+
+  def self.archive_single(user_keyword)
+    user_keyword.archived = true
+    user_keyword.save
   end
 
   private

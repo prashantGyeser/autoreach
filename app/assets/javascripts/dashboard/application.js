@@ -25,6 +25,7 @@
 //= require pages-plugins/jquery-actual/jquery.actual.min
 //= require pages-plugins/jquery-scrollbar/jquery.scrollbar.min
 //= require pages-plugins/boostrap-form-wizard/js/jquery.bootstrap.wizard.min
+//= require intercooler/intercooler-0.4.10.min
 
 // BEGIN CORE TEMPLATE JS FOR PAGES
 //= require pages-core/js/pages

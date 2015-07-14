@@ -1,10 +1,17 @@
+<%= render partial: 'edit_keyword' %>
+
 <div class="container-fluid container-fixed-lg bg-white">
 
   <div class="panel panel-transparent">
     <div class="panel-heading">
       <div class="panel-title">
         Article List
+        <!-- Button trigger modal -->
       </div>
+      <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#editKeyword">
+        Change Keyword
+      </button>
+
       <div class="clearfix"></div>
     </div>
     <div class="panel-body">
