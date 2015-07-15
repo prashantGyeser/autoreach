@@ -6,6 +6,7 @@ class BingSearchJob < ActiveJob::Base
     parsed_results = parse(search_results[:results])
     parsed_results = remove_non_articles(parsed_results)
     store_articles(parsed_results, keyword)
+    set_keyword_search_details(keyword, parsed_results.count)
   end
 
   private
@@ -66,6 +67,12 @@ class BingSearchJob < ActiveJob::Base
     rescue => e
       Rails.logger.error { "Encountered an error when trying to get the facebook shares: #{article.url}, #{e.message} #{e.backtrace.join("\n")}" }
     end
-
   end
+
+  def set_keyword_search_details(keyword, result_count)
+    keyword.set_last_searched
+    keyword.set_search_result_count(result_count)
+  end
+
+
 end

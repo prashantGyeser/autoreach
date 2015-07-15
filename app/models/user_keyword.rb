@@ -2,14 +2,16 @@
 #
 # Table name: user_keywords
 #
-#  id           :integer          not null, primary key
-#  keyword      :string
-#  weight       :integer
-#  user_id      :integer
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#  keyword_type :string
-#  archived     :boolean          default(FALSE)
+#  id                        :integer          not null, primary key
+#  keyword                   :string
+#  weight                    :integer
+#  user_id                   :integer
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  keyword_type              :string
+#  archived                  :boolean          default(FALSE)
+#  last_searched             :datetime
+#  total_results_last_search :integer
 #
 
 class UserKeyword < ActiveRecord::Base
@@ -31,6 +33,16 @@ class UserKeyword < ActiveRecord::Base
   def self.archive_single(user_keyword)
     user_keyword.archived = true
     user_keyword.save
+  end
+
+  def self.set_last_searched
+    self.last_searched = DateTime.now.utc
+    self.save
+  end
+
+  def self.set_search_result_count(result_count)
+    self.total_results_last_search = result_count
+    self.save
   end
 
   private

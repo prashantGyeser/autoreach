@@ -6,6 +6,7 @@ class BingSearchWithUrlCheckJob < ActiveJob::Base
     parsed_results = parse(search_results[:results])
     parsed_results = remove_non_articles(parsed_results)
     store_articles(parsed_results, keyword, admin_search_id)
+
   end
 
   private
@@ -66,7 +67,7 @@ class BingSearchWithUrlCheckJob < ActiveJob::Base
     rescue => e
       Rails.logger.error { "Encountered an error when trying to get the facebook shares: #{admin_article.url}, #{e.message} #{e.backtrace.join("\n")}" }
     end
-
   end
+
 
 end
