@@ -26,5 +26,12 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should not allow duplicate urls for a user" do
+    url = "http://yahoo.com/"
+    Article.create(url: url, user_id: 1)
+    article = build(:article, url: url, user_id: 1)
+    expect(article.errors[:url].size).to eq(1)
+  end
+
 end
