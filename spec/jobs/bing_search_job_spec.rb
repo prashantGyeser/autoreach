@@ -2,9 +2,28 @@ require 'rails_helper'
 
 RSpec.describe BingSearchJob, :vcr, type: :job do
 
-  it "should search for a given keyword" do
-    bing_search_job = BingSearchJob.new
-    bing_search_job.send(:get_articles, {keyword: "growth hacking"})
+  before do
+    @bing_search_job = BingSearchJob.new
+    @keyword = {keyword: "growth hacking", user_id: 1, id: 1}
+    @search_results = @bing_search_job.send(:search, @keyword)
+  end
+
+  it "should search and return all the articles" do
+    parsed_results = @bing_search_job.send(:parse, @search_results[:results])
+    expect(parsed_results.count).to eq 50
+  end
+
+  it "should store the parsed articles" do
+    parsed_results = @bing_search_job.send(:parse, @search_results[:results])
+    non_articles_removed = @bing_search_job.send(:remove_non_articles, parsed_results)
+    expect(non_articles_removed.count).to eq 29
+  end
+
+  it "should store the facebook shares for the urls" do
+    parsed_results = @bing_search_job.send(:parse, @search_results[:results])
+    non_articles_removed = @bing_search_job.send(:remove_non_articles, parsed_results)
+    @bing_search_job.send(:store_articles, non_articles_removed,@keyword)
+    expect(Article.where.not(facebook_shares: nil).count).to eq 28
   end
 
 end

@@ -16,7 +16,7 @@ $(document).ready(function(){
           style: 'bar',
           message: "Successfully updated keyword!",
           position: 'top',
-          timeout: 0,
+          timeout: 3000,
           type: 'success'
         }).show();
         $('#editKeyword').modal('hide');

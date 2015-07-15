@@ -8,4 +8,5 @@
 
 Todo
 
-1. Add a search engine and show the ranking for the content
+1. Eliminate all the articles that fall into the bottom 20% threshold in terms of shares
+2. Search for share count again in case it is not got the first time
