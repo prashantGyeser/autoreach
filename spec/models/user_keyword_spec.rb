@@ -29,4 +29,10 @@ RSpec.describe UserKeyword, type: :model do
     #UserKeyword.all.inspect
   end
 
+  it "stores the last searched time" do
+    user_keyword = FactoryGirl.create(:user_keyword)
+    user_keyword.set_last_searched
+    expect(user_keyword[:last_searched]).not_to be nil
+  end
+
 end

@@ -18,6 +18,12 @@ class UserKeyword < ActiveRecord::Base
   belongs_to :user
   has_many :articles
 
+  after_create :search
+
+  def search
+    BingSearchJob.perform_later self
+  end
+
   def self.generate_keywords(token_id)
     tweets_text = combine_tweets(user_tweets(token_id))
     extracted_keywords = extract_keywords(tweets_text)
@@ -35,7 +41,7 @@ class UserKeyword < ActiveRecord::Base
     user_keyword.save
   end
 
-  def self.set_last_searched
+  def set_last_searched
     self.last_searched = DateTime.now.utc
     self.save
   end

@@ -26,4 +26,9 @@ RSpec.describe BingSearchJob, :vcr, type: :job do
     expect(Article.where.not(facebook_shares: nil).count).to eq 28
   end
 
+  it "should set the last searched time for the keyword" do
+    user_keyword = UserKeyword.create(keyword: "growth hacking", user_id: 1)
+    #user_keyword.set
+  end
+
 end
