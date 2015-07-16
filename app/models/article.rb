@@ -21,6 +21,7 @@
 #  google_plus_shares :integer
 #  linkedin_shares    :integer
 #  description        :text
+#  irrelevant         :boolean          default(FALSE)
 #
 
 class Article < ActiveRecord::Base
@@ -28,5 +29,10 @@ class Article < ActiveRecord::Base
   belongs_to :user_keywords
 
   validates :url, uniqueness: { scope: :user_id}
+
+  def mark_as_irrelevant
+    self.irrelevant = true
+    self.save
+  end
 end
 

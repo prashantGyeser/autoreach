@@ -21,6 +21,7 @@
 #  google_plus_shares :integer
 #  linkedin_shares    :integer
 #  description        :text
+#  irrelevant         :boolean          default(FALSE)
 #
 
 FactoryGirl.define do

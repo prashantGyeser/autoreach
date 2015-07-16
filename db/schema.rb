@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715120715) do
+ActiveRecord::Schema.define(version: 20150716134456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20150715120715) do
     t.float    "spam_score"
     t.text     "title"
     t.string   "main_image"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "user_id"
     t.integer  "quality_score"
     t.integer  "twitter_shares"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150715120715) do
     t.integer  "google_plus_shares"
     t.integer  "linkedin_shares"
     t.text     "description"
+    t.boolean  "irrelevant",         default: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|

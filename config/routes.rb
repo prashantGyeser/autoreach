@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'keywords/index'
   get 'home/index'
   post 'home/edit_keyword'
+  post 'home/delete_article'
   end
 
   root 'home#index'
