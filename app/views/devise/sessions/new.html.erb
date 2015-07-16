@@ -1,26 +1,73 @@
-<h2>Log in</h2>
+<div class="register-container full-height sm-p-t-30">
+  <div class="container-sm-height full-height">
+    <div class="row row-sm-height">
+      <div class="col-sm-12 col-sm-height col-middle">
+        <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+        <h3>Pages makes it easy to enjoy what matters the most in your life</h3>
+        <p>
+          <small>
+            Create a pages account. If you have a facebook account, log into it for this process. Sign in with <a href="#" class="text-info">Facebook</a> or <a href="#" class="text-info">Google</a>
+          </small>
+        </p>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group form-group-default">
+                  <%= f.label :email %>
+                  <%= f.email_field :email, class:"form-control", autofocus: true %>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group form-group-default">
+                  <%= f.label :password %>
+                  <%= f.password_field :password, class:"form-control", autocomplete: "off" %>
+                </div>
+              </div>
+            </div>
+
+
+            <% if devise_mapping.rememberable? -%>
+
+                <div class="row">
+                  <div class="col-md-6 no-padding">
+                    <div class="checkbox ">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me %>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-right">
+                  </div>
+                </div>
+
+
+                <div class="field">
+
+                </div>
+            <% end -%>
+
+            <div class="row">
+              <div class="col-md-6 no-padding">
+                <%= f.submit "Log in", class: 'btn btn-primary btn-cons m-t-10' %>
+              </div>
+              <div class="col-md-6 text-right">
+                <%= render "devise/shared/links" %>
+              </div>
+            </div>
+
+            <div class="actions">
+
+            </div>
+        <% end %>
+
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
