@@ -52,6 +52,11 @@ class UserKeyword < ActiveRecord::Base
     self.save
   end
 
+  def set_search_status
+    self.searched = true
+    self.save
+  end
+
   private
   def self.combine_tweets(tweets)
     tweets.pluck(:tweet).flatten.to_s
@@ -76,9 +81,5 @@ class UserKeyword < ActiveRecord::Base
     UserKeyword.create(keyword: keyword.text, weight: keyword.weight.to_i, token_id: token_id)
   end
 
-  def set_search_status
-    self.searched = true
-    self.save
-  end
 
 end
