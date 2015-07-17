@@ -47,7 +47,7 @@ class UserKeyword < ActiveRecord::Base
     self.save
   end
 
-  def self.set_search_result_count(result_count)
+  def set_search_result_count(result_count)
     self.total_results_last_search = result_count
     self.save
   end
