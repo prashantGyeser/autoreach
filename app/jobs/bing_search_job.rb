@@ -7,6 +7,7 @@ class BingSearchJob < ActiveJob::Base
     parsed_results = remove_non_articles(parsed_results)
     store_articles(parsed_results, keyword)
     set_keyword_search_details(keyword, parsed_results.count)
+    set_search_status(keyword)
   end
 
   private
@@ -86,8 +87,8 @@ class BingSearchJob < ActiveJob::Base
     return facebook_shares
   end
 
-  def get_lowest_shares(shares_array)
-
+  def set_search_status(keyword)
+    keyword.set_search_status
   end
 
 end

@@ -21,13 +21,14 @@ Rails.application.routes.draw do
   end
 
   namespace :dashboard do
-  get 'setup/keywords'
-  get 'setup/processing'
-  post 'setup/create_keywords'
-  get 'keywords/index'
-  get 'home/index'
-  post 'home/edit_keyword'
-  post 'home/delete_article'
+    root to: 'home#index'
+    get 'setup/keywords'
+    get 'setup/processing'
+    post 'setup/create_keywords'
+    get 'keywords/index'
+    get 'home/index'
+    post 'home/edit_keyword'
+    post 'home/delete_article'
   end
 
   root 'home#index'

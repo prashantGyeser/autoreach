@@ -12,6 +12,7 @@
 #  archived                  :boolean          default(FALSE)
 #  last_searched             :datetime
 #  total_results_last_search :integer
+#  searched                  :boolean          default(FALSE)
 #
 
 class UserKeyword < ActiveRecord::Base
@@ -73,6 +74,11 @@ class UserKeyword < ActiveRecord::Base
   # Todo: Fix this so that it no matter the extraction method this works
   def self.save_keyword(keyword, token_id)
     UserKeyword.create(keyword: keyword.text, weight: keyword.weight.to_i, token_id: token_id)
+  end
+
+  def set_search_status
+    self.searched = true
+    self.save
   end
 
 end

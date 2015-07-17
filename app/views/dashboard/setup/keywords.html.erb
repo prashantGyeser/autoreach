@@ -14,18 +14,8 @@
 
             <%= form_tag("/dashboard/setup/create_keywords", method: "post") do %>
                 <div class="form-group form-group-default required">
-                  <%= label_tag("keywords[]", "Keyword 1") %>
-                  <%= text_field_tag "keywords[]",nil, class: "form-control", required: true, autofocus: true %>
-                </div>
-
-                <div class="form-group form-group-default">
-                  <%= label_tag("keywords[]", "Keyword 2") %>
-                  <%= text_field_tag "keywords[]", nil, class: "form-control"%>
-                </div>
-
-                <div class="form-group form-group-default">
-                  <%= label_tag("keywords[]", "Keyword 3") %>
-                  <%= text_field_tag "keywords[]", nil, class: "form-control"%>
+                  <%= label_tag("keyword", "Keyword") %>
+                  <%= text_field_tag "keyword",nil, class: "form-control", required: true, autofocus: true %>
                 </div>
 
                 <%= submit_tag("Find Articles", class: "btn btn-primary") %>

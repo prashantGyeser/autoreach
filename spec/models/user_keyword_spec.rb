@@ -12,6 +12,7 @@
 #  archived                  :boolean          default(FALSE)
 #  last_searched             :datetime
 #  total_results_last_search :integer
+#  searched                  :boolean          default(FALSE)
 #
 
 require 'rails_helper'

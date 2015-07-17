@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716140616) do
+ActiveRecord::Schema.define(version: 20150717041839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20150716140616) do
     t.boolean  "archived",                  default: false
     t.datetime "last_searched"
     t.integer  "total_results_last_search"
+    t.boolean  "searched",                  default: false
   end
 
   create_table "user_tweets", force: :cascade do |t|
