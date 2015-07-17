@@ -21,6 +21,7 @@
           <thead>
           <tr>
             <th width="60%">Article Details</th>
+            <th style="padding: 8px 20px;">Keyword</th>
             <th style="padding: 8px 20px;">Status</th>
             <th style="padding: 8px 20px;">Actions</th>
           </tr>
@@ -34,6 +35,9 @@
                   <p style="margin-top: 5px;">
                     <%= truncate(article.content, :length => 255, :separator => ' ') %>
                   </p>
+                </td>
+                <td class="v-align-middle">
+                  <span class="label"><%= UserKeyword.find(article.keyword_id)[:keyword] %></span>
                 </td>
                 <td class="v-align-middle">
                   <span class="label label-warning">Not Posted</span>
