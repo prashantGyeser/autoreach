@@ -30,7 +30,7 @@
           <% @articles.each do |article| %>
               <tr>
                 <td class="v-align-middle">
-                  <a href="#" class="bold"><%= article.title %></a>
+                  <a href="<%= article.url %>" class="bold"><%= article.title %></a>
                   <p style="margin-top: 5px;">
                     <%= truncate(article.content, :length => 255, :separator => ' ') %>
                   </p>
