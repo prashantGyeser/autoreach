@@ -1,6 +1,6 @@
-<%= render partial: 'edit_keyword' %>
-
-<div class="container-fluid container-fixed-lg bg-white">
+<% if @has_articles %>
+  <%= render partial: 'edit_keyword' %>
+  <div class="container-fluid container-fixed-lg bg-white">
 
   <div class="panel panel-transparent">
     <div class="panel-heading">
@@ -19,15 +19,15 @@
 
         <table class="table table-striped">
           <thead>
-            <tr>
-              <th width="60%">Article Details</th>
-              <th style="padding: 8px 20px;">Status</th>
-              <th style="padding: 8px 20px;">Actions</th>
-            </tr>
+          <tr>
+            <th width="60%">Article Details</th>
+            <th style="padding: 8px 20px;">Status</th>
+            <th style="padding: 8px 20px;">Actions</th>
+          </tr>
           </thead>
           <tbody>
 
-            <% @articles.each do |article| %>
+          <% @articles.each do |article| %>
               <tr>
                 <td class="v-align-middle">
                   <a href="#" class="bold"><%= article.title %></a>
@@ -45,8 +45,8 @@
                   </div>
                 </td>
               </tr>
-            <% end %>
-          
+          <% end %>
+
           </tbody>
         </table>
       </div>
@@ -54,3 +54,37 @@
   </div>
 
 </div>
+<% elsif @processing  %>
+    <div class="panel panel-transparent">
+      <div class="panel-heading">
+        <div class="panel-title">
+
+        </div>
+
+      </div>
+      <div class="panel-body">
+        <div class="col-md-6  col-md-offset-3">
+          <div style="width:100%">
+            <div class="progress">
+              <div class="progress-bar-indeterminate progress-bar-primary"></div>
+            </div>
+          </div>
+
+          <div class="progress_explanation text-center">
+            <h2>Congratulations!</h2>
+            <p>
+              Your setup is complete. We are searching the web for articles. This can take a few minutes. You can close this page. We will send you an email as soon as your articles are ready!
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+<% else %>
+  <!-- Keyword not working -->
+<% end %>
+
+
+
+
