@@ -22,6 +22,7 @@
 #  linkedin_shares    :integer
 #  description        :text
 #  irrelevant         :boolean          default(FALSE)
+#  shares_low         :boolean          default(FALSE)
 #
 
 require 'rails_helper'

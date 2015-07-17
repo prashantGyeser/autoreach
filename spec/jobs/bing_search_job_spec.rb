@@ -31,4 +31,8 @@ RSpec.describe BingSearchJob, :vcr, type: :job do
     #user_keyword.set
   end
 
+  it "should mark the bottm 20% based on share count as shares low" do
+    @bing_search_job.send(:eliminate_low_share_count_articles, [{facebook_shares: 10},{facebook_shares: 20},{facebook_shares: 30},{facebook_shares: 40},{facebook_shares: 50}])
+  end
+
 end

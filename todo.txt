@@ -10,3 +10,9 @@ Todo
 
 1. Eliminate all the articles that fall into the bottom 20% threshold in terms of shares
 2. Search for share count again in case it is not got the first time
+
+
+Todo
+
+The elimination of the bottom 20% of the articles is disabled. Still need to figure out what to do in case there are more than 500 articles and if it should be put in the database before the calculations are done
+Figure out if the share count should be got seperately and not when the article is initially extracted.

@@ -74,5 +74,20 @@ class BingSearchJob < ActiveJob::Base
     keyword.set_search_result_count(result_count)
   end
 
+  def eliminate_low_share_count_articles(parsed_results)
+    get_lowest_shares(extract_shares(parsed_results))
+  end
+
+  def extract_shares(parsed_results)
+    facebook_shares = []
+    parsed_results.each do |result|
+      facebook_shares << result[:facebook_shares]
+    end
+    return facebook_shares
+  end
+
+  def get_lowest_shares(shares_array)
+
+  end
 
 end
