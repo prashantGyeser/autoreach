@@ -78,4 +78,9 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'autoreach.co', port: 80 }
+
+
+  config.assets.compile = true
+  config.assets.digest = true
+
 end
