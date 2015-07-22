@@ -1,9 +1,17 @@
 $(document).ready(function(){
 
+  $('#edit_keyword').click(function(e){
+    $(this).hide();
+    $(this).parent().append('<div class="progress-circle-indeterminate  progress-circle-primary pull-right" style="width: 30px; height: 30px;" data-thick="true"></div>')
+
+  });
+
   $('#edit_keyword_button').click(function(e){
 
     e.preventDefault();
 
+
+    /*
     $.ajax({
       url: '/dashboard/home/edit_keyword',
       dataType: 'text',
@@ -20,11 +28,14 @@ $(document).ready(function(){
           type: 'success'
         }).show();
         $('#editKeyword').modal('hide');
+
+        // Todo: Change the button and show a processing message till the new articles are available
       },
       error: function( jqXhr, textStatus, errorThrown ){
-        alert("Damn!");
+        alert("Oops! Something went wrong. We are looking into it.");
       }
     });
+    */
 
   });
 
@@ -52,7 +63,7 @@ $(document).ready(function(){
         }).show();
       },
       error: function( jqXhr, textStatus, errorThrown ){
-        alert("Damn!");
+        alert("Oops! Something went wrong. We are looking into it.");
       }
     });
 
