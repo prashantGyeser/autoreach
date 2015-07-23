@@ -994,7 +994,8 @@ body.dashboard .page-container {
 ------------------------------------
 */
 .icon-set {
-  background: url('../images/icons/top_tray.png') no-repeat;
+  /*background: url('../images/icons/top_tray.png') no-repeat;*/
+  background: image_tag('logo') no-repeat;
   position: relative;
   display: block;
 }
