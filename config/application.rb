@@ -38,10 +38,10 @@ module Autoreach
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
     config.assets.paths << File.join(Rails.root, "/vendor/pages")
+    config.assets.paths << File.join(Rails.root, "/vendor/pages/pages-core/img")
 
     config.active_job.queue_adapter = :delayed_job
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
   end
 end
