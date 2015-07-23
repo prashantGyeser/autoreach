@@ -42,7 +42,7 @@ module Autoreach
 
     config.active_job.queue_adapter = :delayed_job
 
-    config.assets.paths << Rails.root.join("vendor", "assets", "img")
+    config.sass.load_paths << File.expand_path('vendor/pages/*')
 
 
   end
