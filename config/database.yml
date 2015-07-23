@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: autoreach_production
-  username: autoreach
+  username: postgres
   password: <%= ENV['AUTOREACH_DATABASE_PASSWORD'] %>
