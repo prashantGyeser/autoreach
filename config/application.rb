@@ -38,7 +38,7 @@ module Autoreach
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
     config.assets.paths << File.join(Rails.root, "/vendor/pages")
-    config.assets.paths << File.join(Rails.root, "/vendor/pages/**/*")
+    config.assets.paths << File.join(Rails.root, "/vendor/pages/pages-core/**/*")
 
     config.active_job.queue_adapter = :delayed_job
 
