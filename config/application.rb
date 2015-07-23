@@ -38,11 +38,11 @@ module Autoreach
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
     config.assets.paths << File.join(Rails.root, "/vendor/pages")
-    config.assets.paths << File.join(Rails.root, "/vendor/pages/pages-core/**/*")
+
 
     config.active_job.queue_adapter = :delayed_job
 
-    config.sass.load_paths << File.expand_path('vendor/pages/*')
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
 
   end
