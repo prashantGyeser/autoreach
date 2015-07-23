@@ -41,5 +41,7 @@ module Autoreach
 
     config.active_job.queue_adapter = :delayed_job
 
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
   end
 end
