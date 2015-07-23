@@ -1,0 +1,5 @@
+Permormance on rails
+
+Write up on how the performance of a rails app on heroku can be improved: http://www.nateberkopec.com/2015/07/22/secrets-to-speedy-ruby-apps-on-heroku.html?utm_source=rubyweekly&utm_medium=email
+
+Benchmarks for the performance of the entire rails app. This also has benchmarks on how each gem is performing: https://github.com/schneems/derailed_benchmarks
