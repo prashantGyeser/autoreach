@@ -10,8 +10,6 @@ $(document).ready(function(){
 
     e.preventDefault();
 
-
-    /*
     $.ajax({
       url: '/dashboard/home/edit_keyword',
       dataType: 'text',
@@ -35,7 +33,7 @@ $(document).ready(function(){
         alert("Oops! Something went wrong. We are looking into it.");
       }
     });
-    */
+
 
   });
 
