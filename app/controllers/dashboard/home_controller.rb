@@ -34,4 +34,13 @@ class Dashboard::HomeController < Dashboard::ApplicationController
 
   end
 
+  def search_status
+    keyword = UserKeyword.find(params[:keyword_id])
+
+    respond_to do |format|
+      format.json { render json: {search_complete: keyword.searched} }
+    end
+
+  end
+
 end

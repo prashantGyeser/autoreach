@@ -31,6 +31,7 @@
 //= require pages-core/js/pages
 
 // BEGIN SITE SCRIPTS
+//= require dashboard/home
 
 //  I prefer to list scripts in a specific order, so I comment out require_tree .
 // require_tree .

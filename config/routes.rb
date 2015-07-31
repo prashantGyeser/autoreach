@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     get 'home/index'
     post 'home/edit_keyword'
     post 'home/delete_article'
+    post 'home/search_status'
   end
 
   root 'home#index'
