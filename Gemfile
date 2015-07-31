@@ -69,6 +69,8 @@ gem 'rails_12factor', group: :production
 
 gem "font-awesome-rails"
 
+gem 'kaminari'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
