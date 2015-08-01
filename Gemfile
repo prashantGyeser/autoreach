@@ -48,6 +48,7 @@ gem 'rake_text'
 gem 'devise'
 
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 gem "figaro"
 
@@ -64,8 +65,6 @@ gem 'searchbing'
 gem 'shared_count_api'
 
 gem 'mechanize'
-
-gem 'rails_12factor', group: :production
 
 gem "font-awesome-rails"
 

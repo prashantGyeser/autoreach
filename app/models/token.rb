@@ -20,7 +20,7 @@ class Token < ActiveRecord::Base
   has_many :user_tweets
   has_many :user_keywords
 
-  after_create :set_keywords
+  #after_create :set_keywords
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid, user_id: auth.user_id).first || create_from_omniauth(auth)
@@ -32,7 +32,7 @@ class Token < ActiveRecord::Base
       token.uid = auth['uid']
       token.oauth_token = auth['credentials']['token']
       token.oauth_secret = auth['credentials']['secret']
-      token.name = auth['info']['name']
+      token.name = auth['info']['name'] || nil
       token.username = auth['info']['nickname']
       token.profile_picture = auth['info']['image']
       token.user_id = auth['user_id']

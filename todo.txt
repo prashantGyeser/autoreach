@@ -20,4 +20,4 @@ Figure out if the share count should be got seperately and not when the article 
 
 Todo
 
-Show an indiacation when the new keyword is being processed when a user puts in an edited keyword
+Redirect the user back to the dashboard integration page once they finish integrating their account

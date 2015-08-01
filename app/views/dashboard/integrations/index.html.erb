@@ -1,0 +1,70 @@
+
+
+<div class="container-fluid container-fixed-lg bg-white">
+
+      <div class="panel panel-transparent">
+        <div class="panel-heading">
+          <div class="panel-title">
+            Integrations
+            <!-- Button trigger modal -->
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th width="60%">Provider Name</th>
+                <th style="padding: 8px 20px;">Status</th>
+                <th style="padding: 8px 20px;">Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr>
+                <td class="v-align-middle" style="vertical-align: middle">
+                  <strong>Facebook</strong>
+                </td>
+                <td class="v-align-middle" style="vertical-align: middle">
+                  <% if @facebook_connected %>
+                      <span class="label label-success">Connected</span>
+                  <% else %>
+                      <span class="label label-warning">Not Connected</span>
+                  <% end %>
+                </td>
+                <td class="v-align-middle">
+                  <%= link_to 'Connect','/auth/facebook',  class: 'btn btn-primary btn-cons' %>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="v-align-middle" style="vertical-align: middle">
+                  <strong>Twitter</strong>
+                </td>
+                <td class="v-align-middle" style="vertical-align: middle">
+                  <% if @twitter_connected %>
+                      <span class="label label-success">Connected</span>
+                  <% else %>
+                      <span class="label label-warning">Not Connected</span>
+                  <% end %>
+                </td>
+                <td class="v-align-middle">
+                  <%= link_to 'Connect','/auth/twitter',  class: 'btn btn-primary btn-cons' %>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+

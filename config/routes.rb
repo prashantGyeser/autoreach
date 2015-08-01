@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :dashboard do
+  get 'integrations' =>'integrations#index'
+  end
+
   namespace :admin do
   get 'bing_search/index'
   post 'bing_search/create'
