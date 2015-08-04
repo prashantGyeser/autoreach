@@ -8,6 +8,7 @@ class BingSearchJob < ActiveJob::Base
     store_articles(parsed_results, keyword)
     set_keyword_search_details(keyword, parsed_results.count)
     set_search_status(keyword)
+    ArticleQuality.new.eliminate_least_shared(keyword)
   end
 
   private

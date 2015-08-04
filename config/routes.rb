@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :dashboard do
+  get 'archive/index'
+  end
+
+  namespace :dashboard do
   get 'integrations' =>'integrations#index'
   end
 

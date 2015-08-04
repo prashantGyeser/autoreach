@@ -1,5 +1,9 @@
 class ArticleQuality
 
+  def eliminate_least_shared(keyword)
+    remove_non_performing_articles(order_by_shares(articles(keyword)))
+  end
+
   def score(args)
     get_score(args)
   end
@@ -40,6 +44,37 @@ class ArticleQuality
 
   def get_facebook_share_count(client)
     client.facebook_share_count
+  end
+
+  def articles(keyword)
+    # Todo: This will become slow once there are a few 1000 articles.
+    Article.where(keyword_id: keyword[:id])
+  end
+
+  # This will return an array of array with the first value in the array being the share count.
+  # The arrays being ordered by that count
+  def order_by_shares(articles)
+    articles.order("facebook_shares DESC")
+  end
+
+  def remove_non_performing_articles(articles)
+    remove_low_shared_articles(articles,number_of_articles_to_remove(articles))
+  end
+
+  def number_of_articles_to_remove(articles)
+    total_articles = articles.count
+    ((20*total_articles)/100).to_i
+  end
+
+  def remove_low_shared_articles(articles, number_of_articles_to_remove)
+    mark_as_low(articles.last(number_of_articles_to_remove))
+  end
+
+  def mark_as_low(low_share_articles)
+    low_share_articles.each do |article|
+      article.shares_low = true
+      article.save
+    end
   end
 
 end
