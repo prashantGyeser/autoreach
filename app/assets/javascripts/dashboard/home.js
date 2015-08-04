@@ -5,8 +5,6 @@ $(document).ready(function(){
 
     e.preventDefault();
 
-
-
     $.ajax({
       url: '/dashboard/home/edit_keyword',
       type: 'post',
@@ -14,21 +12,23 @@ $(document).ready(function(){
       data: $('#edit_keyword_form').serialize(),
       success: function( data, textStatus, jQxhr ){
         // Apply the plugin to the body
-        $('body').pgNotification({
-          style: 'bar',
-          message: "Successfully updated keyword!",
-          position: 'top',
-          timeout: 4000,
-          type: 'success'
-        }).show();
-        $('#editKeyword').modal('hide');
+        //$('body').pgNotification({
+        //  style: 'bar',
+        //  message: "Successfully updated keyword!",
+        //  position: 'top',
+        //  timeout: 4000,
+        //  type: 'success'
+        //}).show();
+        //$('#editKeyword').modal('hide');
+        //
+        //$('#edit_keyword').hide();
+        //$('#edit_keyword').parent().append('<div class="text-center pull-right" id="article_search_status"><div class="progress" style="margin-bottom: 10px;"><div class="progress-bar-indeterminate progress-bar-primary" ></div></div><p class="small hint-text">Getting Articles for new keyword</p></div>');
+        //
+        //$('#keyword_id').val(data["id"]);
+        //
+        //setTimeout(updateSearchStatus, 100000)
 
-        $('#edit_keyword').hide();
-        $('#edit_keyword').parent().append('<div class="text-center pull-right" id="article_search_status"><div class="progress" style="margin-bottom: 10px;"><div class="progress-bar-indeterminate progress-bar-primary" ></div></div><p class="small hint-text">Getting Articles for new keyword</p></div>');
-
-        $('#keyword_id').val(data["id"]);
-
-        setTimeout(updateSearchStatus, 100000)
+        location.reload();
 
       },
       error: function( jqXhr, textStatus, errorThrown ){
