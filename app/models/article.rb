@@ -27,7 +27,7 @@
 
 class Article < ActiveRecord::Base
   include Elasticsearch::Model
-  belongs_to :user_keywords
+  belongs_to :user_keyword
 
   validates :url, uniqueness: { scope: :user_id}
 
