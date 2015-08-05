@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :dashboard do
-  get 'archive/index'
+  get 'archive' => 'archive#index'
   end
 
   namespace :dashboard do

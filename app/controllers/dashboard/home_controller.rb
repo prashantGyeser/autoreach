@@ -1,7 +1,7 @@
 class Dashboard::HomeController < Dashboard::ApplicationController
   def index
     @user_keyword = UserKeyword.where(user_id: current_user.id).where(archived: false).last
-    @articles = Article.where(keyword_id: @user_keyword.id).where(irrelevant: false).where.not(facebook_shares: nil).where("facebook_shares > 0").order( 'facebook_shares DESC' ).page(params[:page])
+    @articles = Article.where(user_keyword_id: @user_keyword.id).where(irrelevant: false).where.not(facebook_shares: nil).where("facebook_shares > 0").order( 'facebook_shares DESC' ).page(params[:page])
 
     if @articles.count > 0
       @has_articles = true

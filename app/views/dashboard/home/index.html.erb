@@ -39,7 +39,7 @@
                   <a href="<%= article.url %>" class="bold"><%= article.title %></a>
                 </td>
                 <td class="v-align-middle">
-                  <span class="label"><%= UserKeyword.find(article.keyword_id)[:keyword] %></span>
+                  <span class="label"><%= UserKeyword.find(article.user_keyword_id)[:keyword] %></span>
                 </td>
                 <td class="v-align-middle">
                   <span class="label label-warning">Not Posted</span>

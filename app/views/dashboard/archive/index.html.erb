@@ -1,2 +1,67 @@
-<h1>Dashboard::Archive#index</h1>
-<p>Find me in app/views/dashboard/archive/index.html.erb</p>
+<div class="container-fluid container-fixed-lg bg-white">
+
+  <div class="panel panel-transparent">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Article List
+        <!-- Button trigger modal -->
+      </div>
+      <div class="panel-controls">
+        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#editKeyword" id="edit_keyword">
+          Change Keyword
+        </button>
+      </div>
+
+
+
+
+      <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th width="60%">Article Details</th>
+            <th style="padding: 8px 20px;">Keyword</th>
+            <th style="padding: 8px 20px;">Status</th>
+            <th style="padding: 8px 20px;">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% @user_keywords.each do |user_keyword| %>
+            <% user_keyword.articles.each do |article| %>
+                  <tr>
+                    <td class="v-align-middle">
+                      <a href="<%= article.url %>" class="bold"><%= article.title %></a>
+                    </td>
+                    <td class="v-align-middle">
+                      <span class="label"><%= UserKeyword.find(article.user_keyword_id)[:keyword] %></span>
+                    </td>
+                    <td class="v-align-middle">
+                      <span class="label label-warning">Not Posted</span>
+                    </td>
+                    <td class="v-align-middle">
+                      <div class="btn-group">
+                        <button class="btn btn-success" type="button"><i class="fa fa-pencil"></i></button>
+                        <button class="btn btn-danger delete_article" type="button" data-id="<%= article.id %>"><i class="fa fa-trash-o"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+            <% end %>
+
+          <% end %>
+
+          </tbody>
+        </table>
+      </div>
+
+      <%= paginate @user_keywords %>
+      <%= page_entries_info @user_keywords %>
+
+    </div>
+  </div>
+
+</div>

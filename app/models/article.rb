@@ -6,7 +6,7 @@
 #  url                :string
 #  content            :text
 #  crawled_on         :datetime
-#  keyword_id         :integer
+#  user_keyword_id    :integer
 #  site               :string
 #  performance_score  :integer
 #  spam_score         :float

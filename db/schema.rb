@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717041839) do
+ActiveRecord::Schema.define(version: 20150805103634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150717041839) do
     t.string   "url"
     t.text     "content"
     t.datetime "crawled_on"
-    t.integer  "keyword_id"
+    t.integer  "user_keyword_id"
     t.string   "site"
     t.integer  "performance_score"
     t.float    "spam_score"

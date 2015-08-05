@@ -46,7 +46,7 @@ class BingSearchJob < ActiveJob::Base
   end
 
   def store_article(result, keyword)
-    article = Article.new(url: result[:final_url], description: result[:description], title: result[:title], keyword_id: keyword[:id], user_id: keyword[:user_id])
+    article = Article.new(url: result[:final_url], description: result[:description], title: result[:title], user_keyword_id: keyword[:id], user_id: keyword[:user_id])
 
     if result[:content]
       article[:content] = result[:content]

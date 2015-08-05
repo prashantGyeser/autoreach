@@ -48,7 +48,7 @@ class ArticleQuality
 
   def articles(keyword)
     # Todo: This will become slow once there are a few 1000 articles.
-    Article.where(keyword_id: keyword[:id])
+    Article.where(user_keyword_id: keyword[:id])
   end
 
   # This will return an array of array with the first value in the array being the share count.
