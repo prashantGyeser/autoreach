@@ -39,6 +39,8 @@ gem 'httparty'
 
 gem 'metainspector'
 
+gem 'unirest'
+
 # Keyword extractor
 gem 'highscore'
 gem 'stemmer'

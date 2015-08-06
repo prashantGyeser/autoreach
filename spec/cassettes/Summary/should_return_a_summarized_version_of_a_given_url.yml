@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://textanalysis-text-summarization.p.mashape.com/text-summarizer
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://en.wikipedia.org/wiki/Automatic_summarization","text":"","sentnum":8}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      X-Mashape-Authorization:
+      - 3XpikZC7NnmshGVWiXre5HgYu5JHp1dNhkbjsnjxXHV86cgiCb
+      Content-Type:
+      - application/json
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '85'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 06 Aug 2015 12:13:50 GMT
+      Server:
+      - Mashape/5.0.6
+      X-Ratelimit-Requests-Limit:
+      - '100'
+      X-Ratelimit-Requests-Remaining:
+      - '92'
+      Content-Length:
+      - '944'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "sentences": [
+            "Document summarization is another.",
+            "Generally, there are two approaches to automatic summarization: extraction and abstraction.",
+            "Furthermore, evaluation of extracted summaries can be automated, since it is essentially a classification task.",
+            "Even though automating abstractive summarization is the goal of summarization research, most practical systems are based on some form of extractive summarization.",
+            "Extractive methods work by selecting a subset of existing words, phrases, or sentences in the original text to form the summary.",
+            "Research into abstractive methods is an increasingly important and active research area, however due to complexity constraints, research to date has focused primarily on extractive methods.",
+            "These systems are known as multi-document summarization systems.",
+            "People are subjective, and different authors would choose different sentences."
+          ]
+        }
+    http_version: 
+  recorded_at: Thu, 06 Aug 2015 12:13:50 GMT
+recorded_with: VCR 2.9.3
