@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150805103634) do
+ActiveRecord::Schema.define(version: 20150809025939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150805103634) do
     t.text     "description"
     t.boolean  "irrelevant",         default: false
     t.boolean  "shares_low",         default: false
+    t.boolean  "posted",             default: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -124,6 +125,7 @@ ActiveRecord::Schema.define(version: 20150805103634) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.datetime "last_posted"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

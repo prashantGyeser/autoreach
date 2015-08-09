@@ -72,6 +72,8 @@ gem "font-awesome-rails"
 
 gem 'kaminari'
 
+gem 'time_difference'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'

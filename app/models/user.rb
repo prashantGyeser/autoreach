@@ -15,6 +15,7 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  last_posted            :datetime
 #
 
 class User < ActiveRecord::Base
@@ -25,5 +26,10 @@ class User < ActiveRecord::Base
 
   has_many :tokens
   has_many :user_keywords
+
+  def set_last_posted
+    self.last_posted = DateTime.now.utc
+    self.save
+  end
 
 end

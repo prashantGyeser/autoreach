@@ -23,6 +23,7 @@
 #  description        :text
 #  irrelevant         :boolean          default(FALSE)
 #  shares_low         :boolean          default(FALSE)
+#  posted             :boolean          default(FALSE)
 #
 
 class Article < ActiveRecord::Base
