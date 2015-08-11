@@ -5,7 +5,7 @@ http_interactions:
     uri: https://textanalysis-text-summarization.p.mashape.com/text-summarizer
     body:
       encoding: UTF-8
-      string: '{"url":"http://autoreach.herokuapp.com/","text":"","sentnum":8}'
+      string: '{"url":"https://blog.kissmetrics.com/use-kissmetrics-discover-freemium-value/","text":"","sentnum":8}'
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -18,7 +18,7 @@ http_interactions:
       User-Agent:
       - unirest-ruby/1.1
       Content-Length:
-      - '63'
+      - '101'
   response:
     status:
       code: 200
@@ -27,15 +27,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 06 Aug 2015 15:17:37 GMT
+      - Mon, 10 Aug 2015 15:13:05 GMT
       Server:
       - Mashape/5.0.6
       X-Ratelimit-Requests-Limit:
       - '100'
       X-Ratelimit-Requests-Remaining:
-      - '90'
+      - '98'
       Content-Length:
-      - '79'
+      - '959'
       Connection:
       - keep-alive
     body:
@@ -43,26 +43,33 @@ http_interactions:
       string: |-
         {
           "sentences": [
-            "Be first to find out when we Launch our product."
+            "There are a few ways to determine the effectiveness of your freemium plan.",
+            "For instance, you can track all your freemium customers in a spreadsheet to see which ones convert to paying customers.",
+            "Unfortunately, plenty of failed companies used the freemium model, too.",
+            "Analytics tools like Kissmetrics (with its Cohort Report, Funnel Report, and People Search) can help you discover if freemium is working for your business.",
+            "But if none of the freemium users upgrade to a paying plan or refer others, your freemium plan may just be a burden on your business.",
+            "Using the Kissmetrics Cohort Report, you can see if and when your freemium customers move up and start paying you.",
+            "If you\u2019re using freemium on your product, you may want to sign up for Kissmetrics to see if it\u2019s working for you.",
+            "Then, ideally, the freemium users upgrade to a paying plan or refer others who pay."
           ]
         }
     http_version: 
-  recorded_at: Thu, 06 Aug 2015 15:17:37 GMT
+  recorded_at: Mon, 10 Aug 2015 15:13:04 GMT
 - request:
     method: post
     uri: https://api.twitter.com/1.1/statuses/update.json
     body:
       encoding: UTF-8
-      string: status=Be+first+to+find+out+when+we+Launch+our+product.+http%3A%2F%2Fautoreach.herokuapp.com%2F
+      string: status=There+are+a+few+ways+to+determine+the+effectiveness+o...+https%3A%2F%2Fblog.kissmetrics.com%2Fuse-kissmetrics-discover-freemium-value%2F
     headers:
       Accept:
       - application/json
       User-Agent:
       - TwitterRubyGem/5.14.0
       Authorization:
-      - OAuth oauth_consumer_key="XXbzfGZ5g8zcgzVJhc9iuUwh5", oauth_nonce="31f57916fc3a2abe97a6e846ab3b9b73",
-        oauth_signature="6LAqZQ8cuxxjpmIvwNwWUn8L%2BBI%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1438874257", oauth_token="2431831016-ksK2t1ztrxvN9nR3gzfQfqLzFeU9oX1BKripKBL",
+      - OAuth oauth_consumer_key="XXbzfGZ5g8zcgzVJhc9iuUwh5", oauth_nonce="da2ea3641e6634890cf268a45d0dd065",
+        oauth_signature="LRPLvTDoiCNNhX9ziWyLNDFf1WY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1439219584", oauth_token="2431831016-ksK2t1ztrxvN9nR3gzfQfqLzFeU9oX1BKripKBL",
         oauth_version="1.0"
       Content-Type:
       - application/x-www-form-urlencoded
@@ -78,22 +85,22 @@ http_interactions:
       Content-Disposition:
       - attachment; filename=json.json
       Content-Length:
-      - '868'
+      - '904'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 06 Aug 2015 15:17:38 GMT
+      - Mon, 10 Aug 2015 15:13:06 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Thu, 06 Aug 2015 15:17:38 GMT
+      - Mon, 10 Aug 2015 15:13:06 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_k
       Set-Cookie:
-      - guest_id=v1%3A143887425857791734; Domain=.twitter.com; Path=/; Expires=Sat,
-        05-Aug-2017 15:17:38 UTC
+      - guest_id=v1%3A143921958654825022; Domain=.twitter.com; Path=/; Expires=Wed,
+        09-Aug-2017 15:13:06 UTC
       - lang=en; Path=/
       Status:
       - 200 OK
@@ -102,27 +109,27 @@ http_interactions:
       X-Access-Level:
       - read-write
       X-Connection-Hash:
-      - 050f0c89abe5b746c6fdc4f11337333d
+      - cf0ecb7fbd77ec694f123ff62bcbf1e6
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Response-Time:
-      - '315'
+      - '353'
       X-Transaction:
-      - 197a772fce7ba4d1
+      - eaaca8011cf69209
       X-Tsa-Request-Body-Time:
-      - '96'
+      - '95'
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Xss-Protection:
       - 1; mode=block
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":"Thu Aug 06 15:17:38 +0000 2015","id":629310368741888000,"id_str":"629310368741888000","text":"Be
-        first to find out when we Launch our product. http:\/\/t.co\/jbbDGRfMTa","source":"\u003ca
+      string: '{"created_at":"Mon Aug 10 15:13:06 +0000 2015","id":630758779231993856,"id_str":"630758779231993856","text":"There
+        are a few ways to determine the effectiveness o... https:\/\/t.co\/J4Q7uo8bhX","source":"\u003ca
         href=\"http:\/\/www.autopath.co\" rel=\"nofollow\"\u003eautoreach\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":2431831016,"id_str":"2431831016","name":"Prashant","screen_name":"prasGyeser","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":8,"friends_count":4,"listed_count":0,"created_at":"Mon
-        Apr 07 10:22:34 +0000 2014","favourites_count":0,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":0,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_6_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_6_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/jbbDGRfMTa","expanded_url":"http:\/\/autoreach.herokuapp.com\/","display_url":"autoreach.herokuapp.com","indices":[49,71]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}'
+        Apr 07 10:22:34 +0000 2014","favourites_count":0,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":1,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_6_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_6_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/J4Q7uo8bhX","expanded_url":"https:\/\/blog.kissmetrics.com\/use-kissmetrics-discover-freemium-value\/","display_url":"blog.kissmetrics.com\/use-kissmetric\u2026","indices":[57,80]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}'
     http_version: 
-  recorded_at: Thu, 06 Aug 2015 15:17:38 GMT
+  recorded_at: Mon, 10 Aug 2015 15:13:05 GMT
 recorded_with: VCR 2.9.3

@@ -7,7 +7,7 @@ describe Post, :vcr do
   end
 
   it "should post a message to Twitter" do
-    Post.new.twitter(@twitter_credentials, "http://autoreach.herokuapp.com/")
+    Post.new.twitter(@twitter_credentials, "https://blog.kissmetrics.com/use-kissmetrics-discover-freemium-value/")
   end
 
 
