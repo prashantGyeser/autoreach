@@ -21,3 +21,9 @@ Figure out if the share count should be got seperately and not when the article 
 Todo
 
 Redirect the user back to the dashboard integration page once they finish integrating their account
+
+
+TODO
+
+Setup the logo for the mailers
+
