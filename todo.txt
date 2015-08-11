@@ -26,4 +26,4 @@ Redirect the user back to the dashboard integration page once they finish integr
 TODO
 
 Setup the logo for the mailers
-
+Test the bing search job. Added a email notification that has to be sent out once the search is complete
