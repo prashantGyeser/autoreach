@@ -27,9 +27,16 @@ class User < ActiveRecord::Base
   has_many :tokens
   has_many :user_keywords
 
+  after_create :send_welcome_email
+
   def set_last_posted
     self.last_posted = DateTime.now.utc
     self.save
+  end
+
+  private
+  def send_welcome_email
+    OnboardingMailer.welcome(self).deliver_now
   end
 
 end
