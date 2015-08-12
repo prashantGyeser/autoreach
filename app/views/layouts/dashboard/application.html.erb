@@ -1,7 +1,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta charset="utf-8" />
-  <title>Rails Boiler Plate</title>
+  <title>Autoreach | Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="apple-touch-icon" href="<%= image_path('ico/60.png') %>">
   <link rel="apple-touch-icon" sizes="76x76" href="<%= image_path('ico/76.png') %>">
@@ -51,41 +51,25 @@
   <div class="sidebar-menu">
     <ul class="menu-items">
       <li class="m-t-30">
-        <a href="#" class="detailed">
-          <span class="title">Page 1</span>
-          <span class="details">234 notifications</span>
+        <a href="<%= dashboard_root_url %>" class="detailed">
+          <span class="title">Article List</span>
         </a>
-            <span class="icon-thumbnail "><i class="pg-mail"></i>
+            <span class="icon-thumbnail "><i class="pg-home"></i>
                     </span>
       </li>
       <li class="">
-        <a href="#">
-          <span class="title">Page 2</span>
+        <a href="<%= dashboard_archive_path %>">
+          <span class="title">Article Archive</span>
         </a>
-            <span class="icon-thumbnail "><i class="pg-social"></i>
+            <span class="icon-thumbnail "><i class="fa fa-archive"></i>
                     </span>
       </li>
       <li class="">
-        <a href="javascript:;">
-          <span class="title">Page 3</span>
-          <span class=" arrow"></span>
+        <a href="<%= dashboard_integrations_path %>">
+          <span class="title">Integrations</span>
         </a>
-            <span class="icon-thumbnail"><i class="pg-grid"></i>
+            <span class="icon-thumbnail"><i class="fa fa-gears"></i>
                     </span>
-        <ul class="sub-menu">
-          <li class="">
-            <a href="#">Sub Page 1</a>
-            <span class="icon-thumbnail">sp</span>
-          </li>
-          <li class="">
-            <a href="#">Sub Page 2</a>
-            <span class="icon-thumbnail">sp</span>
-          </li>
-          <li class="">
-            <a href="#">Sub Page 3</a>
-            <span class="icon-thumbnail">sp</span>
-          </li>
-        </ul>
       </li>
     </ul>
     <div class="clearfix"></div>
