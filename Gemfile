@@ -74,6 +74,8 @@ gem 'kaminari'
 
 gem 'time_difference'
 
+gem 'rollbar', '~> 1.2.7'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
