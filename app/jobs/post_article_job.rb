@@ -28,7 +28,7 @@ class PostArticleJob < ActiveJob::Base
   end
 
   def hashtag(keyword)
-    '#' + keyword
+    '#' + keyword.split.map(&:capitalize).join('')
   end
 
 end
