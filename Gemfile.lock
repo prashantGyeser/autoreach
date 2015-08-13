@@ -177,6 +177,10 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    koala (2.2.0)
+      addressable
+      faraday
+      multi_json
     launchy (2.4.3)
       addressable (~> 2.3)
     libnotify (0.9.1)
@@ -447,6 +451,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  koala (~> 2.2)
   launchy
   libnotify
   mechanize

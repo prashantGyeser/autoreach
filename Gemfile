@@ -42,9 +42,9 @@ gem 'metainspector'
 gem 'unirest'
 
 # Keyword extractor
-gem 'highscore'
-gem 'stemmer'
-gem 'rake_text'
+gem 'highscore' # Todo: Remove
+gem 'stemmer' # Todo: Remove
+gem 'rake_text' # Todo: Remove
 
 # Authentication
 gem 'devise'
@@ -59,8 +59,8 @@ gem 'twitter'
 gem 'delayed_job_active_record'
 gem "delayed_job_web"
 
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
+gem 'elasticsearch-model' # Todo: Remove
+gem 'elasticsearch-rails' # Todo: Remove
 
 gem 'searchbing'
 
@@ -70,9 +70,11 @@ gem 'mechanize'
 
 gem "font-awesome-rails"
 
-gem 'kaminari'
+gem 'kaminari' # Pagination
 
 gem 'time_difference'
+
+gem "koala", "~> 2.2"
 
 group :development do
   gem 'guard-rspec'
