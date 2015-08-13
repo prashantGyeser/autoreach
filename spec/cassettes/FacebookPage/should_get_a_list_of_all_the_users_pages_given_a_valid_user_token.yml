@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=CAANMmLhHHKYBAJZCvIYhYh5LpBRGm2XlmhbNLLvmjXAEhT8l0K4HlzZCiFCCymM8qPZA9z5K0kmIz7mnbsp45pxfe79suyWj8jG88B113z1l5HDzaDxd7o1bdHsl3vMCa283D69LFSstcLTiaoIE4AFB1EIu8pALULvwP6H1eUNfOHJP7sd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - CKJkX1Tcx41
+      X-Fb-Rev:
+      - '1879196'
+      Etag:
+      - '"1050253aec7b29caff644806927dabfa81406eee"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.4
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 3lI0MOOAYEGflPtYhBxtV8lBbJqD8j4ZIhLEyPakXoya/SN4HiLAgvGEWgBBJ5vBtm378LuWeztKvx4SwEPw6w==
+      Date:
+      - Wed, 12 Aug 2015 10:45:20 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '11'
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+    http_version: 
+  recorded_at: Wed, 12 Aug 2015 10:45:20 GMT
+recorded_with: VCR 2.9.3
