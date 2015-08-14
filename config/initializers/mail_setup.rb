@@ -4,6 +4,5 @@ ActionMailer::Base.smtp_settings = {
     :user_name =>      ENV['STANDALONE_MANDRILL_USERNAME'],
     :password =>       ENV['STANDALONE_MANDRILL_APIKEY'],
     :domain =>         'heroku.com',
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    :authentication => :plain
 }
