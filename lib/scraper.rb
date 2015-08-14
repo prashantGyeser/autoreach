@@ -36,11 +36,14 @@ class Scraper
   def embedly_extractor(url)
     embedly_api = Embedly::API.new :key => ENV['EMBEDLY_KEY'],
                                    :user_agent => 'Mozilla/5.0 (compatible; mytestapp/1.0; prashant@urbanzeak.com)'
-    obj = embedly_api.extract :url => url
+    begin
+      obj = embedly_api.extract :url => url
+      results = obj[0].marshal_dump
+      return results[:content]
+    rescue => e
+      Rollbar.error(e, :url => url, :description => "Error in scrapping a site")
+    end
 
-    results = obj[0].marshal_dump
-
-    return results[:content]
 
     #json_obj = JSON.pretty_generate(obj[0].marshal_dump)
 
