@@ -74,7 +74,7 @@ gem 'kaminari' # Pagination
 
 gem 'time_difference'
 
-gem 'rollbar', '~> 1.2.7'
+gem 'rollbar', '~> 2.1.1'
 
 gem "koala", "~> 2.2"
 
