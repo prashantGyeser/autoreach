@@ -9,7 +9,7 @@ class BingSearchJob < ActiveJob::Base
     set_keyword_search_details(keyword, parsed_results.count)
     set_search_status(keyword)
     ArticleQuality.new.eliminate_least_shared(keyword)
-    NotificationMailer.search_complete(User.find(keyword[:user_id], keyword))
+    #NotificationMailer.search_complete(User.find(keyword[:user_id], keyword))
   end
 
   private
