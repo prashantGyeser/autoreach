@@ -1,5 +1,5 @@
 ActionMailer::Base.smtp_settings = {
-    :port =>           '587',
+    :port =>           '25',
     :address =>        'smtp.mandrillapp.com',
     :user_name =>      ENV['STANDALONE_MANDRILL_USERNAME'],
     :password =>       ENV['STANDALONE_MANDRILL_APIKEY'],
