@@ -7,9 +7,13 @@ class Dashboard::HomeController < Dashboard::ApplicationController
       @has_articles = true
     elsif UserKeyword.where(user_id: current_user.id).first[:searched] == false
       @processing = true
+    elsif UserKeyword.where(user_id: current_user.id).last[:searched] == true
+      @no_results = true
     else
       @changing_keyword = true
     end
+
+
 
 
     if Token.where(user_id: current_user.id).count <= 0
