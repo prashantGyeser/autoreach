@@ -9,7 +9,7 @@ class Webpage
   def contains_article?
     if term_in_url?
       return true
-    elsif term_in_content?
+    elsif !@content.nil? #term_in_content?
       return true
     end
     return false
