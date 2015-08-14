@@ -3994,31 +3994,31 @@ body > .pgn-wrapper {
   background-size: cover;
 }
 .progress-bar-indeterminate.progress-bar-primary {
-  background-image: url('../img/progress/progress-bar-primary.svg');
+  background-image: image-url('progress/progress-bar-primary.svg');  //url('../img/progress/progress-bar-primary.svg');
   background-color: transparent;
 }
 .progress-bar-indeterminate.progress-bar-complete {
-  background-image: url('../img/progress/progress-bar-complete.svg');
+  background-image: image-url('progress/progress-bar-complete.svg');
   background-color: transparent;
 }
 .progress-bar-indeterminate.progress-bar-success {
-  background-image: url('../img/progress/progress-bar-success.svg');
+  background-image: image-url('progress/progress-bar-success.svg');
   background-color: transparent;
 }
 .progress-bar-indeterminate.progress-bar-info {
-  background-image: url('../img/progress/progress-bar-info.svg');
+  background-image: image-url('progress/progress-bar-info.svg');
   background-color: transparent;
 }
 .progress-bar-indeterminate.progress-bar-warning {
-  background-image: url('../img/progress/progress-bar-warning.svg');
+  background-image: image-url('progress/progress-bar-warning.svg');
   background-color: transparent;
 }
 .progress-bar-indeterminate.progress-bar-danger {
-  background-image: url('../img/progress/progress-bar-danger.svg');
+  background-image: image-url('progress/progress-bar-danger.svg');
   background-color: transparent;
 }
 .progress-bar-indeterminate.progress-bar-master {
-  background-image: url('../img/progress/progress-bar-master.svg');
+  background-image: image-url('progress/progress-bar-master.svg');
   background-color: transparent;
 }
 /* Progress Bar
