@@ -666,8 +666,21 @@
 </div>
 <!-- END OVERLAY -->
 
+
 <!-- JS at bottom of page to improve load time, and only loaded once with 'data-turbolinks-eval' == false  -->
 <%= javascript_include_tag 'dashboard/application', 'data-turbolinks-track' => true, 'data-turbolinks-eval' => false %>
+
+<% if @integration_incomplete %>
+    <script>
+        $(document).ready(function() {
+            var options = {message: '<span class="bold">Your articles will not be automatically posted till you integrate with atleast one social media network. Start posting now!</span> <a href="#" class="btn btn-default btn-sm m-l-10"">Integrate now</a>', position: "bottom", style: "bar", timeout: 40000000000, type: "danger"};
+            $('body').pgNotification(options).show();
+        });
+    </script>
+<% end %>
+
+
+
 
 </body>
 </html>

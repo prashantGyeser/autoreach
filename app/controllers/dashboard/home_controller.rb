@@ -12,6 +12,10 @@ class Dashboard::HomeController < Dashboard::ApplicationController
     end
 
 
+    if Token.where(user_id: current_user.id).count <= 0
+      @integration_incomplete = true
+    end
+
   end
 
   def edit_keyword

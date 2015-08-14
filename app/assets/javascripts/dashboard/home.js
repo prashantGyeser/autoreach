@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
   $('#edit_keyword_button').click(function(e){
 
     e.preventDefault();
