@@ -3,11 +3,10 @@ class BingSearchJob < ActiveJob::Base
 
   def perform(keyword)
     search_results = search(keyword)
-    keyword.total_search_results(search_results[:total_search_results])
     parsed_results = parse(search_results[:results])
     parsed_results = remove_non_articles(parsed_results)
     store_articles(parsed_results, keyword)
-    set_keyword_search_details(keyword, parsed_results.count)
+    set_keyword_search_details(keyword, search_results[:total_search_results])
     set_search_status(keyword)
     ArticleQuality.new.eliminate_least_shared(keyword)
     #NotificationMailer.search_complete(User.find(keyword[:user_id], keyword))
