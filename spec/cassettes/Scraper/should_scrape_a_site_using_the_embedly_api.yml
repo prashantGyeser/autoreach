@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.embed.ly/1/extract?key=a09deb46653a4d769df3734d11491c44&urls=autoreach.co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; mytestapp/1.0; prashant@urbanzeak.com)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 14 Aug 2015 17:20:50 GMT
+      Etag:
+      - '"9bed86ba45a0db35bff84a3aafaf1277171167b0"'
+      Server:
+      - TornadoServer/2.4.1
+      X-Embedly-From-Cache:
+      - '0'
+      X-Embedly-Host:
+      - unearth10
+      X-Embedly-Process-Time:
+      - '37'
+      Content-Length:
+      - '533'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"provider_url": "http://www.autoreach.co", "description": null, "embeds":
+        [], "safe": true, "provider_display": "www.autoreach.co", "related": [], "favicon_url":
+        null, "authors": [], "images": [], "cache_age": 86017, "language": null, "app_links":
+        [], "original_url": "autoreach.co", "url": "http://www.autoreach.co/", "media":
+        {}, "title": "Rails Boiler Plate", "offset": null, "lead": null, "content":
+        null, "entities": [], "favicon_colors": null, "keywords": [], "published":
+        null, "provider_name": "Autoreach", "type": "html"}]'
+    http_version: 
+  recorded_at: Fri, 14 Aug 2015 17:20:50 GMT
+recorded_with: VCR 2.9.3

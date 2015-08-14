@@ -1,7 +1,18 @@
 class Scraper
 
   def scrape_page(url)
-    get_page_content(url)
+    content = get_page_content(url)
+
+    if content.nil?
+      embedly_extractor(url)
+    else
+      return content
+    end
+
+  end
+
+  def embedly_scrapper(url)
+    embedly_extractor(url)
   end
 
   private
@@ -19,5 +30,19 @@ class Scraper
     document_text = nokogiri_doc.xpath("//text()").text
     document_text.squish
   end
+
+  def embedly_extractor(url)
+    embedly_api = Embedly::API.new :key => ENV['EMBEDLY_KEY'],
+                                   :user_agent => 'Mozilla/5.0 (compatible; mytestapp/1.0; prashant@urbanzeak.com)'
+    obj = embedly_api.extract :url => url
+
+    results = obj[0].marshal_dump
+
+    return results[:content]
+
+    #json_obj = JSON.pretty_generate(obj[0].marshal_dump)
+
+  end
+
 
 end

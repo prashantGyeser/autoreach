@@ -1,0 +1,42 @@
+{
+  "provider_url": "http://www.autoreach.co",
+  "description": null,
+  "embeds": [
+
+  ],
+  "safe": true,
+  "provider_display": "www.autoreach.co",
+  "related": [
+
+  ],
+  "favicon_url": null,
+  "authors": [
+
+  ],
+  "images": [
+
+  ],
+  "cache_age": 86400,
+  "language": null,
+  "app_links": [
+
+  ],
+  "original_url": "autoreach.co",
+  "url": "http://www.autoreach.co/",
+  "media": {
+  },
+  "title": "Rails Boiler Plate",
+  "offset": null,
+  "lead": null,
+  "content": null,
+  "entities": [
+
+  ],
+  "favicon_colors": null,
+  "keywords": [
+
+  ],
+  "published": null,
+  "provider_name": "Autoreach",
+  "type": "html"
+}

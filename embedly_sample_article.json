@@ -1,0 +1,287 @@
+{
+  "provider_url": "https://blog.kissmetrics.com",
+  "description": "At many technology companies, traditional marketing roles are transforming into growth hacking roles. In fact, the work has become so popular now that some companies are hiring \"growth hackers.\" They are keeping their marketing departments and hiring growth hackers to work separately from marketing. So what is the role of a growth hacker?",
+  "embeds": [
+
+  ],
+  "safe": true,
+  "provider_display": "blog.kissmetrics.com",
+  "related": [
+
+  ],
+  "favicon_url": "https://blog.kissmetrics.com/wp-content/themes/kissblog/images/favicon.ico",
+  "authors": [
+
+  ],
+  "images": [
+    {
+      "caption": null,
+      "url": "https://blog.kissmetrics.com/wp-content/uploads/2015/06/default-facebook-thumbnail.png",
+      "height": 400,
+      "width": 400,
+      "colors": [
+        {
+          "color": [
+            250,
+            250,
+            250
+          ],
+          "weight": 0.7021484375
+        },
+        {
+          "color": [
+            39,
+            39,
+            39
+          ],
+          "weight": 0.2978515625
+        }
+      ],
+      "entropy": 0.862625631781,
+      "size": 7069
+    },
+    {
+      "caption": null,
+      "url": "https://blog.kissmetrics.com/wp-content/uploads/2015/06/Screen_Shot_2015-06-23_at_12.08.13_PM_copy.png",
+      "height": 794,
+      "width": 681,
+      "colors": [
+        {
+          "color": [
+            0,
+            194,
+            234
+          ],
+          "weight": 0.00024414060000000002
+        },
+        {
+          "color": [
+            252,
+            252,
+            252
+          ],
+          "weight": 0.00024414060000000002
+        }
+      ],
+      "entropy": 0.0626727007,
+      "size": 27993
+    },
+    {
+      "caption": null,
+      "url": "https://blog.kissmetrics.com/wp-content/uploads/2015/08/Webinar-Ad-Blog-8.13.jpg",
+      "height": 598,
+      "width": 404,
+      "colors": [
+        {
+          "color": [
+            42,
+            42,
+            40
+          ],
+          "weight": 0.4897460938
+        },
+        {
+          "color": [
+            245,
+            249,
+            250
+          ],
+          "weight": 0.33203125
+        },
+        {
+          "color": [
+            85,
+            188,
+            218
+          ],
+          "weight": 0.1782226562
+        }
+      ],
+      "entropy": 1.9914182966,
+      "size": 110437
+    },
+    {
+      "caption": null,
+      "url": "https://blog.kissmetrics.com/wp-content/uploads/2015/06/sidebar-ad-google-auth-new.png",
+      "height": 610,
+      "width": 520,
+      "colors": [
+        {
+          "color": [
+            237,
+            244,
+            244
+          ],
+          "weight": 0.8374023438
+        },
+        {
+          "color": [
+            0,
+            140,
+            194
+          ],
+          "weight": 0.1625976562
+        }
+      ],
+      "entropy": 1.4767554282,
+      "size": 10558
+    }
+  ],
+  "cache_age": 16330,
+  "language": "English",
+  "app_links": [
+
+  ],
+  "original_url": "https://blog.kissmetrics.com/learn-growth-hacking/",
+  "url": "https://blog.kissmetrics.com/learn-growth-hacking/",
+  "media": {
+  },
+  "title": "Learn Growth Hacking: 35 Resources to Help You Become a Growth Hacker",
+  "offset": null,
+  "lead": null,
+  "content": "<div>\n<p>At many technology companies, traditional marketing roles are transforming into growth hacking roles. In fact, the work has become so popular now that some <a href=\"https://www.linkedin.com/vsearch/j?type=jobs&amp;keywords=growth+hacker&amp;orig=GLHD&amp;rsid=&amp;pageKey=member-home\">companies are hiring \"growth hackers.\"</a> They are keeping their marketing departments and hiring growth hackers to work separately from marketing.</p>\n<p>So what is the role of a growth hacker?</p>\n<p>Different from marketers, who traditionally are less technical, growth hackers have one objective - to grow the company. This is done through a variety of tactics called (for lack of a better word) \"hacks.\" These hacks generally are inexpensive (commonly free), and they are aimed at increasing the viral coefficient.</p>\n<p>In this post, we'll give a thorough overview of growth hacking, hiring growth hackers, resources on growth hacks, and additional helpful resources.</p>\n<h2>Introduction</h2>\n<p>1. <a href=\"http://www.startup-marketing.com/where-are-all-the-growth-hackers/\">What is a Growth Hacker?</a> - Sean Ellis, the man who coined the term, gives his description of what a growth hacker is and how it is different from a VP of Marketing.</p>\n<p>2. <a href=\"http://www.quora.com/Growth-Hacking/What-is-Growth-Hacking\">What is Growth Hacking?</a> - A Quora thread gives various descriptions of what growth hacking is.</p>\n<p>3. <a href=\"https://medium.com/what-i-learned-building/f445b04cbd20\">What is \"Growth Hacking\" Really?</a> - Josh Elman gives his opinion of what growth hacking is.</p>\n<p>4. <a href=\"http://andrewchen.co/2012/04/27/how-to-be-a-growth-hacker-an-airbnbcraigslist-case-study/\">Growth Hacker is the New VP of Marketing</a> - The marketing role is changing into one that requires a technical background. Andrew Chen explains how growth hackers are different from marketing teams and why the change is important.</p>\n<p>5. <a href=\"http://techcrunch.com/2012/09/02/defining-a-growth-hacker-three-common-characteristics/\">Defining a Growth Hacker: Three Common Characteristics</a> - What do growth hackers have in common? A love of data, creativity, and curiosity. For an expansion on those points, read the article.</p>\n<p>6. <a href=\"http://www.quicksprout.com/2013/08/26/the-definitive-guide-to-growth-hacking/\">The Definitive Guide to Growth Hacking</a> - Neil Patel wrote a huge guide on growth hacking. Ten chapters full, this guide covers it all.</p>\n<p>7. <a href=\"http://blog.clarity.fm/an-introduction-to-growth-hacking-3-quotes-to-explain-the-future-of-marketing/\">An Introduction to Growth Hacking: 3 Quotes to Explain the Future of Marketing</a> - Get your start in growth hacking with these three quotes that describe the core of growth hacking.</p>\n<p>8. <a href=\"http://techcrunch.com/2012/12/08/defining-a-growth-hacker-6-myths-about-growth-hackers/\">Debunking the 6 Most Common Myths about Growth Hacking</a> - So what <i>isn't </i>growth hacking? Read this article by Aaron Ginn to learn.</p>\n<p>Bonus!</p>\n<p><a href=\"http://www.quora.com/Growth-Hackers/What-makes-a-great-growth-hacker\">What makes a great growth hacker?</a> - Andy Johns tells us what makes a great growth hacker. </p>\n<h2>Hiring</h2>\n<p>9. <a href=\"http://techcrunch.com/2012/10/21/defining-a-growth-hacker-building-growth-into-your-team/\">Building Growth into Your Team</a> - To grow sustainably, you'll need a growth mindset in the company DNA. One person cannot do it all. This article gives some tips for building that growth mindset into your team.</p>\n<p>10. <a href=\"http://www.aginnt.com/post/64205739421/how-to-hire-a-growth-hacker#.UmcCW5RAREA\">How to Hire a Growth Hacker</a> - What do you look for when interviewing growth hackers? Let Aaron Ginn help.</p>\n<p>11. <a href=\"http://www.quora.com/Job-Interview-Questions/What-are-some-good-interview-questions-when-hiring-a-growth-hacker\">Good Questions to Ask When Interviewing a Growth Hacker</a> - Want tips for examining candidates? Let some Quora answerers help.</p>\n<p>12. <a href=\"http://www.quora.com/Growth-Hackers/Is-it-better-for-a-start-up-to-recruit-a-Growth-Hacker-or-hire-a-Growth-Hacker-company\">Is It Better to Recruit a Growth Hacker or Hire a Growth Hacking Company?</a> - A conundrum that companies may face: is it better to have your own growth hacker in house or hire a company? Let Andy Johns, a growth hacker himself, help answer that question.</p>\n<h2>Growth Hacks</h2>\n<p>13. <a href=\"http://www.quora.com/Growth-Hacking/What-are-the-Top-10-Consumer-Internet-Growth-Hacks-that-have-been-A-B-tested\">What are the Top 10 Consumer Internet Growth Hacks?</a> - A collection of some of the more well-known successful growth hacks.</p>\n<p>14. <a href=\"http://blog.kissmetrics.com/lessons-from-growth-hackers/\">13 Critically Important Lessons From Over 50 Growth Hackers</a> - Bronson Taylor has interviewed many growth hackers. In this blog post, he provides 13 lessons he's learned from them.</p>\n<p>15. <a href=\"http://blog.kissmetrics.com/dropbox-hacked-growth/\">The 7 Ways Dropbox Hacked Growth to Become a $4 Billion Company</a> - Dropbox is a company that employed a few growth hacks to push their growth. Read about 7 of them in this article.</p>\n<p>16. <a href=\"http://yongfook.com/actionable-growth-hacking-tactics.html\">21 Actionable Growth Hacking Tactics</a> - Jon Yongfook gives us 21 growth hacks.</p>\n<p>17. <a href=\"http://www.quora.com/Facebook-Growth-and-Traction/What-are-some-decisions-taken-by-the-Growth-team-at-Facebook-that-helped-Facebook-reach-500-million-users\">What are Some Decisions Made by the Facebook Growth Team to Help Facebook Grow?</a> - In the early years, Facebook employed a \"growth team\" whose goal was to spread Facebook. They did well, growing it to over 500 million users. A couple of members of the growth team share their experiences in this Quora thread. Also check out the <a href=\"http://www.quora.com/What-is-Facebooks-User-Growth-team-responsible-for-and-what-have-they-launched\">follow up question</a>.</p>\n<p>18. <a href=\"http://refer.ly/blog/getting-started-with-referly-updated-new-user-workflow/\">Growth Hacking Referly: New User Onboarding Workflow</a> - Some of the best growth hacks are the ones implemented during a new user onboarding phase. See how Referly spread their product with onboarding.</p>\n<p>19. <a href=\"http://numeratechoir.com/six-steps-to-growth-what-i-learned-as-500-startups-growth-hacker-in-residence/\">Six Steps to Growth: What I Learned As 500 Startups' Growth Hacker in Residence</a> - Introduction to the six step process as well as examples of it in action.</p>\n<p>20. <a href=\"http://www.youtube.com/watch?v=raIUQP71SBU\">How We Put Facebook on the Path to 1 Billion Users</a> - Chamath Palihapitiya, former VP of User Growth at Facebook, shares some of his knowledge for growth hacking. Also check out the <a href=\"http://www.slideshare.net/growthhackersconference/how-we-put-facebook-on-the-path-to-1-billion-users\">accompanying slides</a>.</p>\n<p>Bonus!</p>\n<p><a href=\"http://www.slideshare.net/mattangriffel/29-growth-hacking-quick-wins\">29 Growth Hacking Quick Wins</a> - In this Slideshare, Mattan Griffel goes through 29 growth hacks. </p>\n<h2>Other Resources</h2>\n<p>21. <a href=\"http://www.quora.com/Growth-Hackers/Who-are-the-best-growth-hackers\">Who Are The Best Growth Hackers?</a> - Quora answerers share their opinions on characteristics of great growth hackers and provide lists of hackers.</p>\n<p>22. <a href=\"http://www.startup-marketing.com/authentic-growth-hacks/\">Stacking the Odds for Authentic Growth</a> - Sean Ellis tells why you need to develop growth hacks centered around \"must have experiences\" that are delivered to the right customers.</p>\n<p>23. <a href=\"https://medium.com/future-tech-future-market/50b1817df7a8\">Growth Hacking Your Way to Viral Lift</a> - Gives a little background on growth hacking and how it's different from marketing. Also gives examples of growth hacks that are sure to inspire you.</p>\n<p>24. <a href=\"http://www.caneelian.com/2012/10/30/what-is-a-growth-hacker-does-your-startup-need-a-growth-team/\">Growth Hackers Conference 2012 Notes</a> - If you didn't attend the <a href=\"http://growthhackersconference.com/\">conference</a>, you can get all the videos (and more) for <a href=\"https://www.udemy.com/growth-hackers-conference/\">$99 on Udemy</a>. Otherwise, use these notes to help learn from the speakers. Also check out <a href=\"http://www.quora.com/User-Growth/What-were-the-most-interesting-takeaways-from-the-Growth-Hackers-Conference-held-on-October-26th-2012\">this Quora thread</a> for more notes.</p>\n<p>25. <a href=\"http://blog.clarity.fm/what-300-years-of-growth-hacking-can-teach-us/\">What 300 Years of Growth Hacking Can Teach Us</a> - Take a historical perspective to growth hacking and learn some of the more time-tested marketing techniques.</p>\n<p>26. <a href=\"http://www.slideshare.net/ryanholiday/19-growth-hacker-quotes\">19 Growth Hacker Quotes</a> - Learn and get different perspectives with these 19 quotes on growth hacking.</p>\n<p>27. <a href=\"http://www.fastcompany.com/3016487/dialed/how-to-growth-hack-anything-lessons-from-a-bittorrent-best-seller\">Growth Hacking a Book</a> - Ryan Holiday, author of Growth Hacker Marketing, writes about his experience growth hacking a book and the lessons he learned from other authors.</p>\n<p>28. <a href=\"http://mashable.com/2013/09/02/growth-hacking/\">The 5 Phases of Growth Hacking</a> - Mashable runs through the 5 phases of growth hacking and gives plenty of examples along the way.</p>\n<p>29. <a href=\"http://www.forbes.com/sites/markfidelman/2013/10/15/meet-the-growth-hacking-wizard-behind-facebook-twitter-and-quoras-astonishing-success/\">Meet the Growth Hacking behind Facebook, Twitter, and Quora's Astonishing Success</a> - A profile of Andy Johns, growth hacker at many successful consumer web companies.</p>\n<p>30. <a href=\"http://pandodaily.com/2013/08/21/how-tempo-growth-hacked-the-hell-out-of-its-app-before-it-ever-launched/\">How Tempo Growth Hacked Their Mobile App Before It Even Launched</a> - Mobile app Tempo grew to many users before it launched on the App Store. Learn the testing they did pre-launch that increased its chances of early success.</p>\n<p>Bonus!</p>\n<p><a href=\"http://www.ranky.co/growth-hacking-101-read-become-magician/\">Growth Hacking 101: Read This to Become a Magician</a> - A breakdown of how to approach growth hacking as well as a few creative tips on user acquisition and activation.</p>\n<h2>Blogs and Websites</h2>\n<p>31. <a href=\"http://www.growthhacker.tv\">Growth Hacker TV</a> - Watch interviews of growth hackers.</p>\n<p>32. <a href=\"http://growthhackers.com/\">GrowthHackers</a> - A Hacker News style website but focused on growth hacking.</p>\n<p>33. <a href=\"http://www.reddit.com/r/GrowthHacking/\">Growth Hacking Subreddit</a> - Not a totally active subreddit, but a good library of posts you can run through to learn more about growth hacking.</p>\n<p>34. <a href=\"https://twitter.com/ukituki/growth-hackers\">Growth Hackers Twitter List</a> - A public Twitter list of growth hackers.</p>\n<p>35. <a href=\"https://clarity.fm/growth-hacking\">Growth Hackers on Clarity</a> - Want to talk to a growth hacker? Allow Clarity to help.</p>\n<p>Having skills in growth hacking is useful whether you're in SaaS, e-commerce, or consumer web. I hope you've found this blog post useful.</p>\n<p><strong>About the Author:</strong> Zach Bulygo is a blogger for KISSmetrics, you can find him on Twitter <a href=\"https://twitter.com/#!/zachcb1\">here</a>. You can also follow him on <a href=\"https://plus.google.com/117750912206547874889?rel=author\">Google+</a>.</p>\n</div>",
+  "entities": [
+    {
+      "count": 3,
+      "name": "Andy Johns"
+    },
+    {
+      "count": 2,
+      "name": "Aaron Ginn"
+    },
+    {
+      "count": 2,
+      "name": "Sean Ellis"
+    },
+    {
+      "count": 1,
+      "name": "Growth Hacking Quick Wins"
+    },
+    {
+      "count": 1,
+      "name": "Best Growth Hackers"
+    },
+    {
+      "count": 1,
+      "name": "Other Resources"
+    },
+    {
+      "count": 1,
+      "name": "Ways Dropbox Hacked Growth"
+    },
+    {
+      "count": 1,
+      "name": "Zach Bulygo"
+    },
+    {
+      "count": 1,
+      "name": "Chamath Palihapitiya"
+    },
+    {
+      "count": 1,
+      "name": "Quora"
+    },
+    {
+      "count": 1,
+      "name": "Bronson Taylor"
+    },
+    {
+      "count": 1,
+      "name": "Phases of Growth Hacking"
+    },
+    {
+      "count": 1,
+      "name": "Dropbox"
+    },
+    {
+      "count": 1,
+      "name": "Mattan Griffel"
+    },
+    {
+      "count": 1,
+      "name": "Ryan Holiday"
+    },
+    {
+      "count": 1,
+      "name": "Josh Elman"
+    },
+    {
+      "count": 1,
+      "name": "New VP of Marketing"
+    },
+    {
+      "count": 1,
+      "name": "Andrew Chen"
+    },
+    {
+      "count": 1,
+      "name": "Future of Marketing"
+    },
+    {
+      "count": 1,
+      "name": "Jon Yongfook"
+    },
+    {
+      "count": 1,
+      "name": "Google"
+    },
+    {
+      "count": 1,
+      "name": "Udemy"
+    },
+    {
+      "count": 1,
+      "name": "Facebook Growth Team"
+    },
+    {
+      "count": 1,
+      "name": "Neil Patel"
+    }
+  ],
+  "favicon_colors": null,
+  "keywords": [
+    {
+      "score": 326,
+      "name": "growth"
+    },
+    {
+      "score": 283,
+      "name": "hacking"
+    },
+    {
+      "score": 256,
+      "name": "hacker"
+    },
+    {
+      "score": 60,
+      "name": "quora"
+    },
+    {
+      "score": 37,
+      "name": "marketing"
+    },
+    {
+      "score": 33,
+      "name": "learn"
+    },
+    {
+      "score": 32,
+      "name": "hire"
+    },
+    {
+      "score": 32,
+      "name": "user"
+    },
+    {
+      "score": 29,
+      "name": "facebook"
+    },
+    {
+      "score": 28,
+      "name": "companies"
+    }
+  ],
+  "published": null,
+  "provider_name": "Kissmetrics",
+  "type": "html"
+}

@@ -78,6 +78,7 @@ gem 'rollbar', '~> 2.1.1'
 
 gem "koala", "~> 2.2"
 
+gem 'embedly', '~> 1.9.1'
 
 group :development do
   gem 'guard-rspec'

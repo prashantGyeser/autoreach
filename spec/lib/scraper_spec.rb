@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Scraper do
+describe Scraper, :vcr do
 
   before do
     @html = %q{
@@ -41,6 +41,11 @@ describe Scraper do
     text = scraper.send(:extract_text_from_html, @html)
     expect(text).to eq "My webpage Hello Webpage! Click here to go to the search engine Google Or you can click here to go to Microsoft Bing. Don't want to learn Ruby? Then give Zed Shaw's Learn Python the Hard Way a try Here are some entertaining links: YouTube Reddit Kathack New York Times Thank you for reading my webpage!"
 
+  end
+
+  it "should scrape a site using the embedly api" do
+    scraper = Scraper.new.embedly_scrapper('autoreach.co')
+    #expect(scraper).to eq true
   end
 
 

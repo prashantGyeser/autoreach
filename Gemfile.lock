@@ -110,6 +110,10 @@ GEM
     elasticsearch-transport (1.0.12)
       faraday
       multi_json
+    embedly (1.9.1)
+      json
+      oauth
+      querystring
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.5.2)
@@ -264,6 +268,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    querystring (0.1.0)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -442,6 +447,7 @@ DEPENDENCIES
   dotenv-rails
   elasticsearch-model
   elasticsearch-rails
+  embedly (~> 1.9.1)
   factory_girl_rails
   faker
   figaro
