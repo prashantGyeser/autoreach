@@ -1,0 +1,332 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.embed.ly/1/extract?key=a09deb46653a4d769df3734d11491c44&urls=https://blog.bufferapp.com/social-media-marketing-plan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; mytestapp/1.0; prashant@urbanzeak.com)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 15 Aug 2015 04:03:10 GMT
+      Etag:
+      - W/"3cb32cf2c55a2685bd1c81080a3c9ec62b033bdd"
+      Server:
+      - TornadoServer/2.4.1
+      X-Embedly-From-Cache:
+      - '0'
+      X-Embedly-Host:
+      - unearth20
+      X-Embedly-Process-Time:
+      - '42'
+      Content-Length:
+      - '9040'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"provider_url": "https://blog.bufferapp.com", "description": "This
+        post originally published on July 16, 2014. We''ve updated it here with new
+        research and stats and a cool new infographic. When I went rock climbing for
+        the first time, I had no idea what I was doing.", "embeds": [], "safe": true,
+        "provider_display": "blog.bufferapp.com", "related": [], "favicon_url": "https://bufferblog-wpengine.netdna-ssl.com/wp-content/themes/buffer-base/favicon.png",
+        "authors": [], "images": [{"caption": null, "url": "https://blog.bufferapp.com/wp-content/uploads/2014/07/Screen-Shot-2014-07-15-at-4.27.22-PM.png",
+        "height": 424, "width": 928, "colors": [{"color": [100, 100, 100], "weight":
+        0.7387695312}, {"color": [147, 148, 149], "weight": 0.2612304688}], "entropy":
+        2.071215315, "size": 23635}, {"caption": null, "url": "https://blog.bufferapp.com/wp-content/uploads/2014/07/mx8sxGC.jpg",
+        "height": 600, "width": 566, "colors": [{"color": [35, 74, 116], "weight":
+        0.8579101562}, {"color": [236, 239, 222], "weight": 0.0874023438}, {"color":
+        [184, 184, 184], "weight": 0.0288085938}, {"color": [148, 149, 160], "weight":
+        0.0258789062}], "entropy": 5.72152576687, "size": 128548}, {"caption": null,
+        "url": "http://bufferblog.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/Screen-Shot-2014-04-12-at-1.26.37-PM.png",
+        "height": 463, "width": 649, "colors": [{"color": [37, 150, 75], "weight":
+        0.6728515625}, {"color": [246, 249, 248], "weight": 0.2058105469}, {"color":
+        [2, 3, 5], "weight": 0.1213378906}], "entropy": 1.2067869683, "size": 53335}],
+        "cache_age": 73500, "language": "English", "app_links": [], "original_url":
+        "https://blog.bufferapp.com/social-media-marketing-plan", "url": "https://blog.bufferapp.com/social-media-marketing-plan",
+        "media": {}, "title": "How to Create a Social Media Marketing Plan From Scratch",
+        "offset": null, "lead": null, "content": "<div>\n<em>This post originally
+        published on July 16, 2014. We''ve updated it here with new research and stats
+        and a cool new infographic. <img src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-includes/images/smilies/simple-smile.png\"></em>
+        <p>When I went rock climbing for the first time, I had no idea what I was
+        doing. My friends and I were complete newbies about ropes and rappelling and
+        every other bit of jargon and technique that goes with climbing. We saw others
+        doing it spectacularly well. We were thrilled at the thought of reaching the
+        top of the climbing wall; we had no idea how to get there.</p>\n<p>I''d imagine
+        that a social media marketing plan could feel the same way.</p>\n<p>If you''re
+        starting from square one, it might feel equal parts thrilling and overwhelming.
+        You know what you want to do and why. You can see that others have climbed
+        the social media mountain; you''ve got few ideas how to get there yourself.</p>\n<p>It''d
+        help to have a plan.</p>\n<p>We''ve shared before about different parts of
+        a social media marketing plan- <a href=\"http://blog.bufferapp.com/social-media-stats-you-need-to-know\">the
+        data and research</a> and personal experience behind <a href=\"http://blog.bufferapp.com/social-media-automation-guide\">what
+        works on social media</a>. Now we''re pleased to put it all into a cohesive,
+        step-by-step blueprint that you can use to get started. If you need a social
+        media marketing plan, start here.</p>\n<p>Oh, and our friends at  <a href=\"http://www.venngage.com/\">online
+        infographic maker Venngage</a>  were kind enough to wrap all that follows
+        into a <a href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan\">comprehensive
+        infographic</a> that''s easy to keep, share and reference:</p>\n<h2><strong>Social
+        Media Marketing Plan</strong></h2>\n<p>Starting at the ground flour and building
+        up, here is our overview of how to create a social media marketing plan from
+        scratch.</p>\n<p>I like to think of this plan like a roadtrip. Start out by
+        pointing yourself in the right direction, then choose the way you''re going
+        to get there, check in regularly to make sure you''re on track, and have some
+        fun along the way.</p>\n<p><strong>Step 1:</strong> Choose your social networks</p>\n<p><strong>Step
+        2:</strong> Fill out your profiles completely</p>\n<p><strong>Step 3:</strong>
+        Find your voice and tone</p>\n<p><strong>Step 4:</strong> Pick your posting
+        strategy</p>\n<p><strong>Step 5:</strong> Analyze and test</p>\n<p><strong>Step
+        6:</strong> Automate and engage</p>\n<h2><strong>Step 1: Which social media
+        sites you should use</strong></h2>\n<a href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/choose-networks.png\"></a>
+        <p>Social media is as homogenous from network to network as soda pop is from
+        brand to brand. Sure, it''s all social media, but <a href=\"http://blog.bufferapp.com/advice-on-growing-a-google-page\">Google+</a>
+        and <a href=\"http://blog.bufferapp.com/twitter-tips-for-beginners\">Twitter</a>
+        might as well be Mountain Dew and Pepsi. Each network is unique, with its
+        own best practices, own style, and own audience.</p>\n<p>You should choose
+        the social networks that best fit your strategy and <a href=\"https://blog.bufferapp.com/goal-setting-strategies\">the
+        goals you want to achieve</a> on social media.</p>\n<strong>You don''t have
+        to be on them all-just the ones that matter to you and your audience.</strong>
+        <p>Some things to consider that can help you choose not only <em>which</em>
+        social networks to try but also <em>how many</em> to try.</p>\n<p><strong>Time
+        - </strong>How much time can you devote to a social network? Plan on at least
+        an hour per day per social network, at least at the start. (Once you get going,
+        tools like <a href=\"http://bufferapp.com\">Buffer</a> can help you save a
+        bit of time.)</p>\n<p><strong>Resources </strong>- What personnel and skills
+        do you have to work with? Visual social networks like <a href=\"https://blog.bufferapp.com/pinterest-marketing-tips\">Pinterest
+        </a>and <a href=\"https://blog.bufferapp.com/instagram-growth\">Instagram</a>
+        require <a href=\"https://blog.bufferapp.com/14-tools-to-make-engaging-images-for-your-social-media-posts\">images
+        and photos</a>. Social networks like Google+ emphasize quality content. Do
+        you have the resources to create what''s needed?</p>\n<p><strong>Audience</strong>
+        - Where do your <a href=\"http://blog.bufferapp.com/find-audience-build-a-community\">potential
+        customers hang out</a>? Which social network has the right demographics?</p>\n<p>For
+        the latter part of this decision, you can reference the audience research
+        and demographics from surveys like those conducted by Pew Research. For instance,
+        Pew has complete data, collected last fall, of the <a href=\"http://www.pewinternet.org/2015/01/09/demographics-of-key-social-networking-platforms-2/\">demographics
+        for Facebook, Twitter, Instagram, Pinterest, and LinkedIn</a>. Here is a side-by-side
+        comparison of Facebook and Twitter demographics.</p>\n<h2>\n<a href=\"http://www.pewinternet.org/2015/01/09/demographics-of-key-social-networking-platforms-2/\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Facebook-and-Twitter-demographics.png\"></a><strong>Step
+        2: Fill out your profiles completely</strong>\n</h2>\n<p>One of our monthly
+        checks here at Buffer is to visit each of our social media profiles and make
+        sure that our avatars, cover photos, <a href=\"https://blog.bufferapp.com/how-to-write-a-professional-bio-for\">bio</a>,
+        and profile info is up-to-date and complete. It''s a key part to our <a href=\"http://blog.bufferapp.com/social-media-audit\">social
+        media audit</a>. A completed profile shows professionalism, cohesive branding,
+        and a signal to visitors that you''re serious about engaging.</p>\n<p>Profiles
+        will require two parts: visuals and text.</p>\n<p>For visuals, we aim for
+        consistency and familiarity with <a href=\"http://blog.bufferapp.com/a-complete-guide-to-creating-awesome-visual-content\">the
+        visuals we use on social media</a>. Our avatar on Twitter matches our avatar
+        on Facebook. Our cover photo on Google+ is similar to our cover on LinkedIn.</p>\n<a
+        href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/visuals.png\"></a>
+        <p>To create these images, you can consult a <a href=\"http://www.rakacreative.com/blog/post/social-media-image-sizes-always-up-to-date\">social
+        media image size chart</a> that will show you the exact breakdown of dimensions
+        for each photo on each network. For an even easier time of it, you can use
+        a tool like <a href=\"http://canva.com\">Canva</a>, which comes with prebuilt
+        templates that set the proper sizes for you.</p>\n<a href=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Screen-Shot-2014-07-15-at-4.27.22-PM.png\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Screen-Shot-2014-07-15-at-4.27.22-PM.png\"></a>
+        <p>For text, your main area to customize is the bio/info section.  <a href=\"http://blog.bufferapp.com/how-to-write-a-professional-bio-for\">Creating
+        a professional social media bio</a> can be broken down into six simple rules.</p>\n<p>\n</p><ol><li>Show,
+        don''t tell: \"What have I done\" often works better than \"Who I am\"</li>\n\t<li>Tailor
+        your keywords to your audience</li>\n\t<li>Keep language fresh; avoid buzzwords</li>\n\t<li>Answer
+        the question of your potential followers: \"What''s in it for me?\"</li>\n\t<li>Be
+        personal and personable</li>\n\t<li>Revisit often</li>\n</ol><h2><strong>Step
+        3: Find your marketing voice and tone</strong></h2>\n<a href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/voice-and-tone.png\"></a>
+        <p>The temptation at this point might be to jump right in and start sharing.
+        Just one more step before you do. <strong>Your foray into social media will
+        be more focused and more on point if you come up with <a href=\"http://blog.bufferapp.com/social-media-marketing-voice-and-tone\">a
+        voice and tone for your content</a></strong> right off the bat.</p>\n<p>To
+        do so, you could spend time coming up with <a href=\"http://blog.bufferapp.com/marketing-personas-beginners-guide\">marketing
+        personas</a> and debating the finer points of your mission statement and customer
+        base. These are all well and good. However, for a social media marketing plan
+        just getting off the ground, you can make this process a bit easier. <a href=\"http://blog.bufferapp.com/social-media-marketing-voice-and-tone\">Start
+        with questions like these</a>:</p>\n<p>\n</p><ul><li>If your brand was a person,
+        what kind of personality would it have?</li>\n\t<li>If your brand was a person,
+        what''s their relationship to the consumer? (a coach, friend, teacher, dad,
+        etc)</li>\n\t<li>Describe in adjectives what your company''s personality is
+        not.</li>\n\t<li>Are there any companies that have a similar personality to
+        yours? Why are they similar?</li>\n\t<li>How do you want your customers to
+        think about your company?</li>\n</ul><p>At the end of this exercise, you should
+        end up with a handful of adjectives that describe the voice and tone of your
+        marketing. Consider this to keep you on track: Voice is the mission statement;
+        tone is the implementation of that mission.</p>\n<p>MailChimp has created
+        <a href=\"http://voiceandtone.com/\">a standalone website simply for its voice
+        and tone</a>. Here''s an example of how they implement these qualities into
+        their communication:</p>\n<img src=\"http://bufferblog.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/Screen-Shot-2014-04-12-at-1.26.37-PM.png\"><p><strong>Cultivate
+        a voice that delights your customers</strong>, then your customers will be
+        thrilled to spread the love about you.</p>\n<h2><strong>Step 4: Pick your
+        posting strategy</strong></h2>\n<p>What''s the ideal amount to post per day?
+        How <a href=\"https://blog.bufferapp.com/how-often-post-social-media\">often
+        should you post</a>? When should you post? What should you post? The solid
+        gold, ironclad answer on questions like these is:</p>\n<p>It depends.</p>\n<p>So
+        much of the social media experience is about your individual audience and
+        niche. What works for you might not work for me, and you never know until
+        you try (we''ll get to trying in step five).</p>\n<p>That being said, there
+        is some pretty good data and insight about where to start. Here''s what we''ve
+        found to be good jumping off points.</p>\n<a href=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Social-Media-Posting-Strategy.png\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Social-Media-Posting-Strategy.png\"></a>
+        <h3><strong>What should you be posting?</strong></h3>\n<strong>Images are
+        ideal.</strong> <p>The push toward <a href=\"https://blog.bufferapp.com/a-complete-guide-to-creating-awesome-visual-content\">visual
+        content</a> has plenty of anecdotal evidence-as you browse the streams on
+        Twitter and Facebook, you''re likely to see images all over. There''s data
+        to back up this change: Image posts get more views, clicks, reshares, and
+        likes than any other type of post. And it''s not even close.</p>\n<p>On Facebook,  <a
+        href=\"http://blog.bufferapp.com/7-facebook-stats-you-should-know-for-a-more-engaging-page\">photos
+        get 53% more likes, 104% more comments and 84% more click-throughs on links</a>
+        than text-based posts.</p>\n<p>Same goes for Twitter. In a study of over two
+        million tweets from verified users across a number of different industries,
+        Twitter found that <a href=\"https://blog.twitter.com/2014/what-fuels-a-tweets-engagement\">photos
+        have the greatest effect on retweets</a>.</p>\n<p>\n</p><ul><li>\n<strong>Photos</strong>
+        average a 35% boost in Retweets</li>\n\t<li>\n<strong>Videos</strong> get
+        a 28% boost</li>\n\t<li>\n<strong>Quotes</strong> get a 19% boost in Retweets</li>\n\t<li>Including
+        a <strong>number</strong> receives a 17% bump in Retweets</li>\n\t<li>\n<strong>Hashtags</strong>
+        receive a 16% boost</li>\n</ul><a href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/visual-content.png\"></a>
+        <h3>The 4:1 Strategy</h3>\n<p>Now that you know what works, you can place
+        these different types of updates into a consistent strategy. One of my favorite
+        systems is the one <a href=\"http://blog.bufferapp.com/the-5-types-of-tweets-to-keep-your-buffer-full-and-your-followers-engaged\">used
+        by Buffer''s co-founder Joel Gascoigne</a>. It works like this:</p>\n<p>\n</p><ol><li>Start
+        with <strong>the basic five types of updates</strong> we all post: Links,
+        images, quotes, reshares, plain-text updates</li>\n\t<li>\n<strong>Choose
+        a \"staple\" update</strong>, a single type that will make up the majority
+        of your shares</li>\n\t<li>\n<strong>Create a 4:1 ratio of sharing</strong>:
+        for every four \"staple\" updates, publish one different type for variety</li>\n</ol><a
+        href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/4-1-system.png\"></a>
+        <p>This way your followers know what to expect from you, and you can hone
+        your sharing to a specific type, making it easier to perfect and to experiment.</p>\n<p>(Note:
+        You might won''t want to post the exact same updates across each of your social
+        networks. Consider composing your updates in a unique way to complement each
+        network''s own best practices, culture, and language.)</p>\n<h3><strong>How
+        often should you be posting?</strong></h3>\n<p>There''s been a lot of interesting
+        data out there about <a href=\"https://blog.bufferapp.com/how-often-post-social-media\">how
+        often to post to social media</a>. Some of the factors that might impact your
+        specific sharing frequency may include your industry, your reach, your resources,
+        and the quality of your updates. The social network you''re using will have
+        its own best practices, too.</p>\n<strong>If people love your updates, you
+        can typically always get away with posting more.</strong> <p>For a specific
+        number, here''re some guidelines we''ve put together based on some really
+        helpful <a href=\"http://blog.bufferapp.com/social-media-frequency-guide\">research
+        into how often to post to social media</a>.</p>\n<a href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/how-often.png\"></a>
+        <h3><strong>When should you be posting?</strong></h3>\n<p>There are many neat
+        tools to show you <a href=\"http://blog.bufferapp.com/best-time-to-tweet-post-to-facebook-send-emails-publish-blogposts\">the
+        best time of day to post to Facebook, Twitter, and more</a>. These <a href=\"https://blog.bufferapp.com/best-social-media-tools-for-small-business\">tools</a>
+        look at your followers and your history of posts to see when your audience
+        is online and when historically have been your best times to share.</p>\n<p>So
+        what''s someone to do who''s just starting out on these social networks, with
+        no audience and no history?</p>\n<p>Again, this is where best practices come
+        in. Perhaps the most helpful (and adorable) infographic I''ve seen about timing
+        comes from SumAll, which <a href=\"http://blog.sumall.com/journal/timing-everything-post-smarter-meow.html\">compiled
+        timing research</a> from sites like Visual.ly, Search Engine Watch, and Social
+        Media Today to create its awesome visual. Here''s an overview of what they
+        found in terms of timing (all times are Eastern Time).</p>\n<p>\n</p><ul><li>\n<strong>Twitter</strong>
+        - 1-3pm weekdays</li>\n\t<li>\n<strong>Facebook</strong> - 1-4pm and 2-5pm
+        weekdays</li>\n\t<li>\n<strong>LinkedIn</strong> - 7-8:30am and 5-6pm Tuesday,
+        Wednesday, and Thursday</li>\n\t<li>\n<strong>Tumblr</strong> - 7-10pm weekdays
+        and 4pm on Fridays</li>\n\t<li>\n<strong>Instagram</strong> - 5-6pm weekdays
+        and 8pm on Mondays with a sweetspot at 6pm</li>\n\t<li>\n<strong>Pinterest</strong>
+        - 2-4pm and 8-11pm weekdays with weekends being the best</li>\n\t<li>\n<strong>Google+</strong>
+        - 9-11am weekdays</li>\n</ul><a href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan-update\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/optimal-times.png\"></a>
+        <h2><strong>Step 5: Analyze, test, and iterate</strong></h2>\n<p>Remember
+        how we talked about social media sharing being a very individual, specific
+        endeavor? Your stats will likely start to bear this out.</p>\n<strong>The
+        more you post, the more you''ll discover which content, timing, and frequency
+        is right for you.</strong> <p>How will you know? It''s best to get <a href=\"https://blog.bufferapp.com/time-saving-social-media-tools\">a
+        reporting tool</a>. Most major social networks will have basic analytics built
+        into the site; it''s just a little easier to seek and find this information
+        from an all-encompassing dashboard.</p>\n<p>These tools (I''ll use <a href=\"http://bufferapp.com\">Buffer''s
+        analytics</a> as an example) can show you a breakdown of how each post performed
+        in the important areas of views, clicks, shares, likes, and comments.</p>\n<a
+        href=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Screen-Shot-2014-07-15-at-4.43.29-PM.png\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Screen-Shot-2014-07-15-at-4.43.29-PM.png\"></a>
+        <p><a href=\"http://blog.bufferapp.com/definitive-guide-social-media-metrics-stats\">Which
+        social media stats are best?</a> We''ve gained some insight from looking at
+        each of these main statistics and the composite engagement stat on a per-post
+        basis. The resulting stat gives us a great look, over time, of how our social
+        media content tends to perform, and we can then test and iterate from there.</p>\n<p>Here''s
+        one way this analysis step.</p>\n<p><strong>Set a benchmark</strong>. After
+        two weeks or a month of sharing, you can go back through your stats and find
+        the average number of clicks, shares, likes, and comments per post. This''ll
+        be your benchmark going forward. You can come back and update this number
+        at any time as your following and influence grows.</p>\n<p><strong>Test something
+        new.</strong> We''re open to testing just about anything at Buffer. We''re
+        in the midst of some tests right now on our Twitter account. Do Twitter-optimized
+        images gain more clicks than non-optimized images? Does capitalization matter?
+        We''ll often hear about someone''s new strategy or get a new idea and then
+        test right away.</p>\n<p><strong>Did it work?</strong> Check the stats from
+        your test versus the stats of your benchmark. If your test performed well,
+        then you can implement the changes into your regular strategy. And once your
+        test is over, test something new!</p>\n<a href=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Add-text.png\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/Add-text.png\"></a>
+        <h2><strong>Step 6: Automate, engage, and listen</strong></h2>\n<p>The final
+        piece of a social media marketing plan involves having a system you can follow
+        to help you stay on top of updates and engaged with your community.</p>\n<p>To
+        start with, automate your updates. Tools like <a href=\"http://bufferapp.com\">Buffer</a>
+        allow you to create all the content and updates that you want to, all at once,
+        and then place everything into a queue to be sent out according to whatever
+        schedule you choose. <strong><a href=\"http://blog.bufferapp.com/social-media-automation-guide\">Automation
+        is the secret weapon</a> for consistently excellent sharing, day after day.</strong></p>\n<p>Your
+        plan doesn''t end with automation, though. <strong>Social media requires engagement,
+        too.</strong> When people talk to you, talk back. Set aside time during your
+        day to followup with conversations that are happening on social media. These
+        are conversations with potential customers, references, friends, and colleagues.
+        They''re too important to ignore.</p>\n<p>One way to stay up on all the conversations
+        that are happening around you and your company is to create a system for listening.
+        Tools like <a href=\"http://blog.bufferapp.com/mention-and-buffer-partner-for-a-better-way-to-monitor-and-publish-on-social-media\">Mention</a>
+        will send you an alert every time you''re mentioned online, and you can rely
+        on custom searches and email alerts for mentions on specific networks, too.</p>\n<h2><strong>What
+        would you share with someone new to social media?</strong></h2>\n<p>Coming
+        up with a social media marketing plan is a great step toward diving in to
+        social. If social media looks thrilling and overwhelming all at once, start
+        with a plan. Once you see the blueprint in front of you, it''s a little easier
+        to see what lies ahead.</p>\n<p>\n</p><ol><li>Pick your networks</li>\n\t<li>Fill
+        out your info</li>\n\t<li>Find your voice</li>\n\t<li>Choose your strategy</li>\n\t<li>Analyze
+        and test</li>\n\t<li>Automate and engage</li>\n</ol><p>Bingo!</p>\n<p>How
+        did you develop your social media strategy? I''d love to keep the conversation
+        going in the comments. If you know someone who could use this, feel free to
+        pass this along. If you can use it yourself, let me know how it goes!<br><a
+        href=\"https://infograph.venngage.com/p/38582/social-media-marketing-plan\"><img
+        src=\"https://bufferblog-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/SOCIALMEDIAMARKETING-PLAN.png\"></a><br><em>Image
+        sources: <a href=\"https://www.flickr.com/photos/wscullin/3770015203/\">Will
+        Scullin</a>, <a href=\"https://blog.twitter.com/2014/what-fuels-a-tweets-engagement\">Twitter</a>,
+        <a href=\"http://blog.sumall.com/journal/timing-everything-post-smarter-meow.html\">SumAll</a>,
+        <a href=\"http://blog.bufferapp.com/definitive-guide-social-media-metrics-stats\">Pew</a></em></p>\n</div>",
+        "entities": [{"count": 4, "name": "Google"}, {"count": 1, "name": "Social
+        Media Marketing Plan Starting"}, {"count": 1, "name": "Instagram"}, {"count":
+        1, "name": "Will Scullin"}, {"count": 1, "name": "Pinterest"}, {"count": 1,
+        "name": "Social Media Today"}, {"count": 1, "name": "Venngage"}, {"count":
+        1, "name": "LinkedIn"}, {"count": 1, "name": "Canva"}, {"count": 1, "name":
+        "Pew Research"}, {"count": 1, "name": "Pinterest and Instagram"}, {"count":
+        1, "name": "Pepsi"}, {"count": 1, "name": "Search Engine Watch"}, {"count":
+        1, "name": "Joel Gascoigne"}, {"count": 1, "name": "Eastern Time"}, {"count":
+        1, "name": "Mountain Dew"}], "favicon_colors": [{"color": [40, 57, 66], "weight":
+        0.1589355469}, {"color": [0, 0, 2], "weight": 0.1232910156}], "keywords":
+        [{"score": 174, "name": "social"}, {"score": 106, "name": "media"}, {"score":
+        73, "name": "networks"}, {"score": 67, "name": "post"}, {"score": 57, "name":
+        "updates"}, {"score": 51, "name": "step"}, {"score": 46, "name": "stats"},
+        {"score": 44, "name": "weekdays"}, {"score": 42, "name": "share"}, {"score":
+        41, "name": "test"}], "published": 1437350400000, "provider_name": "Social",
+        "type": "html"}]'
+    http_version: 
+  recorded_at: Sat, 15 Aug 2015 04:03:10 GMT
+recorded_with: VCR 2.9.3

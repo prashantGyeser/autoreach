@@ -4,7 +4,7 @@ class Scraper
     # content = get_page_content(url)
     #
     # if content.nil?
-    #   embedly_extractor(url)
+    #   return embedly_extractor(url)
     # else
     #   return content
     # end

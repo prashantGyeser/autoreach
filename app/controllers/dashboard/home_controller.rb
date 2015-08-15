@@ -6,6 +6,8 @@ class Dashboard::HomeController < Dashboard::ApplicationController
     if @articles.count > 0
       if @user_keyword.searched == true
         @has_articles = true
+      else
+        @processing = true
       end
     elsif UserKeyword.where(user_id: current_user.id).first[:searched] == false
       @processing = true

@@ -4,8 +4,9 @@ RSpec.describe BingSearchJob, :vcr, type: :job do
 
   before do
     @bing_search_job = BingSearchJob.new
-    @keyword = {keyword: "growth hacking", user_id: 1, id: 1}
+    @keyword = {keyword: "social media marketing", user_id: 1, id: 1}
     @search_results = @bing_search_job.send(:search, @keyword)
+    @user_keyword = UserKeyword.create(keyword: "social media marketing", user_id: 1)
   end
 
   it "should search and return all the articles" do
@@ -16,14 +17,14 @@ RSpec.describe BingSearchJob, :vcr, type: :job do
   it "should store the parsed articles" do
     parsed_results = @bing_search_job.send(:parse, @search_results[:results])
     non_articles_removed = @bing_search_job.send(:remove_non_articles, parsed_results)
-    expect(non_articles_removed.count).to eq 29
+    expect(non_articles_removed.count).to eq 50
   end
 
   it "should store the facebook shares for the urls" do
     parsed_results = @bing_search_job.send(:parse, @search_results[:results])
     non_articles_removed = @bing_search_job.send(:remove_non_articles, parsed_results)
     @bing_search_job.send(:store_articles, non_articles_removed,@keyword)
-    expect(Article.where.not(facebook_shares: nil).count).to eq 28
+    expect(Article.where.not(facebook_shares: nil).count).to eq 50
   end
 
   it "should set the last searched time for the keyword" do
@@ -31,8 +32,9 @@ RSpec.describe BingSearchJob, :vcr, type: :job do
     #user_keyword.set
   end
 
-  it "should mark the bottm 20% based on share count as shares low" do
-    @bing_search_job.send(:eliminate_low_share_count_articles, [{facebook_shares: 10},{facebook_shares: 20},{facebook_shares: 30},{facebook_shares: 40},{facebook_shares: 50}])
+  it "should search and store all the articles" do
+    @bing_search_job.perform(@user_keyword)
+    expect(Article.count).to eq 50
   end
 
 end

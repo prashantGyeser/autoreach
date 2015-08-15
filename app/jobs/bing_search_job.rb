@@ -7,8 +7,8 @@ class BingSearchJob < ActiveJob::Base
     parsed_results = remove_non_articles(parsed_results)
     store_articles(parsed_results, keyword)
     set_keyword_search_details(keyword, search_results[:total_search_results])
-    set_search_status(keyword)
     ArticleQuality.new.eliminate_least_shared(keyword)
+    set_search_status(keyword)
     #NotificationMailer.search_complete(User.find(keyword[:user_id], keyword))
   end
 
@@ -27,6 +27,7 @@ class BingSearchJob < ActiveJob::Base
       if webpage.contains_article?
         parsed_results[index][:content] = webpage.content
       else
+        #puts "Deleting url: #{result[:final_url]}"
         parsed_results.delete_at(index)
       end
     end

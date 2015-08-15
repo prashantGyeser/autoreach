@@ -14,4 +14,11 @@ describe Webpage, :vcr do
     expect(is_article).to be false
   end
 
+  it "should return true when the url contains the required terms" do
+    args = {url: 'https://blog.bufferapp.com/social-media-marketing-plan'}
+    is_article = Webpage.new(args).contains_article?
+    expect(is_article).to be true
+  end
+
+
 end

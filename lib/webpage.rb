@@ -7,6 +7,7 @@ class Webpage
   end
 
   def contains_article?
+    puts url
     if term_in_url?
       return true
     elsif !@content.nil? #term_in_content?
