@@ -32,7 +32,7 @@ class Article < ActiveRecord::Base
 
   validates :url, uniqueness: { scope: :user_id}
 
-  after_save :set_shares
+  after_create :set_shares
 
   def mark_as_irrelevant
     self.irrelevant = true
@@ -40,17 +40,7 @@ class Article < ActiveRecord::Base
   end
 
   def set_shares
-    begin
-      shares = SocialShares.new({url: self.url}).all
-      self.facebook_shares = shares[:facebook]
-      self.twitter_shares = shares[:twitter]
-      self.google_plus_shares = shares[:google]
-      self.linkedin_shares = shares[:linkedin]
-      self.save
-    rescue => e
-      Rollbar.error(e, article: self)
-    end
-
+    GetSharesJob.perform_later self
   end
 
 end

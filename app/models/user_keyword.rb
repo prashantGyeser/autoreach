@@ -2,17 +2,18 @@
 #
 # Table name: user_keywords
 #
-#  id                        :integer          not null, primary key
-#  keyword                   :string
-#  weight                    :integer
-#  user_id                   :integer
-#  created_at                :datetime         not null
-#  updated_at                :datetime         not null
-#  keyword_type              :string
-#  archived                  :boolean          default(FALSE)
-#  last_searched             :datetime
-#  total_results_last_search :integer
-#  searched                  :boolean          default(FALSE)
+#  id                           :integer          not null, primary key
+#  keyword                      :string
+#  weight                       :integer
+#  user_id                      :integer
+#  created_at                   :datetime         not null
+#  updated_at                   :datetime         not null
+#  keyword_type                 :string
+#  archived                     :boolean          default(FALSE)
+#  last_searched                :datetime
+#  total_results_last_search    :integer
+#  searched                     :boolean          default(FALSE)
+#   :integer
 #
 
 class UserKeyword < ActiveRecord::Base
@@ -22,7 +23,8 @@ class UserKeyword < ActiveRecord::Base
   after_create :search
 
   def search
-    BingSearchJob.perform_later self
+    #BingSearchJob.perform_later self
+    ArticleSearchJob.perform_later self
   end
 
   def self.generate_keywords(token_id)

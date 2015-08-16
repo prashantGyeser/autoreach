@@ -1,5 +1,5 @@
 class SearchBing
-  attr_accessor :bing_web, :search_results, :query, :total_available_results
+  attr_accessor :bing_web, :search_results, :query, :total_available_results, :total_results_returned
 
   def initialize(args)
     number_of_articles_per_search = args[:articles_per_search] || 50
@@ -7,6 +7,7 @@ class SearchBing
     @search_results = SearchResults.new
     @query = args[:query]
     @total_available_results = 0
+    @total_results_returned = 0
   end
 
   def find_all(query)
@@ -19,7 +20,9 @@ class SearchBing
 
   private
   def get_results(query)
-    results_hash(bing_web.search(query))
+    search_results = bing_web.search(query)
+    set_total_results_returned(search_results[0][:Web].count)
+    results_hash(search_results)
   end
 
   def results_hash(search_results)
@@ -41,6 +44,10 @@ class SearchBing
 
   def set_total_results(total_results)
     total_available_results = total_results
+  end
+
+  def set_total_results_returned(count)
+    total_results_returned = count
   end
 
 end
