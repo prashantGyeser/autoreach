@@ -24,7 +24,8 @@ describe SearchResults do
       expect(final_url).to eq 'http://thenextweb.com/entrepreneur/2015/06/13/43-lessons-growing-from-0-to-1-million-in-revenue-twice/'
     end
 
-
   end
+
+  it "should mark articles as either articles or non articles"
 
 end

@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://count.donreach.com/?url=https://blog.kissmetrics.com/use-kissmetrics-discover-freemium-value/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 16 Aug 2015 03:33:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '182'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - GEAR=55cf1bd80c1e6630d700015e-countlegacy; path=/
+      - __cfduid=d710d9235bed8b24dfec2982edf9eddfe1439695978; expires=Mon, 15-Aug-16
+        03:32:58 GMT; path=/; domain=.donreach.com; HttpOnly
+      Cache-Control:
+      - public, max-age=14400
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - MISS
+      Expires:
+      - Sun, 16 Aug 2015 07:33:16 GMT
+      Cf-Ray:
+      - 216a1337a1c401d0-SIN
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "url": "https://blog.kissmetrics.com/use-kissmetrics-discover-freemium-value/",
+          "shares": {
+            "buffer": 44,
+            "facebook": 54,
+            "google": 9,
+            "linkedin": 73,
+            "pinterest": 0,
+            "reddit": 0,
+            "total": 722,
+            "twitter": 542,
+            "vk": 0
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Aug 2015 03:33:16 GMT
+recorded_with: VCR 2.9.3

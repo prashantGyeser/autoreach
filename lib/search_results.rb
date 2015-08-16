@@ -58,7 +58,12 @@ class SearchResults
     results_hash[:final_url] = result[:Url]
     results_hash[:title] = result[:Title]
     results_hash[:description] = result[:Description]
+    results_hash[:text] = get_content(result[:Url]) || nil
     return results_hash
+  end
+
+  def get_content(url)
+    Scraper.new.scrape_page(url)
   end
 
 end
