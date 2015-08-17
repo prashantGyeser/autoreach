@@ -31,10 +31,8 @@ class SearchManager
     article = Article.new(url: result[:final_url], description: result[:description], title: result[:title], user_keyword_id: user_keyword[:id], user_id: user_keyword[:user_id], content: result[:text])
 
     if article.save
-      puts "Saved Article"
       return article
     else
-      puts "Could not save article: #{article.inspect}. The error message is: #{article.errors.full_messages}"
       Rollbar.warning("Encountered an error when trying to save the article: #{result[:final_url]}, #{article.errors.full_messages}")
       return false
     end
