@@ -24,6 +24,7 @@
 #  irrelevant         :boolean          default(FALSE)
 #  shares_low         :boolean          default(FALSE)
 #  posted             :boolean          default(FALSE)
+#  is_article         :boolean          default(FALSE)
 #
 
 class Article < ActiveRecord::Base
@@ -42,13 +43,16 @@ class Article < ActiveRecord::Base
 
   def check_if_article
     if !self.content.nil?
-      Webpage.new({url: self.url, content: self.content})
+      if Webpage.new({url: self.url, content: self.content}).contains_article?
+        self.is_article = true
+        self.save
+      end
     end
 
   end
 
   def set_shares
-    if !self.content.nil?
+    if is_article
       GetSharesJob.perform_later self
     end
   end

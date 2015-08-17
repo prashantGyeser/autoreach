@@ -24,6 +24,7 @@
 #  irrelevant         :boolean          default(FALSE)
 #  shares_low         :boolean          default(FALSE)
 #  posted             :boolean          default(FALSE)
+#  is_article         :boolean          default(FALSE)
 #
 
 FactoryGirl.define do
