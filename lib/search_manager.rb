@@ -41,8 +41,8 @@ class SearchManager
   end
 
   def set_reports
-    user_keyword.total_results_in_last_search = bing_search.total_results_returned
-    user_keyword.save
+    #user_keyword.total_results_in_last_search = bing_search.total_results_returned
+    #user_keyword.save
   end
 
 end
