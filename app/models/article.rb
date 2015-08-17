@@ -32,6 +32,7 @@ class Article < ActiveRecord::Base
 
   validates :url, uniqueness: { scope: :user_keyword_id }
 
+  after_create :check_if_article
   after_create :set_shares
 
   def mark_as_irrelevant
@@ -39,8 +40,17 @@ class Article < ActiveRecord::Base
     self.save
   end
 
+  def check_if_article
+    if !self.content.nil?
+      Webpage.new({url: self.url, content: self.content})
+    end
+
+  end
+
   def set_shares
-    GetSharesJob.perform_later self
+    if !self.content.nil?
+      GetSharesJob.perform_later self
+    end
   end
 
 end

@@ -3,14 +3,14 @@ class Webpage
 
   def initialize(args)
     @url = args[:url]
-    @content = Scraper.new.scrape_page(@url) || ''
+    @content =  args[:content] || Scraper.new.scrape_page(@url)
   end
 
   def contains_article?
     puts url
     if term_in_url?
       return true
-    elsif !@content.nil? #term_in_content?
+    elsif term_in_content?
       return true
     end
     return false
