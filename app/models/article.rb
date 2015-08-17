@@ -30,7 +30,7 @@ class Article < ActiveRecord::Base
   include Elasticsearch::Model
   belongs_to :user_keyword
 
-  validates :url, uniqueness: { scope: :user_id}
+  validates :url, uniqueness: { scope: :user_keyword_id }
 
   after_create :set_shares
 
