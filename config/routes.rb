@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'search/index'
   end
 
-  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
+  
 
   namespace :admin do
   get 'article_search/index'

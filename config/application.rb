@@ -40,7 +40,7 @@ module Autoreach
     config.assets.paths << File.join(Rails.root, "/vendor/pages")
 
 
-    config.active_job.queue_adapter = :delayed_job
+    config.active_job.queue_adapter = :sidekiq
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 

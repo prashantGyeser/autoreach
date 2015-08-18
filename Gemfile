@@ -56,8 +56,10 @@ gem "figaro"
 
 gem 'twitter'
 
-gem 'delayed_job_active_record'
-gem "delayed_job_web"
+#gem 'delayed_job_active_record'
+#gem "delayed_job_web"
+
+gem 'sidekiq'
 
 gem 'elasticsearch-model' # Todo: Remove
 gem 'elasticsearch-rails' # Todo: Remove
