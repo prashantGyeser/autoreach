@@ -36,7 +36,7 @@ class Article < ActiveRecord::Base
   after_create :check_if_article
   after_create :set_shares
   after_create :get_content
-  after_save :backfill_shares
+  #after_save :backfill_shares
 
   def backfill_shares
     if content_updated?(self)

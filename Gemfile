@@ -84,6 +84,8 @@ gem 'embedly', '~> 1.9.1'
 
 gem 'puma'
 
+gem 'sinatra', :require => nil
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
