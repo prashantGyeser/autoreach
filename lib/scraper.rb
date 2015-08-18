@@ -1,16 +1,14 @@
 class Scraper
 
   def scrape_page(url)
-    # content = get_page_content(url)
-    #
-    # if content.nil?
-    #   return embedly_extractor(url)
-    # else
-    #   return content
-    # end
+    content = get_page_content(url)
 
-    embedly_extractor(url)
-
+    if content.nil?
+      content_with_tags = embedly_extractor(url)
+      return extract_text_from_html(content_with_tags)
+    else
+      return content
+    end
   end
 
   def embedly_scrapper(url)

@@ -13,7 +13,7 @@
 #  last_searched                :datetime
 #  total_results_last_search    :integer
 #  searched                     :boolean          default(FALSE)
-#   :integer
+#  total_results_in_last_search :integer
 #
 
 class UserKeyword < ActiveRecord::Base

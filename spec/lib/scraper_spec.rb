@@ -48,5 +48,11 @@ describe Scraper, :vcr do
     #expect(scraper).to eq true
   end
 
+  it "should remove all html tags given just body content" do
+    scraper = Scraper.new
+    text = scraper.send(:extract_text_from_html, '<body>This is a test</body>')
+    expect(text).to eq "This is a test"
+  end
+
 
 end

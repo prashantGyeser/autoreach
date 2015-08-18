@@ -16,7 +16,7 @@ class SearchManager
   # Need to upgrade it so that it can get more than the first 50 results or uses some other service to get more results
   def search
     search_results = bing_search.first_50
-    set_reports
+    #set_reports
     return search_results
   end
 
@@ -39,8 +39,8 @@ class SearchManager
   end
 
   def set_reports
-    user_keyword.total_results_in_last_search = bing_search.total_results_returned
-    user_keyword.save
+    #user_keyword.total_results_in_last_search = bing_search.total_results_returned
+    #user_keyword.save
   end
 
 end
