@@ -82,6 +82,8 @@ gem "koala", "~> 2.2"
 
 gem 'embedly', '~> 1.9.1'
 
+gem 'puma'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'

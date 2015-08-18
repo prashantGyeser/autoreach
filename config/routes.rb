@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'search/index'
   end
 
-  
+
 
   namespace :admin do
   get 'article_search/index'
