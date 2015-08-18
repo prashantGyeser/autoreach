@@ -35,6 +35,25 @@ class Article < ActiveRecord::Base
 
   after_create :check_if_article
   after_create :set_shares
+  after_create :get_content
+  after_save :backfill_shares
+
+  def backfill_shares
+    if content_updated?(self)
+      check_if_article
+      set_shares
+    end
+  end
+
+  def content_updated?(article)
+    article.content_changed?
+  end
+
+  def get_content
+    if self.content.nil?
+      ContentBackfillJob.perform_later self
+    end
+  end
 
   def mark_as_irrelevant
     self.irrelevant = true
@@ -52,7 +71,7 @@ class Article < ActiveRecord::Base
   end
 
   def set_shares
-    if is_article
+    if is_article && self.facebook_shares.nil?
       GetSharesJob.perform_later self
     end
   end

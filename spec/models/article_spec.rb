@@ -31,11 +31,11 @@ require 'rails_helper'
 
 RSpec.describe Article, type: :model do
 
-  it "should not allow duplicate urls for a user" do
+  it "should check if the content has changed" do
     url = "http://yahoo.com/"
-    Article.create(url: url, user_id: 1)
-    article = build(:article, url: url, user_id: 1)
-    expect(article.errors[:url].size).to eq(1)
+    article = Article.create(url: url, user_keyword_id: 1)
+    article.user_keyword_id = 2
+    article.save
   end
 
 end
