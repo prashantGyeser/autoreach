@@ -29,7 +29,7 @@ class Search
 
   def generate_perfect_match_url(query)
     # https://webhose.io/search?token=49b06853-009e-4737-9bf8-43b2365109d2&format=json&q=%22GROWTH%20HACKING%22%20performance_score%3A%3E1&language=english&site_type=news&site_type=blogs
-    url = "#{base_url}search?token=#{token}&format=json&q=#{query} performance_score:>1&language=english&site_type=news&site_type=blogs"
+    url = "#{base_url}search?token=#{token}&format=json&q=#{query} performance_score:>4&language=english&site_type=blogs"
     encode_url(url)
   end
 
