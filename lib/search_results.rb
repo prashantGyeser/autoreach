@@ -59,6 +59,9 @@ class SearchResults
     results_hash[:title] = result[:Title]
     results_hash[:description] = result[:Description]
     results_hash[:text] = get_content(result[:Url]) || nil
+    results_hash[:performance_score] = nil
+    results_hash[:spam_score] = nil
+    results_hash[:published] = nil
     return results_hash
   end
 
