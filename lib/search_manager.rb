@@ -9,19 +9,19 @@ class SearchManager
   def get_articles
 
     webhose_results = search_webhose
-
+    puts "Total webhost results: #{webhose_results.count}"
     if webhose_results.count <= 0
       store_articles(search_bing)
     else
       store_articles(webhose_results)
     end
-    
+
   end
 
   private
 
   def search_webhose
-    Search.new(user_keyword.keyword).find
+    Search.new({search_term: user_keyword[:keyword]}).find
   end
 
 

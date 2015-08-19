@@ -20,7 +20,8 @@ class UserKeyword < ActiveRecord::Base
   belongs_to :user
   has_many :articles
 
-  after_create :search
+  #after_create :search
+  after_commit :search, on: :create
 
   def search
     #BingSearchJob.perform_later self

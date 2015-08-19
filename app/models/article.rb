@@ -61,7 +61,7 @@ class Article < ActiveRecord::Base
   end
 
   def check_if_article
-    if !self.content.nil?
+    if !self.content.nil? && self.performance_score.nil?
       if Webpage.new({url: self.url, content: self.content}).contains_article?
         self.is_article = true
         self.save
@@ -71,7 +71,7 @@ class Article < ActiveRecord::Base
   end
 
   def set_shares
-    if is_article && self.facebook_shares.nil?
+    if is_article && self.facebook_shares.nil? && self.performance_score.nil?
       GetSharesJob.perform_later self
     end
   end
