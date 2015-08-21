@@ -86,6 +86,8 @@ gem 'puma'
 
 gem 'sinatra', :require => nil
 
+gem 'le'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'

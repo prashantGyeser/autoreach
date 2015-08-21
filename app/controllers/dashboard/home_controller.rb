@@ -7,7 +7,12 @@ class Dashboard::HomeController < Dashboard::ApplicationController
 
     if @articles.count > 0
       if @user_keyword.searched == true
-        @has_articles = true
+        if @articles.count > 0
+          @has_articles = true
+        else
+          @no_results = true
+        end
+
       else
         @processing = true
       end
