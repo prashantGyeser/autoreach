@@ -7,11 +7,7 @@ class Dashboard::HomeController < Dashboard::ApplicationController
 
     if @articles.count > 0
       if @user_keyword.searched == true
-        if @articles.count > 0
-          @has_articles = true
-        else
-          @no_results = true
-        end
+        @has_articles = true
       else
         @processing = true
       end
@@ -22,8 +18,6 @@ class Dashboard::HomeController < Dashboard::ApplicationController
     else
       @changing_keyword = true
     end
-
-
 
 
     if Token.where(user_id: current_user.id).count <= 0
