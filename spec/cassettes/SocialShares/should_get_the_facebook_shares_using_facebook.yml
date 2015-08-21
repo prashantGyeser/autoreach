@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.facebook.com/restserver.php?method=links.getStats&urls=http://tmagazine.blogs.nytimes.com/category/womens-fashion/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/xml;charset=utf-8
+      X-Fb-Trace-Id:
+      - GELqQZGNYOw
+      X-Fb-Rev:
+      - '1896546'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - x5qIQEHA/7ZSNG0QMp3Jp0JYDxPJ0ukri9zKl2SZ0AgOvnxIq88CeAow5I6GVp1oWRapKgnqsPOMicAEiTEpXA==
+      Date:
+      - Fri, 21 Aug 2015 11:27:22 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '757'
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <links_getStats_response xmlns="http://api.facebook.com/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.facebook.com/1.0/ http://api.facebook.com/1.0/facebook.xsd" list="true">
+          <link_stat>
+            <url>http://tmagazine.blogs.nytimes.com/category/womens-fashion/</url>
+            <normalized_url>http://tmagazine.blogs.nytimes.com/category/womens-fashion/</normalized_url>
+            <share_count>62</share_count>
+            <like_count>49</like_count>
+            <comment_count>26</comment_count>
+            <total_count>137</total_count>
+            <click_count>0</click_count>
+            <comments_fbid>10150206269948436</comments_fbid>
+            <commentsbox_count>0</commentsbox_count>
+          </link_stat>
+        </links_getStats_response>
+    http_version: 
+  recorded_at: Fri, 21 Aug 2015 11:27:22 GMT
+recorded_with: VCR 2.9.3

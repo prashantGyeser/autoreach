@@ -8,13 +8,15 @@ class SearchManager
 
   def get_articles
 
-    webhose_results = search_webhose
-    puts "Total webhost results: #{webhose_results.count}"
-    if webhose_results.count <= 0
-      store_articles(search_bing)
-    else
-      store_articles(webhose_results)
-    end
+    store_articles(search_bing)
+
+    # webhose_results = search_webhose
+    # puts "Total webhost results: #{webhose_results.count}"
+    # if webhose_results.count <= 0
+    #   store_articles(search_bing)
+    # else
+    #   store_articles(webhose_results)
+    # end
 
   end
 
