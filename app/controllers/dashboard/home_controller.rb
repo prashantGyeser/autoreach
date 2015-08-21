@@ -12,7 +12,6 @@ class Dashboard::HomeController < Dashboard::ApplicationController
         else
           @no_results = true
         end
-
       else
         @processing = true
       end
