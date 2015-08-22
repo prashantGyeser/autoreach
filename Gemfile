@@ -88,6 +88,8 @@ gem 'sinatra', :require => nil
 
 gem 'le'
 
+gem 'newrelic_rpm'
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
