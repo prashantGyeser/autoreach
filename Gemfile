@@ -90,6 +90,8 @@ gem 'le'
 
 gem 'newrelic_rpm'
 
+gem "skylight"
+
 group :development do
   gem 'guard-rspec'
   gem 'libnotify'
