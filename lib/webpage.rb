@@ -6,6 +6,13 @@ class Webpage
     @content =  args[:content] || Scraper.new.scrape_page(@url)
   end
 
+  def url_excluded?
+    if ["wikipedia","quora.com", "google.com"].any? { |w| url[w] }
+      return true
+    end
+    return false
+  end
+
   def contains_article?
     if term_in_url?
       return true

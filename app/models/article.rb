@@ -62,7 +62,8 @@ class Article < ActiveRecord::Base
 
   def check_if_article
     if !self.content.nil? && self.performance_score.nil?
-      if Webpage.new({url: self.url, content: self.content}).contains_article?
+      webpage = Webpage.new({url: self.url, content: self.content})
+      if !webpage.url_excluded? && webpage.contains_article?
         self.is_article = true
         self.save
       end
