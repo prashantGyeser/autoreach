@@ -6,13 +6,18 @@
         <h3>Pages makes it easy to enjoy what matters the most in your life</h3>
         <p>
           <small>
-            Create a pages account. If you have a facebook account, log into it for this process. Sign in with <a href="#" class="text-info">Facebook</a> or <a href="#" class="text-info">Google</a>
+            Create a pages account. If you have a facebook account, log into it for this process. Sign in with <a href="#" class="text-info">Facebook</a> or <a href="#" class="text-info">Google2</a>
           </small>
         </p>
 
 
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <%# devise_error_messages! %>
+            <%- flash.each do |name, msg| -%>
+                <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+            <%- end -%>
 
             <div class="row">
               <div class="col-sm-12">
