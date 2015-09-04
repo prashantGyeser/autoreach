@@ -46,7 +46,10 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
-  devise_for :users
+  #devise_for :users
+  devise_for :users do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
   # Omniauth
   # Sample reference: https://github.com/RailsApps/rails-omniauth/
