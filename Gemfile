@@ -114,6 +114,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'faker'
+
+  gem 'rails-perftest'
 end
 
 group :test do

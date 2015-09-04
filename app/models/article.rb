@@ -25,10 +25,11 @@
 #  shares_low         :boolean          default(FALSE)
 #  posted             :boolean          default(FALSE)
 #  is_article         :boolean          default(FALSE)
+#  content_tries      :integer          default(0)
+#  shares_tries       :integer          default(0)
 #
 
 class Article < ActiveRecord::Base
-  include Elasticsearch::Model
   belongs_to :user_keyword
 
   validates :url, uniqueness: { scope: :user_keyword_id }
@@ -63,7 +64,7 @@ class Article < ActiveRecord::Base
   def check_if_article
     if !self.content.nil? && self.performance_score.nil?
       webpage = Webpage.new({url: self.url, content: self.content})
-      if !webpage.url_excluded? && webpage.contains_article?
+      if webpage.contains_article?
         self.is_article = true
         self.save
       end

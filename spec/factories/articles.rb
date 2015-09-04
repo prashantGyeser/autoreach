@@ -25,6 +25,8 @@
 #  shares_low         :boolean          default(FALSE)
 #  posted             :boolean          default(FALSE)
 #  is_article         :boolean          default(FALSE)
+#  content_tries      :integer          default(0)
+#  shares_tries       :integer          default(0)
 #
 
 FactoryGirl.define do
