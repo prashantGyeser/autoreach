@@ -22,14 +22,14 @@ describe Webpage, :vcr do
 
   it "should exclude urls that come from unwanted sites" do
     args = {url: 'https://blog.google.com/social-media-marketing-plan'}
-    url_excluded = Webpage.new(args).url_excluded?
-    expect(url_excluded).to be true
+    contains_article = Webpage.new(args).contains_article?
+    expect(contains_article).to be false
   end
 
   it "should not exclude urls that contain a brand name" do
     args = {url: 'https://blog.test.com/google'}
-    url_excluded = Webpage.new(args).url_excluded?
-    expect(url_excluded).to be false
+    contains_article = Webpage.new(args).contains_article?
+    expect(contains_article).to be true
   end
 
 end

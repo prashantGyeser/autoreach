@@ -12,7 +12,7 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'capybara/poltergeist'
 require 'vcr'
-
+require 'rspec/active_job'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -58,4 +58,15 @@ RSpec.configure do |config|
 # The different available types are documented in the features, such as in
 # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+
+  config.include(RSpec::ActiveJob)
+
+# clean out the queue after each spec
+  config.after(:each) do
+    ActiveJob::Base.queue_adapter.enqueued_jobs = []
+    ActiveJob::Base.queue_adapter.performed_jobs = []
+  end
+
+
 end

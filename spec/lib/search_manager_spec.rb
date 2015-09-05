@@ -9,7 +9,6 @@ describe SearchManager, :vcr do
   it "should search and store articles" do
     SearchManager.new({user_keyword: @user_keyword}).get_articles
     expect(Article.count).to eq 50
-    expect(Article.where(content: nil).count).to be 21
   end
 
 end

@@ -60,6 +60,7 @@ gem 'twitter'
 #gem "delayed_job_web"
 
 gem 'sidekiq'
+gem 'sidekiq-failures'
 
 gem 'elasticsearch-model' # Todo: Remove
 gem 'elasticsearch-rails' # Todo: Remove
@@ -93,10 +94,10 @@ gem 'newrelic_rpm'
 gem "skylight"
 
 group :development do
-  gem 'guard-rspec'
   gem 'libnotify'
   gem 'spring-commands-rspec'
   gem "annotate"
+  gem 'guard-rspec', require: false
 end
 
 
@@ -116,6 +117,7 @@ group :development, :test do
   gem 'faker'
 
   gem 'rails-perftest'
+  gem 'rspec-activejob'
 end
 
 group :test do

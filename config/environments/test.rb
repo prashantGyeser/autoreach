@@ -41,4 +41,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.assets.paths << File.join(Rails.root, "/vendor/pages")
+
+  config.active_job.queue_adapter = :test
 end

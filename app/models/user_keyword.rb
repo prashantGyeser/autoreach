@@ -24,7 +24,6 @@ class UserKeyword < ActiveRecord::Base
   after_commit :search, on: :create
 
   def search
-    #BingSearchJob.perform_later self
     ArticleSearchJob.perform_later self
   end
 

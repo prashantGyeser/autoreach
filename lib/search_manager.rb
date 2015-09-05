@@ -8,15 +8,10 @@ class SearchManager
 
   def get_articles
     store_articles(search_bing)
+    SetAllArticleDetailsJob.perform_later
   end
 
   private
-
-  def search_webhose
-    Search.new({search_term: user_keyword[:keyword]}).find
-  end
-
-
   # Todo: Add the search logic here
   # Right now this is a simple search using Bing and only gets the first 50 results.
   # Need to upgrade it so that it can get more than the first 50 results or uses some other service to get more results

@@ -34,48 +34,15 @@ class Article < ActiveRecord::Base
 
   validates :url, uniqueness: { scope: :user_keyword_id }
 
-  after_create :check_if_article
-  after_create :set_shares
-  after_create :get_content
-  #after_save :backfill_shares
+  #after_save :get_details
 
-  def backfill_shares
-    if content_updated?(self)
-      check_if_article
-      set_shares
-    end
-  end
-
-  def content_updated?(article)
-    article.content_changed?
-  end
-
-  def get_content
-    if self.content.nil?
-      ContentBackfillJob.perform_later self
-    end
-  end
+  # def get_details
+  #   SetArticleDetailsJob.perform_later self
+  # end
 
   def mark_as_irrelevant
     self.irrelevant = true
     self.save
-  end
-
-  def check_if_article
-    if !self.content.nil? && self.performance_score.nil?
-      webpage = Webpage.new({url: self.url, content: self.content})
-      if webpage.contains_article?
-        self.is_article = true
-        self.save
-      end
-    end
-
-  end
-
-  def set_shares
-    if is_article && self.facebook_shares.nil? && self.performance_score.nil?
-      GetSharesJob.perform_later self
-    end
   end
 
 end

@@ -318,6 +318,9 @@ GEM
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
       rspec-mocks (~> 3.3.0)
+    rspec-activejob (0.4.2)
+      activejob (>= 4.2)
+      rspec-mocks
     rspec-core (3.3.0)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.0)
@@ -361,6 +364,8 @@ GEM
       json (~> 1.0)
       redis (~> 3.2, >= 3.2.1)
       redis-namespace (~> 1.5, >= 1.5.2)
+    sidekiq-failures (0.4.5)
+      sidekiq (>= 2.16.0)
     simple_oauth (0.3.1)
     simplecov (0.10.0)
       docile (~> 1.1.0)
@@ -480,6 +485,7 @@ DEPENDENCIES
   rails_12factor
   rake_text
   rollbar (~> 2.1.1)
+  rspec-activejob
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -487,6 +493,7 @@ DEPENDENCIES
   selenium-webdriver
   shared_count_api
   sidekiq
+  sidekiq-failures
   simplecov
   sinatra
   skylight
