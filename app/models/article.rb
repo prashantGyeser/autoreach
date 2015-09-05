@@ -34,12 +34,6 @@ class Article < ActiveRecord::Base
 
   validates :url, uniqueness: { scope: :user_keyword_id }
 
-  #after_save :get_details
-
-  # def get_details
-  #   SetArticleDetailsJob.perform_later self
-  # end
-
   def mark_as_irrelevant
     self.irrelevant = true
     self.save

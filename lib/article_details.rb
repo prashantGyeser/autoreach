@@ -11,7 +11,6 @@ class ArticleDetails
     if article.content.nil? && ( article.content_tries < 3 )
       set_content
       set_shares
-
     elsif article.facebook_shares.nil? && ( article.shares_tries < 3 )
       set_shares
     end

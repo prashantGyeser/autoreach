@@ -65,8 +65,4 @@ class SearchResults
     return results_hash
   end
 
-  def get_content(url)
-    Scraper.new.scrape_page(url)
-  end
-
 end

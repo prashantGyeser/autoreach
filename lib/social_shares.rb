@@ -14,9 +14,7 @@ class SocialShares
   # Todo: Update this so that it falls back to donreach
   def get_shares
     shared_count_facebook_shares = shared_count_facebook
-    puts "The facebook shares are: #{shared_count_facebook_shares}"
     if shared_count_facebook_shares.nil?
-      puts "It is getting the social share using the fb url"
       return {facebook: get_shares_through_facebook, twitter: nil, google: nil, linkedin: nil}
     else
       return {facebook: shared_count_facebook_shares, twitter: nil, google: nil, linkedin: nil}
