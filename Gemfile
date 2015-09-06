@@ -93,6 +93,8 @@ gem 'newrelic_rpm'
 
 gem "skylight"
 
+gem 'pusher'
+
 group :development do
   gem 'libnotify'
   gem 'spring-commands-rspec'
