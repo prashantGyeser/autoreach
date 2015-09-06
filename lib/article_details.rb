@@ -28,6 +28,7 @@ class ArticleDetails
   def set_shares
     if webpage.contains_article?
       get_shares
+      PusherUpdates.new.send_article_to_frontend(article)
     end
     increment_shares_tries
   end
