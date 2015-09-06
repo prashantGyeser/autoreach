@@ -121,7 +121,7 @@ body.dashboard .page-container {
   -webkit-animation: none;
   animation: none;
   top: 73px;
-  background: url('../img/progress/progress-circle-success.svg') no-repeat top left;
+  background: image-url('progress/progress-circle-success.svg') no-repeat top left;
   background-size: 100% auto;
   margin: 0 auto;
   border-width: 0;
@@ -723,7 +723,7 @@ body.dashboard .page-container {
 }
 .quickview-wrapper .nav-tabs ~ .tab-content .quickview-notes .note {
   /* Quickview Note */
-  background-image: url('../img/notes_lines.png');
+  background-image: image-url('notes_lines.png');
   background-repeat: repeat-y;
   background-position: 27px top;
 }
@@ -995,7 +995,7 @@ body.dashboard .page-container {
 */
 .icon-set {
   /*background: url('../images/icons/top_tray.png') no-repeat;*/
-  background: asset-url('icons/top_tray.png') no-repeat;
+  background: image-url('icons/top_tray.png') no-repeat;
   position: relative;
   display: block;
 }
@@ -1644,10 +1644,10 @@ body.dashboard .page-container {
   opacity: 0.1;
 }
 .portlet-icon-refresh-lg-master {
-  background-image: url('../img/progress/progress-circle-lg-master-static.svg');
+  background-image: image-url('progress/progress-circle-lg-master-static.svg');
 }
 .portlet-icon-refresh-lg-white {
-  background-image: url('../img/progress/progress-circle-lg-white-static.svg');
+  background-image: image-url('progress/progress-circle-lg-white-static.svg');
 }
 .portlet-icon-refresh-lg-master-animated,
 .portlet-icon-refresh-lg-white-animated {
@@ -1664,10 +1664,10 @@ body.dashboard .page-container {
   opacity: 1;
 }
 .portlet-icon-refresh-lg-master-animated {
-  background-image: url('../img/progress/progress-circle-lg-master.svg');
+  background-image: image-url('progress/progress-circle-lg-master.svg');
 }
 .portlet-icon-refresh-lg-white-animated {
-  background-image: url('../img/progress/progress-circle-lg-white.svg');
+  background-image: image-url('progress/progress-circle-lg-white.svg');
 }
 /* For demo purpose only */
 .panel-scroll {
@@ -3274,7 +3274,7 @@ Misc buttons
   top: 8px;
 }
 .alert .close {
-  background: url("../img/icons/noti-cross.png") no-repeat scroll 0 0 transparent;
+  background: image-url("icons/noti-cross.png") no-repeat scroll 0 0 transparent;
   background-position: -9px -10px;
   width: 10px;
   height: 9px;
@@ -3988,7 +3988,7 @@ body > .pgn-wrapper {
 ------------------------------------
 */
 .progress-bar-indeterminate {
-  background: url('../img/progress/progress-bar-master.svg') no-repeat top left;
+  background: image-url('progress/progress-bar-master.svg') no-repeat top left;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -4104,29 +4104,29 @@ body > .pgn-wrapper {
 ------------------------------------
 */
 .progress-circle-indeterminate {
-  background: url('../img/progress/progress-circle-master.svg') no-repeat top left;
+  background: image-url('rogress/progress-circle-master.svg') no-repeat top left;
   width: 50px;
   height: 50px;
   background-size: 100% auto;
   margin: 0 auto;
 }
 .progress-circle-indeterminate.progress-circle-warning {
-  background-image: url('../img/progress/progress-circle-warning.svg');
+  background-image: image-url('progress/progress-circle-warning.svg');
 }
 .progress-circle-indeterminate.progress-circle-danger {
-  background-image: url('../img/progress/progress-circle-danger.svg');
+  background-image: image-url('progress/progress-circle-danger.svg');
 }
 .progress-circle-indeterminate.progress-circle-info {
-  background-image: url('../img/progress/progress-circle-info.svg');
+  background-image: image-url('progress/progress-circle-info.svg');
 }
 .progress-circle-indeterminate.progress-circle-primary {
-  background-image: url('../img/progress/progress-circle-primary.svg');
+  background-image: image-url('progress/progress-circle-primary.svg');
 }
 .progress-circle-indeterminate.progress-circle-success {
-  background-image: url('../img/progress/progress-circle-success.svg');
+  background-image: image-url('progress/progress-circle-success.svg');
 }
 .progress-circle-indeterminate.progress-circle-complete {
-  background-image: url('../img/progress/progress-circle-complete.svg');
+  background-image: image-url('progress/progress-circle-complete.svg');
 }
 /* Circular Progress 
 ------------------------------------
@@ -6645,7 +6645,7 @@ https://github.com/Waxolunist/bootstrap3-wysihtml5-bower
   font-weight: 600;
 }
 .editor-icon {
-  background-image: url("../img/editor_tray.png");
+  background-image: image-url("editor_tray.png");
   display: inline-block;
   height: 40px;
   margin-top: 5px;
@@ -7859,7 +7859,7 @@ input.list-view-search {
   overflow-x: hidden;
 }
 .social-wrapper .social .cover-photo:before {
-  background-image: url("../img/linear_gradient.png");
+  background-image: image-url("linear_gradient.png");
   background-repeat: repeat-x;
   bottom: 0;
   content: " ";
@@ -10177,7 +10177,7 @@ Main components
   opacity: .69;
 }
 .widget-1:before {
-  background-image: url('../img/linear_gradient.png');
+  background-image: image-url('linear_gradient.png');
   background-repeat: repeat-x;
   content: " ";
   left: 0;
@@ -12813,16 +12813,16 @@ Main components
 /*** Retina Display Images **/
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2) {
   .icon-set {
-    background: url('../img/icons/top_tray_2x.png');
+    background: image-url('icons/top_tray_2x.png');
     position: relative;
     background-size: 95px 19px;
   }
   .editor-icon {
-    background-image: url("../img/editor_tray_2x.png");
+    background-image: image-url("editor_tray_2x.png");
     background-size: 480px 40px;
   }
   .alert .close {
-    background: url("../img/icons/noti-cross-2x.png") no-repeat scroll 0 0 transparent;
+    background: image-url("icons/noti-cross-2x.png") no-repeat scroll 0 0 transparent;
     background-position: -9px -10px;
     width: 10px;
     height: 9px;
