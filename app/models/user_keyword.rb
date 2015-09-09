@@ -14,6 +14,7 @@
 #  total_results_last_search    :integer
 #  searched                     :boolean          default(FALSE)
 #  total_results_in_last_search :integer
+#  processing_complete          :boolean          default(FALSE)
 #
 
 class UserKeyword < ActiveRecord::Base
@@ -76,6 +77,11 @@ class UserKeyword < ActiveRecord::Base
     keywords.each do |keyword|
       save_keyword(keyword, token_id)
     end
+  end
+
+  def set_processing_complete
+    self.processing_complete = true
+    self.save
   end
 
   # Todo: Fix this so that it no matter the extraction method this works

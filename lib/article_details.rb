@@ -1,10 +1,13 @@
 class ArticleDetails
-  attr_accessor :article, :url, :webpage
+  attr_accessor :article, :url, :webpage, :user_keyword_processing, :pusher_updates, :user_keyword
 
   def initialize(args)
     @article = args[:article]
+    @user_keyword = UserKeyword.find(article.user_keyword_id)
     @url = article[:url]
     @webpage = Webpage.new({url: url})
+    @user_keyword_processing = UserKeywordProcessing.new({user_keyword: user_keyword})
+    @pusher_updates = PusherUpdates.new
   end
 
   def set_details
@@ -14,6 +17,16 @@ class ArticleDetails
     elsif article.facebook_shares.nil? && ( article.shares_tries < 3 )
       set_shares
     end
+
+    if user_keyword_processing.is_complete? && !user_keyword.processing_complete
+      puts "Okay it is complete"
+      pusher_updates.processing_complete(user_keyword)
+      user_keyword.set_processing_complete
+    elsif !user_keyword_processing.is_complete? && !user_keyword.processing_complete
+      puts "It is processing"
+      pusher_updates.processing_in_progress(user_keyword)
+    end
+
   end
 
   private

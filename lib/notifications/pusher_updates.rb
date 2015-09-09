@@ -7,4 +7,14 @@ class PusherUpdates
     Pusher[channel_name].trigger('new_article', { id: article.id, title: article.title, url: article.url, keyword: user_keyword.keyword })
   end
 
+  def processing_complete(user_keyword)
+    channel_name = "private_#{user_keyword.user_id}"
+    Pusher[channel_name].trigger('processing_complete', { id: user_keyword.id })
+  end
+
+  def processing_in_progress(user_keyword)
+    channel_name = "private_#{user_keyword.user_id}"
+    Pusher[channel_name].trigger('processing_inprogress', { id: user_keyword.id })
+  end
+
 end

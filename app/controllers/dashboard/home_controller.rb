@@ -24,6 +24,8 @@ class Dashboard::HomeController < Dashboard::ApplicationController
       @integration_incomplete = true
     end
 
+    @user_keyword_processing = UserKeywordProcessing.new({user_keyword: @user_keyword})
+
   end
 
   def edit_keyword

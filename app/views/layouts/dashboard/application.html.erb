@@ -181,13 +181,31 @@
         encrypted: true
     });
     var channel = pusher.subscribe('private_<%= current_user.id %>');
+
     channel.bind('new_article', function(data) {
         add_article_row(data)
+    });
+
+    channel.bind('processing_inprogress', function(data) {
+        show_processing_status();
+    });
+
+    channel.bind('processing_complete', function(data) {
+        hide_processing_status();
     });
 
     function add_article_row(article){
       $('#articles').append("<tr><td class='v-align-middle'><a href='"+ article.url +"' class='bold' target='_blank'>"+ article.title +"</a></td><td class='v-align-middle'><span class='label'>"+ article.keyword +"</span></td><td class='v-align-middle'><span class='label label-warning'>Not Posted</span></td><td class='v-align-middle'><div class='btn-group'><button class='btn btn-danger delete_article' type='button' data-id='"+ article.id +"'><i class='fa fa-trash-o'></i></button></div></td></tr>");
     }
+
+    function show_processing_status(){
+      $('#processing_status').show();
+    }
+
+    function hide_processing_status(){
+        $('#processing_status').hide(1000);
+    }
+
 
 </script>
 

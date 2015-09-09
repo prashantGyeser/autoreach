@@ -20,6 +20,23 @@
       <div class="clearfix"></div>
     </div>
     <div class="panel-body">
+
+          <div class="row" id="processing_status" style="display:none">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="progress">
+                <div class="progress-bar-indeterminate progress-bar-primary"></div>
+              </div>
+              <div class="progress_explanation text-center">
+                <h2>Articles Found!</h2>
+                <p>
+                  We are still processing your articles. They will show up automatically as they come in.
+                </p>
+              </div>
+            </div>
+          </div>
+      
+
+
       <div class="table-responsive">
 
         <table class="table table-striped" id="articles">
@@ -58,6 +75,9 @@
 
       <%= paginate @articles %>
       <%= page_entries_info @articles %>
+
+
+    </div>
 
     </div>
   </div>
