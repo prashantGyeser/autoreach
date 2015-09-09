@@ -60,6 +60,13 @@ class UserKeyword < ActiveRecord::Base
     self.save
   end
 
+  def set_processing_complete
+    self.processing_complete = true
+    self.save
+  end
+
+  
+
   private
   def self.combine_tweets(tweets)
     tweets.pluck(:tweet).flatten.to_s
@@ -79,10 +86,6 @@ class UserKeyword < ActiveRecord::Base
     end
   end
 
-  def set_processing_complete
-    self.processing_complete = true
-    self.save
-  end
 
   # Todo: Fix this so that it no matter the extraction method this works
   def self.save_keyword(keyword, token_id)

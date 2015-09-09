@@ -18,14 +18,7 @@ class ArticleDetails
       set_shares
     end
 
-    if user_keyword_processing.is_complete? && !user_keyword.processing_complete
-      puts "Okay it is complete"
-      pusher_updates.processing_complete(user_keyword)
-      user_keyword.set_processing_complete
-    elsif !user_keyword_processing.is_complete? && !user_keyword.processing_complete
-      puts "It is processing"
-      pusher_updates.processing_in_progress(user_keyword)
-    end
+    send_notifications
 
   end
 
@@ -76,6 +69,17 @@ class ArticleDetails
   def increment_shares_tries
     article.shares_tries = article.shares_tries + 1
     article.save
+  end
+
+  def send_notifications
+    if user_keyword_processing.is_complete? && !user_keyword.processing_complete
+      puts "Okay it is complete"
+      pusher_updates.processing_complete(user_keyword)
+      user_keyword.set_processing_complete
+    elsif !user_keyword_processing.is_complete? && !user_keyword.processing_complete
+      puts "It is processing"
+      pusher_updates.processing_in_progress(user_keyword)
+    end
   end
 
 end
