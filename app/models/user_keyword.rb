@@ -65,7 +65,7 @@ class UserKeyword < ActiveRecord::Base
     self.save
   end
 
-  
+
 
   private
   def self.combine_tweets(tweets)
