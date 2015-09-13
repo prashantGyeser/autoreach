@@ -29,8 +29,9 @@
 
   <%= csrf_meta_tags %>
 
+
   <!-- ONBOARDING -- START -->
-  
+  <script src="https://d237d8mq680mpf.cloudfront.net/onboarded-js/latest/onboarded-js.min.js" data-style="true" data-style-overlay-dismissable="true"></script>
   <!-- ONBOARDING -- END -->
 
 
@@ -160,6 +161,43 @@
 </div>
 <!-- END PAGE CONTAINER -->
 
+
+<!-- ONBOARDING -- START -->
+<div data-onboarded-token="pmkpdqVLRc98HdbGmlLvPA" style="display: none;">
+  <div data-onboarded-flow="Autoreach dashboard tour" class="flow">
+    <div data-step="1-Welcome" class="step">
+      <h1>Congratulations!</h1>
+      <h6>Step 1 of 3</h6>
+      <p>We have found articles for you. This tour will help you have a a quick look around. It will not take more than a few seconds!</p>
+      <section>
+        <button data-name="Go To Step One" data-action-next="first">Next</button>
+      </section>
+    </div>
+
+    <div data-step="first" class="step" data-focus-selector="#articles" data-focus-classname="highlight">
+      <h1>Your Articles</h1>
+      <h6>Step 2 of 3</h6>
+      <p>
+        You articles will show up here ranked by the quality of articles.
+      </p>
+      <button data-name="Go To Step Two" data-action-next="second">Next</button>
+    </div>
+
+    <div data-step="second" class="step" data-scrollTo-selector=".pgn-wrapper" data-focus-selector=".pgn-wrapper" data-focus-classname="highlight">
+      <h1>Connect</h1>
+      <h6>Step 3 of 3</h6>
+      <p>
+        Connect your social media accounts and we will automatically start posting for you.
+      </p>
+      <button data-action-complete>Finish</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ONBOARDING -- END -->
+
+
 <!-- JS at bottom of page to improve load time, and only loaded once with 'data-turbolinks-eval' == false  -->
 <%= javascript_include_tag 'dashboard/application', 'data-turbolinks-track' => true, 'data-turbolinks-eval' => false %>
 <script src="https://js.pusher.com/2.2/pusher.min.js"></script>
@@ -167,7 +205,7 @@
 <% if @integration_incomplete %>
     <script>
         $(document).ready(function() {
-            var options = {message: '<span class="bold">Your articles will not be automatically posted till you integrate with atleast one social media network. Start posting now!</span> <a href="/dashboard/integrations" class="btn btn-default btn-sm m-l-10"">Integrate now</a>', position: "bottom", style: "bar", timeout: 40000000000, type: "danger"};
+            var options = {message: '<span class="bold">Your articles will not be automatically posted till you integrate with atleast one social media network. Start posting now!</span> <a href="/dashboard/integrations" id="integrate_now" class="btn btn-default btn-sm m-l-10"">Integrate now</a>', position: "bottom", style: "bar", timeout: 40000000000, type: "danger"};
             $('body').pgNotification(options).show();
         });
     </script>
@@ -213,8 +251,6 @@
 
 
 </script>
-
-
 
 </body>
 </html>
