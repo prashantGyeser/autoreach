@@ -7,25 +7,26 @@ class SearchManager
   end
 
   def get_articles
-    store_articles(search_bing)
-    SetAllArticleDetailsJob.perform_later
+    search_logic
   end
 
   private
-  # Todo: Add the search logic here
-  # Right now this is a simple search using Bing and only gets the first 50 results.
-  # Need to upgrade it so that it can get more than the first 50 results or uses some other service to get more results
-  def search_bing
-    search_results = bing_search.first_50
-    #set_reports
+  def search_bing(offset)
+    # Todo: Add the offset here
+    search_results = bing_search.find_with_offset(offset)
     return search_results
   end
 
 
   def store_articles(results)
+    articles_saved = 0
     results.each do |result|
-      store_article(result)
+      article = store_article(result)
+      if article != false
+        articles_saved = articles_saved + 1
+      end
     end
+    return articles_saved
   end
 
   def store_article(result)
@@ -39,9 +40,52 @@ class SearchManager
     end
   end
 
-  def set_reports
-    #user_keyword.total_results_in_last_search = bing_search.total_results_returned
-    #user_keyword.save
+  # Todo: Change the name. This one is here till I can find a better name
+  def search_logic
+
+    # Search bing first with no offset. This is to make sure there are no new results
+    # Count the results that are stored i.e. articles saved
+      # IF the count is == 50
+      # Break out of this system
+      # ELSE
+      # Rerun search till a total of 50 new results are go using this search call
+
+
+    get_new_articles
+    SetAllArticleDetailsJob.perform_later
   end
+
+  def get_new_articles
+
+    articles_count = store_articles(search_bing(0))
+
+    # Todo: Account for cases where the search result is less than 50. Currently it will go into an infinite loop if there are less than 50 results
+    if articles_count != 50
+      get_articles_with_offset(articles_count)
+    end
+
+
+  end
+
+  def get_articles_with_offset(current_new_article_count)
+    total_new_articles = current_new_article_count
+    while total_new_articles < 50
+      search_results = search_bing(offset)
+      # Getting 50 results with each search so increasing the offset by 50 each time
+      set_keyword_offset(50 + user_keyword.offset)
+      articles_count = store_articles(search_results)
+      total_new_articles =  articles_count + total_new_articles
+    end
+  end
+
+
+  def offset
+    user_keyword.offset
+  end
+
+  def set_keyword_offset(offset)
+    user_keyword.set_offset(offset)
+  end
+
 
 end

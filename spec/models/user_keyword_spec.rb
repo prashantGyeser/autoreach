@@ -15,6 +15,7 @@
 #  searched                     :boolean          default(FALSE)
 #  total_results_in_last_search :integer
 #  processing_complete          :boolean          default(FALSE)
+#  offset                       :integer          default(0)
 #
 
 require 'rails_helper'

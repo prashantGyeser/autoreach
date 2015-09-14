@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150909052903) do
+ActiveRecord::Schema.define(version: 20150914114725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(version: 20150909052903) do
     t.boolean  "searched",                     default: false
     t.integer  "total_results_in_last_search"
     t.boolean  "processing_complete",          default: false
+    t.integer  "offset",                       default: 0
   end
 
   create_table "user_tweets", force: :cascade do |t|

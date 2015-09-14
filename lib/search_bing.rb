@@ -18,9 +18,20 @@ class SearchBing
     search
   end
 
+  def find_with_offset(offset)
+    search_with_offset(offset)
+  end
+
   private
   def get_results(query)
     search_results = bing_web.search(query)
+    set_total_results_returned(search_results[0][:Web].count)
+    results_hash(search_results)
+  end
+
+  def get_results_with_offset(offset)
+    search_results = bing_web.search(query, offset)
+    set_total_results(search_results[0][:WebTotal])
     set_total_results_returned(search_results[0][:Web].count)
     results_hash(search_results)
   end
@@ -48,6 +59,12 @@ class SearchBing
 
   def set_total_results_returned(count)
     total_results_returned = count
+  end
+
+  def search_with_offset(offset)
+    results = bing_web.search(query, offset)
+    set_total_results(results[0][:WebTotal])
+    return parse_bing(results[0][:Web])
   end
 
 end

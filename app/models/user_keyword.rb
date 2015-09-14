@@ -15,6 +15,7 @@
 #  searched                     :boolean          default(FALSE)
 #  total_results_in_last_search :integer
 #  processing_complete          :boolean          default(FALSE)
+#  offset                       :integer          default(0)
 #
 
 class UserKeyword < ActiveRecord::Base
@@ -65,6 +66,10 @@ class UserKeyword < ActiveRecord::Base
     self.save
   end
 
+  def set_offset(offset)
+    self.offset = offset
+    self.save
+  end
 
 
   private
