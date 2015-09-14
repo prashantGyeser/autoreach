@@ -11,4 +11,10 @@ describe SearchManager, :vcr do
     expect(Article.count).to eq 50
   end
 
+  it "should get new articles after the first search" do
+    SearchManager.new({user_keyword: @user_keyword}).get_articles
+    SearchManager.new({user_keyword: @user_keyword}).get_articles
+    expect(Article.count).to eq 100
+  end
+
 end
