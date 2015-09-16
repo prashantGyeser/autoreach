@@ -19,8 +19,20 @@
 
   <%= csrf_meta_tags %>
 
+  <script src="//load.sumome.com/" data-sumo-site-id="0261fac491e06f1e9d89074eca908af7dace70121fb31c3668fe24ee4dad55ac" async="async"></script>
+
 </head>
 <body class="pace-white">
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-67681914-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 <!-- BEGIN JUMBOTRON -->
 <section class="jumbotron demo-custom-height xs-full-height bg-black" data-pages-bg-image="<%= image_path("hero_4.jpg") %>">
   <div class="container-xs-height full-height">
